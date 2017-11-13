@@ -1,0 +1,41 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateResidentialDetailsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('residential_details', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id');
+            $table->string('county_residence');
+            $table->string('sub_county');
+            $table->string('constituency');
+            $table->string('household_type');
+            $table->string('household_name');
+            $table->string('street');
+            $table->string('property_number');
+            $table->string('floor_number');
+            $table->string('door_number');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('residential_details');
+    }
+}
