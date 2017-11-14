@@ -23,7 +23,7 @@ class ContactsController extends Controller
     public function searchContact(Request $request)
     {
     	$input = Request::all();
-    	$contacts = EmploymentDetails::where('business_name','LIKE', '%'.$input['search'].'%')->get();
+    	$contacts = EmploymentDetails::where('institution_name','LIKE', '%'.$input['search'].'%')->get();
 
     	return view('Contacts.index', compact('contacts'));
     }

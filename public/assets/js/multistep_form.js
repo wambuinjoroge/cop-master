@@ -25,7 +25,7 @@ $(document).ready(function(){
         $('#step-3-progress').addClass('btn-success');
     });
     $(document).on('click','#next-3', function(){
-        $('#step-4').focus();
+        $('#step-4').focus()
         $('#step-1').hide();
         $('#step-2').hide();
         $('#step-3').hide();

@@ -54,7 +54,7 @@
             <div class="box-body">
                 <div class="panel-body">
                 
-                 <p><strong>  <h3 align="center">{{$contact->business_name}}</h3></strong></p>
+                 <p><strong>  <h3 align="center">{{$contact->institution_name}}</h3></strong></p>
                   <ol class="contact">
                   <div class="col-md-12">
                     
@@ -63,19 +63,19 @@
                                          <div class="form-group col-md-6 col-sm-6">
                                                <button class="accordion"><strong>Address</strong></button>
                      <div class="panel">
-                     <strong>Business Category : {{$contact->category}}  </strong>
+                     <strong>Business Category : {{$contact->business_category}}  </strong>
                     <p>
-                    {{$contact->business_loc}}
+                    {{$contact->building_name_loc}}
                     <br>{{$contact->floor_num}} Floor - Room {{$contact->room_num}}<br> 
                     {{$contact->street_name}}<br> 
-                    P.O Box {{$contact->emp_address}}<br> Kenya.<br> 
+                    P.O Box {{$contact->postal_address}}<br> Kenya.<br> 
                     Branch : {{$contact->branch_name}} <br>
                     City/Town : {{$contact->city_name}} <br>
                      <strong>County : {{$contact->county_name}}</strong> <br>
-                    Tel : {{$contact->emp_phone_num}} <br>
-                    Fax : {{$contact->emp_fax_num}} <br>
-                    Email : {{$contact->emp_email}} <br>
-                    Website :<a href> {{$contact->emp_website}}   </a>
+                    Tel : {{$contact->telephone}} <br>
+                    Fax : {{$contact->fax_num}} <br>
+                    Email : {{$contact->email_address}} <br>
+                    Website :<a href> {{$contact->website}}   </a>
                     </p>
                      </div>
                                             </div> 

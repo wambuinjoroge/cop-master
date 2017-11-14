@@ -104,7 +104,7 @@
                             <div class="form-row">
                                 <label>
                                     <span>Any Special Need </span>
-                                    <label class="radio-inline"><input type="radio" name="special_needs" value="0" onclick="show1();" />
+                                    <label class="radio-inline"><input type="radio" checked="checked" name="special_needs" value="0" onclick="show1();" />
                                             No</label>
                                     <label class="radio-inline"><input type="radio" name="special_needs" value="1" onclick="show2();" />
                                         Yes</label>

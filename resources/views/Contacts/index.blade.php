@@ -56,7 +56,7 @@
               @foreach($contacts as $key => $value)
                 <div class="container">
                   <div class="contact-info">
-                    <a href="/contacts/{{$value->id}}/details">{{$value->business_name}}</a>
+                    <a href="/contacts/{{$value->id}}/details">{{$value->institution_name}}</a>
                   </div>
                 </div>
               @endforeach
