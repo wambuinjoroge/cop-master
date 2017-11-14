@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Role;
 use App\ResidentialDetails;
 use App\EmploymentDetails;
 use App\HouseholdDetails;
@@ -167,6 +168,7 @@ class RegisterController extends Controller
         //    $message->to($data['email']);
         //    $message->subject('Registration Confirmation');
          //   )
+        $user->attachRole(Role::where('name','user')->first());
         return $user;
        // return redirect(route('login'))->with('status', 'Confirmation email has been send.kindly check your mail')
     }
