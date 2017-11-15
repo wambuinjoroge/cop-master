@@ -414,10 +414,10 @@
     <footer>
        <div class="container">
             <div class="row">
-                <div class=" col-md-5">
+                <div class=" pull-left">
                     <span class="copyright">Copyright &copy; <?=date('Y');?> Machini Technologies. All Rights Reserved</span>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="pull-right">
                         <ul class="list-inline social-icons">
                             <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
