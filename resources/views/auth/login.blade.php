@@ -93,6 +93,15 @@
             <br>
             </div>
     </div>
+     
+          <hr>
+        <div class="wrapper" align="center">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div id="copyright">© <?=date('Y');?> - Machini Technologies . All Rights Reserved</div>
+                </div><!--span12-->
+            </div><!--row-fluid-->
+        </div><!--wrapper-->
 </div>
 </form>
     <!-- Scripts -->

@@ -9,8 +9,64 @@
 
     @include('partials.topbar')
     @include ('includes.js')
+   
 </head>
-<body style="margin-top:70px;">
+<body>
+ <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- Branding Image -->
+                    <a class="logo" href="{{ url('/') }}">
+                       <img src="assets/bootstrap/img/ecp.png"  alt="ecp" style="height: 70px; width: 80px;">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+                        &nbsp;
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @if (Auth::guest())
+                            <li><a href="{{ url('/login') }}">Login</a></li>
+                            
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
+                    </ul>
+                </div>
+            </div>
+        </nav>
     <form  method="POST" action="{{ route('register') }}" class="registration-form" >
     {{csrf_field()}}
         <div class="col-md-6 col-md-offset-3">
@@ -104,7 +160,7 @@
                             <div class="form-row">
                                 <label>
                                     <span>Any Special Need </span>
-                                    <label class="radio-inline"><input type="radio" checked="checked" name="special_needs" value="0" onclick="show1();" />
+                                    <label class="radio-inline"><input type="radio" name="special_needs" value="0" onclick="show1();" />
                                             No</label>
                                     <label class="radio-inline"><input type="radio" name="special_needs" value="1" onclick="show2();" />
                                         Yes</label>
@@ -269,6 +325,7 @@
                                                     <option value="select" selected>--select--</option>
                                                     <option value="Government">Government</option>
                                                     <option value ="Private">Private</option>
+                                                    <option value ="International">International</option>
                                                 </select>
                                                 @if ($errors->has('sector'))
                                                     <span class="help-block">
@@ -365,7 +422,7 @@
                                     <div class="form-bottom">
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('street_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">Street Name</label>
+                                                <label class="control-label">Street / Road /Avenue Name</label>
                                                 <input maxlength="200" type="text" name="street_name" class="form-control" placeholder="Enter street or road or avenue" value="{{ old('street_name') }}" />
                                                  @if ($errors->has('street_name'))
                                                     <span class="help-block">
@@ -563,7 +620,7 @@
                                     <div class="form-bottom">
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('street') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">Street/Road/Avenue</label>
+                                                <label class="control-label">Street / Road /Avenue Name</label>
                                                 <input type="text" name="street" class="form-control" maxlength="100" placeholder="Enter Street, Road or Avenue" value="{{ old('street') }}">
                                                 @if ($errors->has('street'))
                                                     <span class="help-block">
@@ -654,16 +711,26 @@
                                 </div>
                             </div>
                         </div>
-                            <div class="col-xs-8">
-                                <div class="checkbox icheck">
-                                    <label><a href="/login">I have an account login</a>
-                                    </label>
-                                </div>
-                            </div>
+                           
                     </div>
+                          <div class="wrapper" align="center">
+            <div class="row-fluid">
+                <div class="span12">
+                   <label><a href="/login">Have an account ? Login</a>
+                </div>
+            </div>
+        </div>           
+          <hr>
+                     <div class="wrapper" align="center">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div id="copyright">© <?=date('Y');?> - Machini Technologies . All Rights Reserved</div>
+                </div><!--span12-->
+            </div><!--row-fluid-->
+        </div><!--wrapper-->
                 </div>
 
             </form>
-            <script src="/assets/js/multistep_form.js"></script>
+            <!--script src="/assets/js/multistep_form.js"></script-->
         </body>
         </html>                

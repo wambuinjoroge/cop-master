@@ -65,7 +65,7 @@
                      <div class="panel">
                      <strong>Business Category : {{$contact->business_category}}  </strong>
                     <p>
-                    {{$contact->building_name_loc}}
+                    {{$contact->building_name}}
                     <br>{{$contact->floor_num}} Floor - Room {{$contact->room_num}}<br> 
                     {{$contact->street_name}}<br> 
                     P.O Box {{$contact->postal_address}}<br> Kenya.<br> 
