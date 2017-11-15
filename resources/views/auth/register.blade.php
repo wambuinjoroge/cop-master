@@ -101,7 +101,7 @@
                             <h3> Profile</h3><hr>
                             <div class="form-group{{ $errors->has('id_no') ? ' has-error' : '' }}">
                                 <label class="control-label">Identification</label>
-                                <input  maxlength="8" minlength="7" type="text" required="required" class="form-control" placeholder="Enter National ID or Passport Number" name="id_no" value="{{ old('id_no') }}" />
+                                <input  maxlength="8" minlength="7" type="text" required="required" class="form-control" placeholder="Enter National or Alien ID or Passport Number" name="id_no" value="{{ old('id_no') }}" />
                                 @if ($errors->has('id_no'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('id_no') }}</strong>
@@ -146,7 +146,7 @@
                                         <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                                         <div class="col-md-6 col-md-6 col-sm-6">
-                                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                            <input id="email" type="email" class="form-control" name="email" placeholder="Enter Email Address" value="{{ old('email') }}" required>
 
                                             @if ($errors->has('email'))
                                                 <span class="help-block">
@@ -238,8 +238,8 @@
                                             <span>Status</span>
                                             <label class="radio-inline"><input type="radio" value="employed" name="employment" checked="checked" onclick="show3();">Employed</label>
                                             <label class="radio-inline"><input type="radio" value="self_employed" name="employment" onclick="show4();">Self-Employed</label>
-                                            <label class="radio-inline"><input type="radio" value="unemployed" name="employment" onclick="show5();">Unemployed</label>
                                              <label class="radio-inline"><input type="radio" value="volunteer" name="employment" onclick="show6();">Volunteer</label>
+                                            <label class="radio-inline"><input type="radio" value="unemployed" name="employment" onclick="show5();">Unemployed</label>
                                         </label>
                                         @if ($errors->has('employment'))
                                             <span class="help-block">
@@ -307,8 +307,8 @@
                                             @endif
                                             </div>    
                                             <div class="form-group{{ $errors->has('city_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label  >City / Town</label>
-                                                <input type="text" name="city_name" class="form-control" value="{{ old('city_name') }}">
+                                                <label  >City / Town Name</label>
+                                                <input type="text" name="city_name" class="form-control" placeholder="Enter City or Town Name" value="{{ old('city_name') }}">
                                                 @if ($errors->has('city_name'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('city_name') }}</strong>
@@ -424,8 +424,8 @@
                                     <div class="form-bottom">
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('street_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">Street / Road /Avenue Name</label>
-                                                <input maxlength="200" type="text" name="street_name" class="form-control" placeholder="Enter street or road or avenue" value="{{ old('street_name') }}" />
+                                                <label class="control-label">Street Name</label>
+                                                <input maxlength="200" type="text" name="street_name" class="form-control" placeholder="Enter street or road or avenue or lane" value="{{ old('street_name') }}" />
                                                  @if ($errors->has('street_name'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('street_name') }}</strong>
@@ -479,7 +479,7 @@
                                             </div>
                                             <div class="form-group{{ $errors->has('website') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label">Website </label>
-                                                <input maxlength="100" type="text" name="website" class="form-control" placeholder="Enter Website" value="{{ old('website') }}" />
+                                                <input maxlength="100" type="text" name="website" class="form-control" placeholder="Enter Website url" value="{{ old('website') }}" />
                                                  @if ($errors->has('website'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('website') }}</strong>
@@ -609,8 +609,8 @@
                                             </div>
 
                                             <div class="form-group{{ $errors->has('household_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">Household / Building Name</label>
-                                                <input maxlength="100" type="text" name="household_name" class="form-control" placeholder="Enter Household Name" value="{{ old('household_name') }}" />
+                                                <label class="control-label">Household Name</label>
+                                                <input maxlength="100" type="text" name="household_name" class="form-control" placeholder="Enter Household or Building  Name" value="{{ old('household_name') }}" />
                                                 @if ($errors->has('household_name'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('household_name') }}</strong>
@@ -622,8 +622,8 @@
                                     <div class="form-bottom">
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('street') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">Street / Road /Avenue Name</label>
-                                                <input type="text" name="street" class="form-control" maxlength="100" placeholder="Enter Street, Road or Avenue" value="{{ old('street') }}">
+                                                <label class="control-label"> Road Name</label>
+                                                <input type="text" name="street" class="form-control" maxlength="100" placeholder="Enter Street, Road or Avenue or lane" value="{{ old('street') }}">
                                                 @if ($errors->has('street'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('street') }}</strong>

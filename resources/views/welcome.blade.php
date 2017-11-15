@@ -90,7 +90,7 @@
                 <div id="cd-intro-background">
                    <div class="col-sm-12 col-md-12">
                     <div id="intro">
-                     <!--div class="pro-name">Welcome To <span class="span">ecp</span></div-->
+                     <!--div class="pro-name">*315#</span></div-->
                          <div class="centered-words show-for-small-only">
                              <div class="motto">
                                  <span class="red">connect.</span>
@@ -414,10 +414,10 @@
     <footer>
        <div class="container">
             <div class="row">
-                <div class=" pull-left">
+                <div class=" col-md-5">
                     <span class="copyright">Copyright &copy; <?=date('Y');?> Machini Technologies. All Rights Reserved</span>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-6">
                     <div class="pull-right">
                         <ul class="list-inline social-icons">
                             <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
