@@ -171,7 +171,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="{{url('/account')}}" class="btn btn-default btn-flat">Account</a>
+                  <a href="{{url('#')}}" class="btn btn-default btn-flat">Account</a>
                 </div>
                 <div class="pull-right btn btn-default btn-flat">
                   <a href="{{ route('logout') }}"
