@@ -370,7 +370,7 @@
                                     </div>
                                     <div class="form-group{{ $errors->has('institution_name') ? 'has-error' : '' }}">
                                         <label class="control-label">Institution Name</label>
-                                        <input maxlength="200" type="text" name="institution_name" class="form-control" placeholder="Enter institution,Office Block or Business Name " value="{{ old('institution_name') }}" />
+                                        <input maxlength="200" type="text" name="institution_name" class="form-control" placeholder="Enter institution or Office or Office Block or Business Name " value="{{ old('institution_name') }}" />
                                         @if ($errors->has('institution_name'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('institution_name') }}</strong>
@@ -381,7 +381,7 @@
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('building_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label">Building Name</label>
-                                                <input maxlength="200" type="text" name="building_name" class="form-control" placeholder="Enter Building ,Office or Business Center Name" value="{{ old('building_name') }}" />
+                                                <input maxlength="200" type="text" name="building_name" class="form-control" placeholder="Enter Building or Office or Business Center Name" value="{{ old('building_name') }}" />
                                                  @if ($errors->has('building_name'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('building_name') }}</strong>
@@ -434,7 +434,7 @@
                                             </div>
                                             <div class="form-group{{ $errors->has('postal_address') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label">Postal Address</label>
-                                                <textarea name="postal_address" class="form-control" placeholder="Enter your postal address e.g P.O BOX 1000-0100 Kenya" value="{{ old('postal_address') }}" ></textarea>
+                                                <textarea name="postal_address" class="form-control" placeholder="Enter postal address e.g  1000-0100 Nairobi " value="{{ old('postal_address') }}" ></textarea>
                                                  @if ($errors->has('postal_address'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('postal_address') }}</strong>
@@ -448,7 +448,7 @@
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('telephone') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label">Telephone</label>
-                                                <input  maxlength="100" type="text" name="telephone" class="form-control" placeholder="Enter Primary Phone Numbers" value="{{ old('telephone') }}"  />
+                                                <input  maxlength="100" type="text" name="telephone" class="form-control" placeholder="Enter Primary Phone Number" value="{{ old('telephone') }}"  />
                                                  @if ($errors->has('telephone'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('telephone') }}</strong>
@@ -679,10 +679,10 @@
                                     <div class="form-row{{ $errors->has('religion') ? 'has-error' : '' }}">
                                         <label>
                                             <span>Religion</span>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="christian">Christianity</label>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="islam">Islam</label>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="hindu">Hinduism</label>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="budhist">Budhism</label>
+                                            <label class="radio-inline"><input type="radio" name="religion" value="christian">Christian</label>
+                                            <label class="radio-inline"><input type="radio" name="religion" value="islam">Muslim</label>
+                                            <label class="radio-inline"><input type="radio" name="religion" value="hindu">Hindu</label>
+                                            <label class="radio-inline"><input type="radio" name="religion" value="budhist">Budhist</label>
                                             <label class="radio-inline"><input type="radio" name="religion" value="atheist">Atheist</label>
                                             <label class="radio-inline"><input type="radio" name="religion" value="others">Others</label>
                                         </label>
