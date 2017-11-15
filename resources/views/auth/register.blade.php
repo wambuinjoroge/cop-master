@@ -338,6 +338,7 @@
                                                 <label  >Business Category</label>
                                                 <select class="form-control" name="business_category">
                                                     <option value="" selected>--select--</option>
+                                                    <option value="aviation">Aviation</option>
                                                     <option value="Business Support">Business Support</option>
                                                     <option value="Building & Construction">Building &amp; Construction</option>
                                                     <option value="Computer & Internet">Computer &amp; Internet</option>
@@ -731,6 +732,6 @@
                 </div>
 
             </form>
-            <!--script src="/assets/js/multistep_form.js"></script-->
+            <script src="/assets/js/multistep_form.js"></script>
         </body>
         </html>                
