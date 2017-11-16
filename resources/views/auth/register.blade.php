@@ -694,7 +694,7 @@
                                     </div><br>
                                     <div class="form-group{{ $errors->has('cluster') ? 'has-error' : '' }}">
                                         <label class="control-label">Cluster Code</label>
-                                        <input maxlength="100" type="text" name="cluster" class="form-control" placeholder="Enter Code " value="{{ old('cluster') }}" />
+                                        <input maxlength="100" type="text" name="cluster" class="form-control" placeholder="Enter Code e.g KENCH" value="{{ old('cluster') }}" />
                                         @if ($errors->has('cluster'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('cluster') }}</strong>

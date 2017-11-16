@@ -415,7 +415,7 @@
        <div class="container">
             <div class="row">
                 <div class=" pull-left">
-                    <span class="copyright">Copyright &copy; <?=date('Y');?> Machini Technologies. All Rights Reserved</span>
+                    <span class="copyright">Copyright &copy; <?=date('Y');?> - Machini Technologies . All Rights Reserved</span>
                 </div>
                 <div class="col-md-8">
                     <div class="pull-right">
