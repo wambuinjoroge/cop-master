@@ -73,7 +73,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="container">
-                        <div class="stepwizard " >
+                        <!--div class="stepwizard " >
                             <div class="stepwizard-row setup-panel">
                                 <div class="stepwizard-step">
                                     <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
@@ -92,7 +92,7 @@
                                     <p>Household</p>
                                 </div>
                             </div>   
-                        </div>
+                        </div-->
                     </div>
                 </div>
                 <div class="panel-body">         
@@ -220,13 +220,7 @@
                                             </div> 
                                         </div>
                                     </div>
-                                    <div class="col-xs-8">
-                                        <div class="checkbox icheck">
-                                            <label>
-                                                <input type="checkbox" name="terms" checked> I agree to the <a href="#">Terms of Use</a>
-                                            </label>
-                                        </div>
-                                    </div>
+                                  
                                     <!--button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-1">Next</button-->
                                 </div>
                             </div>
@@ -238,7 +232,7 @@
                                             <span>Status</span>
                                             <label class="radio-inline"><input type="radio" value="employed" name="employment" checked="checked" onclick="show3();">Employed</label>
                                             <label class="radio-inline"><input type="radio" value="self_employed" name="employment" onclick="show4();">Self-Employed</label>
-                                             <label class="radio-inline"><input type="radio" value="volunteer" name="employment" onclick="show6();">Volunteer</label>
+                                             <label class="radio-inline"><input type="radio" value="volunteer" name="employment" onclick="show6();">Volunteer / Intern</label>
                                             <label class="radio-inline"><input type="radio" value="unemployed" name="employment" onclick="show5();">Unemployed</label>
                                         </label>
                                         @if ($errors->has('employment'))
@@ -693,13 +687,20 @@
                                         @endif
                                     </div><br>
                                     <div class="form-group{{ $errors->has('cluster') ? 'has-error' : '' }}">
-                                        <label class="control-label">Cluster Code</label>
+                                        <label class="control-label">County Code</label>
                                         <input maxlength="100" type="text" name="cluster" class="form-control" placeholder="Enter Code e.g KENCH" value="{{ old('cluster') }}" />
                                         @if ($errors->has('cluster'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('cluster') }}</strong>
                                             </span>
                                         @endif
+                                    </div>
+                                      <div class="col-xs-8">
+                                        <div class="checkbox icheck">
+                                            <label>
+                                                <input type="checkbox" name="terms" checked> I agree to the <a href="#">Terms of Use</a>
+                                            </label>
+                                        </div>
                                     </div>
                                     <div class="row">
                                         <div class=" col-md-offset-2 col-md-4">
