@@ -227,7 +227,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-1">Next</button>
+                                    <!--button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-1">Next</button-->
                                 </div>
                             </div>
                             <div class="row setup-content" id="step-2">
@@ -489,14 +489,14 @@
                                         </div>
                                     </div>
                                     </div>
-                                    <div class="row">
+                                    <!--div class="row">
                                         <div class="col-md-4 col-md-offset-2">
                                             <button class="btn btn-success nextBtn btn-block" type="button" id="back-1">Back</button>
                                         </div>
                                         <div class="col-md-4">
                                             <button class="btn btn-success nextBtn btn-block" type="button" id="next-2">Next</button>
                                         </div>
-                                    </div>
+                                    </div-->
                                     
                                     
                                 </div>
@@ -663,14 +663,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <!--div class="row">
                                         <div class="col-md-offset-2 col-md-4">
                                             <button class="btn btn-success nextBtn btn-block" id="back-2">Back</button>
                                         </div>
                                         <div class="col-md-4">
                                             <button class="btn btn-success nextBtn btn-block" id="next-3">Next</button>
                                         </div>
-                                    </div>
+                                    </div-->
                                 </div>
                             </div>         
                             <div class="row setup-content" id="step-4">
@@ -733,6 +733,6 @@
                 </div>
 
             </form>
-            <script src="/assets/js/multistep_form.js"></script>
+            <!--script src="/assets/js/multistep_form.js"></script-->
         </body>
         </html>                
