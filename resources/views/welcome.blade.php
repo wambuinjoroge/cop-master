@@ -90,7 +90,7 @@
                 <div id="cd-intro-background">
                    <div class="col-sm-12 col-md-12">
                     <div id="intro">
-                     <!--div class="pro-name">Welcome To <span class="span">ecp</span></div-->
+                     <!--div class="pro-name">*315#</span></div-->
                          <div class="centered-words show-for-small-only">
                              <div class="motto">
                                  <span class="red">connect.</span>
@@ -193,34 +193,33 @@
                     <h2 class="section-heading">Services</h2>
                 </div>
             </div>
-            <div class="row text-center">
+               <div class="row text-center">
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Crime & Justice</h4>
+                    <h4 class="service-heading">Probation and Aftercare Service</h4>
                     <p class="text-muted">coming soon.</p>
-                    <p><a href="/login" class="btn btn-default">Get Service </a></p>
+                    <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
                     <h4 class="service-heading">Kenya Prison Service</h4>
                     <p class="text-muted">coming soon.</p>
-                    <p><a href="#" class="btn btn-default">Get Service </a></p>
+                    <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
                     <h4 class="service-heading">Kenya Forest Service</h4>
                     <p class="text-muted">coming soon.</p>
-                    <p><a href="#" class="btn btn-default">Get Service </a></p>
+                    <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                  <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
                     <h4 class="service-heading">Kenya Wildlife Service</h4>
                     <p class="text-muted">coming soon.</p>
-                    <p><a href="#" class="btn btn-default">Get Service </a></p>
+                    <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                 
-            </div>
-        </div>
+            </div>        </div>
     </section>
      
     
@@ -299,62 +298,6 @@
   
                 </div>
             </div>
-            <!--div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                 <div class="event-title">
-         <h4><i class="fa fa-shopping-cart"></i> Appeal</h4>
-      </div>
-               
-                <div class="hline"></div><br>
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{asset('assets/dist/img/user2-160x160.jpg')}}" class="img-responsive"  alt="Image">
-                    </a>
-                    <div class="portfolio-caption">
-                        
-                         <a href="/login" class="btn btn-success">More Appeals ...</a> 
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                <div class="event-title">
-                  <h4><i class="fa fa-share-alt"></i> Lost & Found</h4>
-                </div>
-                 <div class="hline"></div><br>
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{asset('assets/dist/img/user2-160x160.jpg')}}" class="img-responsive"  alt="Image">
-                    </a>
-                    <div class="portfolio-caption">
-                        <a href="/login" class="btn btn-success">More Lost & Found ...</a>  
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                 <div class="event-title">
-                  <h4><i class="fa fa-calendar"></i> Events </h4>
-                 </div>
-                  <div class="hline"></div><br>
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{asset('assets/dist/img/user2-160x160.jpg')}}" class="img-responsive"  alt="Image">
-                    </a>
-                    <div class="portfolio-caption">
-                        <a href="/login" class="btn btn-success">More Events ...</a>  
-                    </div>
-                </div>
-              
-            </div-->
        </div>
     </section>
 
@@ -391,7 +334,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading grey">Let's Get Intouch</h2>
-                    <h3 class="section-subheading text-muted">For Feedback , Comments , Suggestions , Complains and Queries.</h3>
+                     <h3 class="section-subheading text-muted">For Feedback , Comments and Queries.</h3>
                 </div>
             </div>
             <div class="row">
@@ -404,7 +347,7 @@
                         <div class="widget-body">
                             <address>
                             <i class="fa fa-phone fa-3x sr-contact"></i> : 
-                             <a href="call">+254 (0) 704 - 207 - 449 </a><br><br>
+                             <a href="call">+254 (0) 727-750-007 </a><br><br>
                                <i class="fa fa-envelope fa-3x sr-contact"></i> : <a href="mailto:#">  contact@ecp.co.ke</a><br>
                                
                                 
@@ -419,10 +362,10 @@
                         <address>
                             <p class="text">
                             <ul>
-                            <li><a href="faq">FAQ</a></li>
+                            <li><a href="#">FAQ</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms of use</a></li>
-                            <li><a href="help">Help</a></li>
+                            <li><a href="#">Help</a></li>
                             </ul>
                             </p> 
                           </address>
@@ -472,9 +415,9 @@
        <div class="container">
             <div class="row">
                 <div class=" pull-left">
-                    <span class="copyright">Copyright &copy; <?=date('Y');?> Machini Technologies. All Rights Reserved</span>
+                    <span class="copyright">Copyright &copy; <?=date('Y');?> - Machini Technologies . All Rights Reserved</span>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-8">
                     <div class="pull-right">
                         <ul class="list-inline social-icons">
                             <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
@@ -494,129 +437,6 @@
     <p id="back-top" title="Back to Top">
       <a href="#page-top" class="cd-top btnSwing"><i class="fa fa-angle-up fa-2x"></i></a>
     </p>
-    <!-- Portfolio Modals -->
-    <!-- Use the modals below to showcase details about your portfolio projects! -->
-
-    <!-- Portfolio Modal 1 -->
-    <!--div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                               <!--h4><i class="fa fa-shopping-cart"></i> Appeal</h4>
-                <div class="hline"></div><br>
-                <div class="well">
-                      <div class="well" >
-                      <img src="{{asset('assets/dist/img/user2-160x160.jpg')}}" class="img-responsive"  alt="Image">
-                        <p>Name : Agweng'</p>
-                        <p>Age : 15yrs</p>
-                        <p>Category: Medical Appeal </p>
-                        <p>Condition Category: </p>
-                        <p>Condition Name : </p>
-                        <p>Description : </p>
-                        <p>Amount: Ksh. 5 Million</p>
-                    </div>
-            </div>
-                                <!--ul class="list-inline">
-                                    <li>Date: July 2014</li>
-                                    <li>Client: Round Icons</li>
-                                    <li>Category: Graphic Design</li>
-                                </ul-->
-                                <!--button type="button" class="btn btn-success" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 2 -->
-    <!--div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                 <div class="event-title">
-         <h4><i class="fa fa-share-alt"></i> Lost & Found</h4>
-      </div>
-        <div class="hline"></div><br>
-      <div class="well">
-                      <div class="well" >
-                        <img src="{{asset('assets/dist/img/user2-160x160.jpg')}}" class="img-responsive"  alt="Image">
-                        <p>Name : Agweng'</p>
-                        <p>Age : 15yrs</p>
-                        <p>Status: Missing</p>
-                        <p>Gender: Female</p>
-                        <p>Area Name : Runda</p>
-                        <p>Description : </p>
-                        <p>Contact: 0722 145 098</p>
-                    </div>
-            </div>
-                                <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 3 -->
-    <!--div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                 <!--div class="event-title">
-         <h4><i class="fa fa-calendar"></i> Events </h4>
-      </div>
-        <div class="hline"></div><br>
-         <div class="well">
-                      <div class="well" >
-                        <p>Theme : 7TH  ANNUAL INTERNATIONAL CONFERENCE</p>
-                        <p>Description : RESEARCH, INNOVATION AND KNOWLEDGE TRANSLATION FOR   COMMUNITY TRANSFORMATION</p>
-                        <p>Date : 21/09/2017</p>
-                        <p>Venue : KABARAK UNIVERSITY MAIN CAMPUS</p>
-                        <p>Time : 08:00 AM - 5:00 PM</p>
-                        <p>Entrance Charges : Free </p>
-                    </div>
-            </div>
-                                <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- jQuery -->
     <script src="assets/jquery/jquery.min.js"></script>
 

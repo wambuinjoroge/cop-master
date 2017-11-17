@@ -9,15 +9,71 @@
 
     @include('partials.topbar')
     @include ('includes.js')
+   
 </head>
-<body style="margin-top:70px;">
+<body>
+ <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- Branding Image -->
+                    <a class="logo" href="{{ url('/') }}">
+                       <img src="assets/bootstrap/img/ecp.png"  alt="ecp" style="height: 70px; width: 80px;">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+                        &nbsp;
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @if (Auth::guest())
+                            <li><a href="{{ url('/login') }}">Login</a></li>
+                            
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
+                    </ul>
+                </div>
+            </div>
+        </nav>
     <form  method="POST" action="{{ route('register') }}" class="registration-form" >
     {{csrf_field()}}
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="container">
-                        <div class="stepwizard " >
+                        <!--div class="stepwizard " >
                             <div class="stepwizard-row setup-panel">
                                 <div class="stepwizard-step">
                                     <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
@@ -36,7 +92,7 @@
                                     <p>Household</p>
                                 </div>
                             </div>   
-                        </div>
+                        </div-->
                     </div>
                 </div>
                 <div class="panel-body">         
@@ -45,7 +101,7 @@
                             <h3> Profile</h3><hr>
                             <div class="form-group{{ $errors->has('id_no') ? ' has-error' : '' }}">
                                 <label class="control-label">Identification</label>
-                                <input  maxlength="8" minlength="7" type="text" required="required" class="form-control" placeholder="Enter National ID or Passport Number" name="id_no" value="{{ old('id_no') }}" />
+                                <input  maxlength="8" minlength="7" type="text" required="required" class="form-control" placeholder="Enter National or Alien ID or Passport Number" name="id_no" value="{{ old('id_no') }}" />
                                 @if ($errors->has('id_no'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('id_no') }}</strong>
@@ -90,7 +146,7 @@
                                         <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                                         <div class="col-md-6 col-md-6 col-sm-6">
-                                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                            <input id="email" type="email" class="form-control" name="email" placeholder="Enter Email Address" value="{{ old('email') }}" required>
 
                                             @if ($errors->has('email'))
                                                 <span class="help-block">
@@ -104,7 +160,7 @@
                             <div class="form-row">
                                 <label>
                                     <span>Any Special Need </span>
-                                    <label class="radio-inline"><input type="radio" checked="checked" name="special_needs" value="0" onclick="show1();" />
+                                    <label class="radio-inline"><input type="radio" name="special_needs" value="0" onclick="show1();" />
                                             No</label>
                                     <label class="radio-inline"><input type="radio" name="special_needs" value="1" onclick="show2();" />
                                         Yes</label>
@@ -122,7 +178,7 @@
                                                 <option value="addiction">Addiction</option>
                                                 <option value="health">Health</option>
                                                 <option value="drugs">Drugs</option>
-                                                <option value="#substance_abuse">Substance Abuse</option>
+                                                <option value="substance_abuse">Substance Abuse</option>
                                             </select> 
                                             @if ($errors->has('needs'))
                                                 <span class="help-block">
@@ -164,14 +220,8 @@
                                             </div> 
                                         </div>
                                     </div>
-                                    <div class="col-xs-8">
-                                        <div class="checkbox icheck">
-                                            <label>
-                                                <input type="checkbox" name="terms" checked> I agree to the <a href="#">Terms of Use</a>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-1">Next</button>
+                                  
+                                    <!--button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-1">Next</button-->
                                 </div>
                             </div>
                             <div class="row setup-content" id="step-2">
@@ -182,6 +232,7 @@
                                             <span>Status</span>
                                             <label class="radio-inline"><input type="radio" value="employed" name="employment" checked="checked" onclick="show3();">Employed</label>
                                             <label class="radio-inline"><input type="radio" value="self_employed" name="employment" onclick="show4();">Self-Employed</label>
+                                             <label class="radio-inline"><input type="radio" value="volunteer" name="employment" onclick="show6();">Volunteer / Intern</label>
                                             <label class="radio-inline"><input type="radio" value="unemployed" name="employment" onclick="show5();">Unemployed</label>
                                         </label>
                                         @if ($errors->has('employment'))
@@ -250,8 +301,8 @@
                                             @endif
                                             </div>    
                                             <div class="form-group{{ $errors->has('city_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label  >City / Town</label>
-                                                <input type="text" name="city_name" class="form-control" value="{{ old('city_name') }}">
+                                                <label  >City / Town Name</label>
+                                                <input type="text" name="city_name" class="form-control" placeholder="Enter City or Town Name" value="{{ old('city_name') }}">
                                                 @if ($errors->has('city_name'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('city_name') }}</strong>
@@ -269,6 +320,7 @@
                                                     <option value="select" selected>--select--</option>
                                                     <option value="Government">Government</option>
                                                     <option value ="Private">Private</option>
+                                                    <option value ="International">International</option>
                                                 </select>
                                                 @if ($errors->has('sector'))
                                                     <span class="help-block">
@@ -281,6 +333,7 @@
                                                 <label  >Business Category</label>
                                                 <select class="form-control" name="business_category">
                                                     <option value="" selected>--select--</option>
+                                                    <option value="aviation">Aviation</option>
                                                     <option value="Business Support">Business Support</option>
                                                     <option value="Building & Construction">Building &amp; Construction</option>
                                                     <option value="Computer & Internet">Computer &amp; Internet</option>
@@ -311,7 +364,7 @@
                                     </div>
                                     <div class="form-group{{ $errors->has('institution_name') ? 'has-error' : '' }}">
                                         <label class="control-label">Institution Name</label>
-                                        <input maxlength="200" type="text" name="institution_name" class="form-control" placeholder="Enter institution,Office Block or Business Name " value="{{ old('institution_name') }}" />
+                                        <input maxlength="200" type="text" name="institution_name" class="form-control" placeholder="Enter institution or Office or Office Block or Business Name " value="{{ old('institution_name') }}" />
                                         @if ($errors->has('institution_name'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('institution_name') }}</strong>
@@ -322,7 +375,7 @@
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('building_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label">Building Name</label>
-                                                <input maxlength="200" type="text" name="building_name" class="form-control" placeholder="Enter Building ,Office or Business Center Name" value="{{ old('building_name') }}" />
+                                                <input maxlength="200" type="text" name="building_name" class="form-control" placeholder="Enter Building or Office or Business Center Name" value="{{ old('building_name') }}" />
                                                  @if ($errors->has('building_name'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('building_name') }}</strong>
@@ -366,7 +419,7 @@
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('street_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label">Street Name</label>
-                                                <input maxlength="200" type="text" name="street_name" class="form-control" placeholder="Enter street or road or avenue" value="{{ old('street_name') }}" />
+                                                <input maxlength="200" type="text" name="street_name" class="form-control" placeholder="Enter street or road or avenue or lane" value="{{ old('street_name') }}" />
                                                  @if ($errors->has('street_name'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('street_name') }}</strong>
@@ -375,7 +428,7 @@
                                             </div>
                                             <div class="form-group{{ $errors->has('postal_address') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label">Postal Address</label>
-                                                <textarea name="postal_address" class="form-control" placeholder="Enter your postal address e.g P.O BOX 1000-0100 Kenya" value="{{ old('postal_address') }}" ></textarea>
+                                                <textarea name="postal_address" class="form-control" placeholder="Enter postal address e.g  1000-0100 Nairobi " value="{{ old('postal_address') }}" ></textarea>
                                                  @if ($errors->has('postal_address'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('postal_address') }}</strong>
@@ -389,7 +442,7 @@
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('telephone') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label">Telephone</label>
-                                                <input  maxlength="100" type="text" name="telephone" class="form-control" placeholder="Enter Primary Phone Numbers" value="{{ old('telephone') }}"  />
+                                                <input  maxlength="100" type="text" name="telephone" class="form-control" placeholder="Enter Primary Phone Number" value="{{ old('telephone') }}"  />
                                                  @if ($errors->has('telephone'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('telephone') }}</strong>
@@ -420,7 +473,7 @@
                                             </div>
                                             <div class="form-group{{ $errors->has('website') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label">Website </label>
-                                                <input maxlength="100" type="text" name="website" class="form-control" placeholder="Enter Website" value="{{ old('website') }}" />
+                                                <input maxlength="100" type="text" name="website" class="form-control" placeholder="Enter Website url" value="{{ old('website') }}" />
                                                  @if ($errors->has('website'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('website') }}</strong>
@@ -430,14 +483,14 @@
                                         </div>
                                     </div>
                                     </div>
-                                    <div class="row">
+                                    <!--div class="row">
                                         <div class="col-md-4 col-md-offset-2">
                                             <button class="btn btn-success nextBtn btn-block" type="button" id="back-1">Back</button>
                                         </div>
                                         <div class="col-md-4">
                                             <button class="btn btn-success nextBtn btn-block" type="button" id="next-2">Next</button>
                                         </div>
-                                    </div>
+                                    </div-->
                                     
                                     
                                 </div>
@@ -550,8 +603,8 @@
                                             </div>
 
                                             <div class="form-group{{ $errors->has('household_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">Household / Building Name</label>
-                                                <input maxlength="100" type="text" name="household_name" class="form-control" placeholder="Enter Household Name" value="{{ old('household_name') }}" />
+                                                <label class="control-label">Household Name</label>
+                                                <input maxlength="100" type="text" name="household_name" class="form-control" placeholder="Enter Household or Building  Name" value="{{ old('household_name') }}" />
                                                 @if ($errors->has('household_name'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('household_name') }}</strong>
@@ -563,8 +616,8 @@
                                     <div class="form-bottom">
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('street') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">Street/Road/Avenue</label>
-                                                <input type="text" name="street" class="form-control" maxlength="100" placeholder="Enter Street, Road or Avenue" value="{{ old('street') }}">
+                                                <label class="control-label"> Road Name</label>
+                                                <input type="text" name="street" class="form-control" maxlength="100" placeholder="Enter Street, Road or Avenue or lane" value="{{ old('street') }}">
                                                 @if ($errors->has('street'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('street') }}</strong>
@@ -604,14 +657,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <!--div class="row">
                                         <div class="col-md-offset-2 col-md-4">
                                             <button class="btn btn-success nextBtn btn-block" id="back-2">Back</button>
                                         </div>
                                         <div class="col-md-4">
                                             <button class="btn btn-success nextBtn btn-block" id="next-3">Next</button>
                                         </div>
-                                    </div>
+                                    </div-->
                                 </div>
                             </div>         
                             <div class="row setup-content" id="step-4">
@@ -620,10 +673,10 @@
                                     <div class="form-row{{ $errors->has('religion') ? 'has-error' : '' }}">
                                         <label>
                                             <span>Religion</span>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="christian">Christianity</label>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="islam">Islam</label>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="hindu">Hinduism</label>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="budhist">Budhism</label>
+                                            <label class="radio-inline"><input type="radio" name="religion" value="christian">Christian</label>
+                                            <label class="radio-inline"><input type="radio" name="religion" value="islam">Muslim</label>
+                                            <label class="radio-inline"><input type="radio" name="religion" value="hindu">Hindu</label>
+                                            <label class="radio-inline"><input type="radio" name="religion" value="budhist">Budhist</label>
                                             <label class="radio-inline"><input type="radio" name="religion" value="atheist">Atheist</label>
                                             <label class="radio-inline"><input type="radio" name="religion" value="others">Others</label>
                                         </label>
@@ -634,36 +687,53 @@
                                         @endif
                                     </div><br>
                                     <div class="form-group{{ $errors->has('cluster') ? 'has-error' : '' }}">
-                                        <label class="control-label">Cluster Code</label>
-                                        <input maxlength="100" type="text" name="cluster" class="form-control" placeholder="Enter Code " value="{{ old('cluster') }}" />
+                                        <label class="control-label">County Code</label>
+                                        <input maxlength="100" type="text" name="cluster" class="form-control" placeholder="Enter County Code e.g KEN001" value="{{ old('cluster') }}" />
                                         @if ($errors->has('cluster'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('cluster') }}</strong>
                                             </span>
                                         @endif
                                     </div>
-                                    <div class="row">
+                                      <div class="col-xs-8">
+                                        <div class="checkbox icheck">
+                                            <label>
+                                                <input type="checkbox" name="terms" checked> I agree to the <a href="#">Terms of Use</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!--div class="row">
                                         <div class=" col-md-offset-2 col-md-4">
                                             <button class="btn btn-success nextBtn btn-block" id="back-3">Back</button>
                                         </div>
                                         <div class="col-md-4">
                                             <button class="btn btn-success btn-block" type="submit">Submit</button>
                                         </div>
-                                    </div>
-                                    
+                                    </div-->
+                                    <button class="btn btn-success btn-block" type="submit">Submit</button>
                                 </div>
                             </div>
                         </div>
-                            <div class="col-xs-8">
-                                <div class="checkbox icheck">
-                                    <label><a href="/login">I have an account login</a>
-                                    </label>
-                                </div>
-                            </div>
+                           
                     </div>
+                          <div class="wrapper" align="center">
+            <div class="row-fluid">
+                <div class="span12">
+                   <label><a href="/login">Have an Account ? Login</a>
+                </div>
+            </div>
+        </div>           
+          <hr>
+                     <div class="wrapper" align="center">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div id="copyright">© <?=date('Y');?> - Machini Technologies . All Rights Reserved</div>
+                </div><!--span12-->
+            </div><!--row-fluid-->
+        </div><!--wrapper-->
                 </div>
 
             </form>
-            <script src="/assets/js/multistep_form.js"></script>
+            <!--script src="/assets/js/multistep_form.js"></script-->
         </body>
         </html>                

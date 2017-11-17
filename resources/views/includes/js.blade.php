@@ -33,6 +33,9 @@
       function show5(){
       document.getElementById('div2').style.display = 'none';
                       } 
+      function show6(){
+      document.getElementById('div2').style.display = 'block';
+                      } 
     </script>
     <!-- Bootstrap 3.3.5 -->
     <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
