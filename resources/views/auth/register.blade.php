@@ -178,7 +178,7 @@
                                                 <option value="addiction">Addiction</option>
                                                 <option value="health">Health</option>
                                                 <option value="drugs">Drugs</option>
-                                                <option value="#substance_abuse">Substance Abuse</option>
+                                                <option value="substance_abuse">Substance Abuse</option>
                                             </select> 
                                             @if ($errors->has('needs'))
                                                 <span class="help-block">
@@ -688,7 +688,7 @@
                                     </div><br>
                                     <div class="form-group{{ $errors->has('cluster') ? 'has-error' : '' }}">
                                         <label class="control-label">County Code</label>
-                                        <input maxlength="100" type="text" name="cluster" class="form-control" placeholder="Enter Code e.g KENCH" value="{{ old('cluster') }}" />
+                                        <input maxlength="100" type="text" name="cluster" class="form-control" placeholder="Enter County Code e.g KEN001" value="{{ old('cluster') }}" />
                                         @if ($errors->has('cluster'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('cluster') }}</strong>
@@ -702,15 +702,15 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <!--div class="row">
                                         <div class=" col-md-offset-2 col-md-4">
                                             <button class="btn btn-success nextBtn btn-block" id="back-3">Back</button>
                                         </div>
                                         <div class="col-md-4">
                                             <button class="btn btn-success btn-block" type="submit">Submit</button>
                                         </div>
-                                    </div>
-                                    
+                                    </div-->
+                                    <button class="btn btn-success btn-block" type="submit">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -719,7 +719,7 @@
                           <div class="wrapper" align="center">
             <div class="row-fluid">
                 <div class="span12">
-                   <label><a href="/login">Have an account ? Login</a>
+                   <label><a href="/login">Have an Account ? Login</a>
                 </div>
             </div>
         </div>           
