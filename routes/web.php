@@ -81,4 +81,5 @@ Route::get('/contribution', 'ContributionsController@index');
 Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function()
 {
     Route::resource('user', 'UserController');
+    Route::resource('roles', 'RoleController');
 });

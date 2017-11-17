@@ -28,11 +28,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        All Users
+        All Roles
       </h1>
       <ol class="breadcrumb">
        <li><a href="/member"><i class="fa fa-home" ></i>Dashboard</a></li>
-       <li class="active"><a href="/contacts"><i class="fa fa-book"></i>Contact List</a></li>
+       <li class="active"><a href="#"><i class="fa fa-book"></i>Roles</a></li>
       </ol>
     </section>
 
@@ -42,7 +42,7 @@
       <!-- SELECT2 EXAMPLE -->
       <div class="box box-default">
         <div class="box-header with-border">
-         <center><h3 class="box-title">Registered Users</h3></center> 
+         <center><h3 class="box-title">Available Roles</h3></center> 
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -52,39 +52,33 @@
         <!-- /.box-header -->
         <div class="box-body">
       
-            <a href="" class="btn btn-success btn-xs">New User</a><br>
+            <a href="{{ route('roles.create') }}" class="btn btn-success btn-xs">New Role</a><br>
     
           <table class="table table-responsive table-striped table-bordered">
             <thead>
-              <th>User ID</th>
+              <th>Role ID</th>
               <th>Name</th>
-              <th>Email</th>
-              <th>Role</th>
-              <th>Joined On</th>
+              <th>Display Name</th>
+              <th>Description</th>
+              <th>Users</th>
               <th>Action</th>
             </thead>
             <tbody>
-              @forelse ($users as $user)
-                  <td>{{ $user->id }}</td>
-                  <td>{{ $user->name }}</td>
-                  <td>{{ $user->email }}</td>
-                  <td>
-                    @foreach($user->roles as $role)
-                      <span class="label label-info">{{ $role->name }}</span>
-                    @endforeach
-                  </td>
-                  <td>{{ $user->created_at->format('Y-m-d') }}</td>
+              @foreach ($roles as $role)
+                  <td>{{ $role->id }}</td>
+                  <td>{{ $role->name }}</td>
+                  <td>{{ $role->display_name }}</td>
+                  <td>{{ $role->description }}</td>
+                  <td>{{ count($role->users) }}</td>
                   <td>
                     <a href="" class="">View</a> &nbsp;&nbsp;
                     <a href="" class="">Edit</a> &nbsp;&nbsp;
                     <a href="" class="">Delete</a> &nbsp;&nbsp;
                   </td>
-              @empty
-                  <td colspan="6" class="alert alert-warning">No users available</td>
-              @endforelse
+              @endforeach
             </tbody>
           </table>
-          {!! $users->links() !!}
+          {!! $roles->links() !!}
       
         </div>
         <!-- /.box -->
