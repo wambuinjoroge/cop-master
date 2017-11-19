@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class UssdController extends Controller
 {
@@ -32,6 +33,7 @@ class UssdController extends Controller
 			$response = "END we will get back to you";
 		}
 
-     	return $response;
+     	return response($response, 200)
+                  ->header('Content-Type', 'text/plain');
      }
 }
