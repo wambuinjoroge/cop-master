@@ -84,4 +84,4 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function()
     Route::resource('roles', 'RoleController');
 });
 
-Route::get('/callback/ussd','UssdController@index');
+Route::post('/callback/ussd','UssdController@index');
