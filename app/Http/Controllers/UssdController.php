@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class UssdController extends Controller
 {
     //
-     public index(Request $request)
+     public function index(Request $request)
      {
      	$sessionId   = $request->get("sessionId");
 		$serviceCode = $request->get("serviceCode");
