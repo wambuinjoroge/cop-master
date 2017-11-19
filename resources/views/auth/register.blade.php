@@ -331,7 +331,7 @@
                                             </div>
 
                                             <div class="form-group{{ $errors->has('business_category') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label  >Trade / Industry Category</label>
+                                                <label  >Industry Category</label>
                                                 <select class="form-control" name="business_category">
                                                     <option value="" selected>--select--</option>
                                                     <option value="Advertising" >Advertising / Marketing / PR / Media / Publishing</option>
