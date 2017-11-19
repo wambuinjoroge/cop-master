@@ -102,26 +102,17 @@
                 <label for="exampleInputEmail1">Mobile Number</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Mobile Number">
           </div>
-          <div class="form-group col-md-6 col-sm-6">
-           <div class="row">
-                <div class="form-group col-md-6 col-sm-6">
-           <label for=""> Date / Time In</label>
+         
+           <div class="form-group col-md-6 col-sm-6">
+            <label for=""> Date / Time In</label>
                    <div class="input-group date">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
                   <input type="text" class="form-control pull-right" id="datepicker">
                 </div>
-          
           </div> 
-          <div class="form-group col-md-6 col-sm-6">
-            <label for="exampleInputEmail1">Token Number</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Token Number">
-          </div> 
-          
-          <!-- /.row -->
-        </div>
-          </div> 
+         
           
         </div>
         
@@ -141,33 +132,16 @@
                 <label for="exampleInputEmail1">Clearing Officer Name</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Institution Name">
           </div>
-          <div class="form-group col-md-6 col-sm-6">
-           <div class="row">
-                <div class="form-group col-md-6 col-sm-6">
-           <label for=""> Date / Time In</label>
+           <div class="form-group col-md-6 col-sm-6">
+            <label for=""> Date / Time In</label>
                    <div class="input-group date">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
                   <input type="text" class="form-control pull-right" id="datepicker">
                 </div>
-          
           </div> 
-          <div class="form-group col-md-6 col-sm-6">
-            <label class="control-label">Security Company Name</label>
-                  <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">--select--</option>
-                  <option >G4S</option>
-                  <option>Wells Fargo</option>
-                  <option>KK</option>
-                </select>
-          </div> 
-          
-          <!-- /.row -->
-        </div>
-          </div> 
-          
-        </div>
+         
         <div class="form-group">
                   <label for="ammount">Means of Transport </label>
                   <label class="radio-inline"><input type="radio" name="optradio">No</label>

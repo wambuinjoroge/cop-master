@@ -318,9 +318,10 @@
                                                 <label >Sector</label>
                                                 <select class="form-control" name="sector">
                                                     <option value="select" selected>--select--</option>
-                                                    <option value="Government">Government</option>
+                                                    <option value="Public">Public</option>
                                                     <option value ="Private">Private</option>
-                                                    <option value ="International">International</option>
+                                                    <option value ="Diplomatic">Diplomatic</option>
+                                                    
                                                 </select>
                                                 @if ($errors->has('sector'))
                                                     <span class="help-block">
@@ -330,26 +331,33 @@
                                             </div>
 
                                             <div class="form-group{{ $errors->has('business_category') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label  >Business Category</label>
+                                                <label  >Trade / Industry Category</label>
                                                 <select class="form-control" name="business_category">
                                                     <option value="" selected>--select--</option>
-                                                    <option value="aviation">Aviation</option>
+                                                    <option value="Advertising" >Advertising / Marketing / PR / Media / Publishing</option>
+                                                    <option value="Accounting" >Accounting / Auditing</option>
+                                                    <option value="Agriculture">Agriculture / Chemicals</option>
+                                                    <option value="aviation">Airline / Travel / Hospitality</option>
+                                                     <option value="Security">Armed Forces / Security Forces</option>
+                                                    <option value="Banking & Finance">Banking &amp; Finance</option>
+                                                     <option value="Beauty & Product">Beauty &amp;Beauty Products </option>
                                                     <option value="Business Support">Business Support</option>
-                                                    <option value="Building & Construction">Building &amp; Construction</option>
+                                                    <option value="Building & Construction">Building / Architecture / Real Estate &amp; Construction</option>
                                                     <option value="Computer & Internet">Computer &amp; Internet</option>
                                                     <option value="Cars & Vehicles">Cars &amp; Vehicles</option>
-                                                    <option value="Electrical & Electronic">Electrical &amp; Electronic</option>
+                                                    <option value="Electrical & Electronic">Electrical / Engineering &amp; Electronic</option>
                                                     <option value="Energy">Energy</option>
-                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Entertainment">Entertainment / Film &amp;  Music </option>
                                                     <option value="Fashion & Lifestyle">Fashion &amp; Lifestyle</option>
-                                                    <option value="Health">Health</option>
+                                                     <option value="Government & Parastatals">Government & Parastatals &amp; Institutions</option>
+                                                    <option value="Health">Health Services / Medical / Pharmaciticals</option>
                                                     <option value="Hotel & Restaurant">Hotel &amp; Restaurant</option>
-                                                    <option value="Money & Finance">Money &amp; Finance</option>
+                                                   
                                                     <option value="Manufacturing & Industry">Manufacturing &amp; Industry</option>
                                                     <option value="Others">Others</option>
                                                     <option value="Property & Real Estate">Property &amp; Real Estate</option>
                                                     <option value="Professional Services">Professional Services</option>
-                                                    <option value="Security">Security</option>
+                                                    
                                                     <option value="Society">Society</option>
                                                      <option value="Shopping">Shopping</option>
                                                     <option value="Sports & Betting">Sports &amp; Betting</option>
