@@ -22,12 +22,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Bursary</a></li>
+            <!--li><a href="#">Bursary</a></li>
             <li><a href="#">Burial Permit</a></li>
             <li><a href="#">CDF</a></li>
-            <li><a href="#">Conflict Resolution</a></li>
-            <li><a href="#">Event Permit</a></li>
-            <li><a href="#">Witness Protection</a></li>
+            <li><a href="#">Conflict Resolution</a></li-->
+            <li><a href="/event">Event Permit</a></li>
+            <!--li><a href="#">Witness Protection</a></li>
             <!--li><a href="#">Private Security Service</a></li-->
           </ul>
         </li>

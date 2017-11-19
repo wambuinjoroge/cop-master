@@ -301,7 +301,7 @@
                                             @endif
                                             </div>    
                                             <div class="form-group{{ $errors->has('city_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label  >City / Town Name</label>
+                                                <label  >City  Name</label>
                                                 <input type="text" name="city_name" class="form-control" placeholder="Enter City or Town Name" value="{{ old('city_name') }}">
                                                 @if ($errors->has('city_name'))
                                                     <span class="help-block">
@@ -321,7 +321,7 @@
                                                     <option value="Public">Public</option>
                                                     <option value ="Private">Private</option>
                                                     <option value ="Diplomatic">Diplomatic</option>
-                                                    
+                                                    <option value ="International">International</option>
                                                 </select>
                                                 @if ($errors->has('sector'))
                                                     <span class="help-block">
@@ -695,8 +695,8 @@
                                         @endif
                                     </div><br>
                                     <div class="form-group{{ $errors->has('cluster') ? 'has-error' : '' }}">
-                                        <label class="control-label">County Code</label>
-                                        <input maxlength="100" type="text" name="cluster" class="form-control" placeholder="Enter County Code e.g KEN001" value="{{ old('cluster') }}" />
+                                        <label class="control-label">Cluster Code</label>
+                                        <input maxlength="100" type="text" name="cluster" class="form-control" placeholder="Enter Cluster Code e.g KEN01CH" value="{{ old('cluster') }}" />
                                         @if ($errors->has('cluster'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('cluster') }}</strong>

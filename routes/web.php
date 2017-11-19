@@ -59,6 +59,8 @@ Auth::routes();
 Route::get('/contacts', 'ContactsController@index');
 Route::get('/contacts/{id}/details', 'ContactsController@viewContactDetails');
 Route::post('/contacts', 'ContactsController@searchContact');
+//event permit
+Route::get('/event', 'EventPermitController@index');
 //visitor pass
 Route::get('/pass', 'PassController@index');
 //courier
