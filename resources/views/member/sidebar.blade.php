@@ -134,14 +134,14 @@
             </span>
           </a>
         </li>
-        <!--li>
+        <li>
           <a href="#">
           <i class="glyphicon glyphicon-cog"></i> <span>Account Settings</span>
             <span class="pull-right-container">
               
             </span>
           </a>
-        </li-->
+        </li>
           </ul>
     </section>
     <!-- /.sidebar -->
