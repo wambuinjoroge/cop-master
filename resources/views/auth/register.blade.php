@@ -356,7 +356,7 @@
                                                     <option value="Hotel & Restaurant">Hospitality /  Hotel &amp; Restaurant</option>
                                                    
                                                     <option value="Manufacturing & Industries">Manufacturing &amp; Industries</option>
-                                                    <option value="Shipping / clearing &amp; Forwarding">Shipping / clearing &amp; Forwarding</option>
+                                                    <option value="Shipping / clearing &amp; Forwarding">Shipping / Clearing &amp; Forwarding</option>
                                                     <option value="Others">Others</option>
                                                     <option value="Petroleum">Petroleum</option>
                                                     <option value="Professional Services">Professional Services</option>
