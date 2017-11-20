@@ -301,7 +301,7 @@
                                             @endif
                                             </div>    
                                             <div class="form-group{{ $errors->has('city_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label  >City  Name</label>
+                                                <label  >Town  Name</label>
                                                 <input type="text" name="city_name" class="form-control" placeholder="Enter City or Town Name" value="{{ old('city_name') }}">
                                                 @if ($errors->has('city_name'))
                                                     <span class="help-block">
@@ -320,7 +320,7 @@
                                                     <option value="select" selected>--select--</option>
                                                     <option value="Public">Public</option>
                                                     <option value ="Private">Private</option>
-                                                    <option value ="Diplomatic">Diplomatic</option>
+                                                    <!--option value ="Diplomatic">Diplomatic</option-->
                                                     <option value ="International">International</option>
                                                 </select>
                                                 @if ($errors->has('sector'))
@@ -337,30 +337,34 @@
                                                     <option value="Advertising" >Advertising / Marketing / PR / Media / Publishing</option>
                                                     <option value="Accounting" >Accounting / Auditing</option>
                                                     <option value="Agriculture">Agriculture / Chemicals</option>
-                                                    <option value="aviation">Airline / Travel / Hospitality</option>
+                                                    <option value="aviation">Airline &amp; Travel</option>
                                                      <option value="Security">Armed Forces / Security Forces</option>
-                                                    <option value="Banking & Finance">Banking &amp; Finance</option>
-                                                     <option value="Beauty & Product">Beauty &amp;Beauty Products </option>
+                                                    <option value="Banking & Finance">Banking / Money  &amp; Finance</option>
+                                                     <option value="Beauty & Product">Beauty & Beauty Products </option>
                                                     <option value="Business Support">Business Support</option>
                                                     <option value="Building & Construction">Building / Architecture / Real Estate &amp; Construction</option>
-                                                    <option value="Computer & Internet">Computer &amp; Internet</option>
+                                                    <option value="Computer & Internet">Computer Hardware / Software / Networking &amp; Internet</option>
                                                     <option value="Cars & Vehicles">Cars &amp; Vehicles</option>
-                                                    <option value="Electrical & Electronic">Electrical / Engineering &amp; Electronic</option>
-                                                    <option value="Energy">Energy</option>
+                                                    <option value="Electrical & Electronic">Electrical / Electronic &amp; Engineering </option>
+                                                    <option value="Education">Education / Learning Institutions</option>
+                                                     <option value="Energy">Energy</option>
                                                     <option value="Entertainment">Entertainment / Film &amp;  Music </option>
                                                     <option value="Fashion & Lifestyle">Fashion &amp; Lifestyle</option>
-                                                     <option value="Government & Parastatals">Government & Parastatals &amp; Institutions</option>
+                                                    <option value="Insurance">Insurance &amp; Legal</option>
+                                                     <option value="Government & Parastatals">Government &amp; Institutions Parastatals </option>
                                                     <option value="Health">Health Services / Medical / Pharmaciticals</option>
-                                                    <option value="Hotel & Restaurant">Hotel &amp; Restaurant</option>
+                                                    <option value="Hotel & Restaurant">Hospitality /  Hotel &amp; Restaurant</option>
                                                    
-                                                    <option value="Manufacturing & Industry">Manufacturing &amp; Industry</option>
+                                                    <option value="Manufacturing & Industries">Manufacturing &amp; Industries</option>
+                                                    <option value="Shipping / clearing &amp; Forwarding">Shipping / clearing &amp; Forwarding</option>
                                                     <option value="Others">Others</option>
-                                                    <option value="Property & Real Estate">Property &amp; Real Estate</option>
+                                                    <option value="Petroleum">Petroleum</option>
                                                     <option value="Professional Services">Professional Services</option>
                                                     
-                                                    <option value="Society">Society</option>
+                                                    <option value="Society">NGOs / Religious / Society &amp; Charity Organizations</option>
                                                      <option value="Shopping">Shopping</option>
                                                     <option value="Sports & Betting">Sports &amp; Betting</option>
+                                                     <option value="UN & Diplomatic Missions">UN & Diplomatic Missions</option>
                                                 </select>
                                                 @if ($errors->has('business_category'))
                                                     <span class="help-block">
