@@ -8,9 +8,13 @@
 </head>
 
 <body>
-	<h1>Hi {{ $user->name }},</h1>
+	<h1>Dear {{ $user->name }},</h1>
 
-	<p>Please click on the following link to activate your ecp account , 
+	<p>Thanks for registering on ecp .Please click on the following link to confirm / activate your 
+
+	   ecp account ,Proceed to login into your account.
+
+	   Thank you !!! 
 
 	  Regards ,
 
