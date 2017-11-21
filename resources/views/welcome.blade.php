@@ -243,14 +243,9 @@
                 <div class="hline"></div><br>
                 <div class="well">
                       <div class="well" >
-                      <img src="{{asset('assets/dist/img/user2-160x160.jpg')}}" class="img-responsive"  alt="Image">
-                        <p>Name : Agweng'</p>
-                        <p>Age : 15yrs</p>
-                        <p>Category: Medical </p>
-                        <p>Condition Category: </p>
-                        <p>Condition Name : </p>
-                        <p>Description : </p>
-                        <p>Amount: Ksh. 5 Million</p>
+                      <div class="well" >
+                       <img src="{{asset('assets/img/appeal.jpeg')}}" class="img-responsive"  alt="Image">
+                    </div>
                     </div>
             </div>
          <a href="index.php/login" class="btn btn-success">More Appeals ...</a> 
