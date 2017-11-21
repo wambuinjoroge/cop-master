@@ -287,15 +287,7 @@
         <div class="hline"></div><br>
          <div class="well">
                       <div class="well" >
-                        <p>Category : Technology</p>
-                         <p>County : Nakuru</p>
-                        <p>Tittle : 7TH  ANNUAL INTERNATIONAL CONFERENCE</p>
-                        <p>Description : RESEARCH, INNOVATION AND KNOWLEDGE TRANSLATION FOR   COMMUNITY TRANSFORMATION</p>
-                        <p>Date  : 21/09/2017 </p>
-                        <p>Time : 08:00 AM - 5:00 PM</p>
-                        <p>Venue : KABARAK UNIVERSITY MAIN CAMPUS</p>
-                        <p>Cost : Free </p>
-                        <p>Contact: 0704 207 449</p>
+                       <img src="{{asset('assets/img/medcamp.jpg')}}" class="img-responsive"  alt="Image">
                     </div>
             </div>
        
