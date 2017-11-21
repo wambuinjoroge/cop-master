@@ -242,13 +242,13 @@
                    <h4><i class="fa fa-shopping-cart"></i> Appeal</h4>
                 <div class="hline"></div><br>
                 <div class="well">
-                      <div class="well" >
+                     
                       <div class="well" >
                        <img src="{{asset('assets/img/appeal.jpeg')}}" class="img-responsive"  alt="Image">
                     </div>
-                    </div>
+                   
             </div>
-         <a href="index.php/login" class="btn btn-success">More Appeals ...</a> 
+         <a href="{{ url('/login') }}" class="btn btn-success">More Appeals ...</a> 
         
                 </div>
                 <div class="col-sm-4"> 
@@ -270,7 +270,7 @@
                     </div>
             </div>
         
-         <a href="index.php/login" class="btn btn-success">More Lost & Found ...</a>  
+         <a href="{{ url('/login') }}" class="btn btn-success">More Lost & Found ...</a>  
  
                 </div>
                 
@@ -281,13 +281,13 @@
       </div>
         <div class="hline"></div><br>
          <div class="well">
-                      <div class="well" >
+                     
                        <img src="{{asset('assets/img/medcamp.jpg')}}" class="img-responsive"  alt="Image">
-                    </div>
+                   
             </div>
        
         <br>
-         <a href="index.php/login" class="btn btn-success">More Events ...</a>  
+         <a href="{{ url('/login') }}" class="btn btn-success">More Events ...</a>  
   
                 </div>
             </div>
