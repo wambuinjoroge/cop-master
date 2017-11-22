@@ -18,9 +18,9 @@ class UssdController extends Controller
 		if($input == "")
 		{
 			$response = "CON Respond using options\n";
-			$response .= "1 Visit ecp website  www.ecp.co.ke\n";
-			$response .= "2 Inquire Information";
-			$response .= "3 Customer Care +254 727750 007";
+			$response .= "1 Visit website  www.ecp.co.ke\n";
+			$response .= "2 Inquire Information\n";
+			$response .= "3 Call +254 727750 007 for more information\n";
 			$response .= "4 Unsubscribe ecp";
 
 		}
@@ -33,7 +33,7 @@ class UssdController extends Controller
 		}
 		else if($input =="1*1" || $input =="1*2" || $input =="1*3" || $input =="2*1" || $input =="2*2" || $input =="2*3")
 		{
-			$response = "END Thank you {{ Auth::user() ->name  }} for using ecp service.";
+			$response = "END Thank you for using ecp service.";
 		}
 
      	return response($response, 200)
