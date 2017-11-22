@@ -17,20 +17,23 @@ class UssdController extends Controller
 
 		if($input == "")
 		{
-			$response = "CON Select a service\n";
-			$response .= "1 Health\n";
-			$response .= "2 Finance";
+			$response = "CON Respond using options\n";
+			$response .= "1 Visit ecp website  www.ecp.co.ke\n";
+			$response .= "2 Inquire Information";
+			$response .= "3 Customer Care +254 727750 007";
+			$response .= "4 Unsubscribe ecp";
+
 		}
 		else if($input == "1" || $input=="2")
 		{
-			$response = "CON Choose a Location\n";
-			$response .= "1 Nairobi\n";
-			$response .= "2 Nakuru\n";
-			$response .= "3 Kisumu";
+			$response = "CON Please Select Service\n";
+			$response .= "1 Verify Information\n";
+			$response .= "2 Check Logs\n";
+			$response .= "3 Retrieve Contact";
 		}
 		else if($input =="1*1" || $input =="1*2" || $input =="1*3" || $input =="2*1" || $input =="2*2" || $input =="2*3")
 		{
-			$response = "END we will get back to you";
+			$response = "END Thank you {{ Auth::user() ->name  }} for using ecp service.";
 		}
 
      	return response($response, 200)
