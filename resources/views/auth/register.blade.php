@@ -162,7 +162,7 @@
                                     <span>Any Special Need </span>
                                     <label class="radio-inline"><input type="radio" name="special_needs" value="0" onclick="show1();" />
                                             No</label>
-                                    <label class="radio-inline"><input type="radio" name="special_needs" value="1" onclick="show2();" />
+                                    <label class="radio-inline "><input type="radio" name="special_needs" value="1" onclick="show2();" />
                                         Yes</label>
                                         
                                         </label>

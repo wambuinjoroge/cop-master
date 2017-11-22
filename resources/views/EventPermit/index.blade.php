@@ -54,137 +54,106 @@
         <center><h4 class="box-title">Event Details</h4></center> 
         <div class="row">
                 <div class="form-group col-md-6 col-sm-6">
-                <label for="exampleInputEmail1">Institution Name</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Institution Name">
+                <label for="exampleInputEmail1">Event Name</label>
+                  <input type="email" class="form-control"  placeholder="Enter Event Name">
           </div>
           <div class="form-group col-md-6 col-sm-6">
-            <label for="exampleInputEmail1">Building Name</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Building Name">
+             <label class="control-label">Event Type</label>
+             <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">--select--</option>
+                  <option >Assembly</option>
+                  <option>Demonstration</option>
+                  <option>Parade</option>
+                  <option>Party</option>
+                  <option>Concert/Perfomance</option>
+                  <option>Roadshow</option>
+                  <option>Education</option>
+                  <option>Others</option>
+                  <option>Marathon</option>
+                  <option>Festival/Outdoor Market</option>
+                </select>
           </div> 
           
           <!-- /.row -->
         </div>
-         <div class="row">
-                <div class="form-group col-md-6 col-sm-6">
-                <label for="exampleInputEmail1">Section / Department Name</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Section or Department Name">
-          </div>
-          <div class="form-group col-md-6 col-sm-6">
-           <div class="row">
-                <div class="form-group col-md-6 col-sm-6">
-                <label for="exampleInputEmail1">Floor Number</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Floor Number">
-          </div>
-          <div class="form-group col-md-6 col-sm-6">
-            <label for="exampleInputEmail1">Room Number / Office Name</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Room Number">
-          </div> 
-          
-          <!-- /.row -->
-        </div>
-          </div> 
-          
-        </div>
-        <center><h4 class="box-title">Visitor's Details</h4></center> 
-        <div class="row">
-                <div class="form-group col-md-6 col-sm-6">
-                <label for="exampleInputEmail1">Identification</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Identification">
-          </div>
-          <div class="form-group col-md-6 col-sm-6">
-           <label for="exampleInputEmail1">Full Name</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Full Name">
-          </div> 
-          
-        </div>
-        <div class="row">
-               <div class="form-group col-md-6 col-sm-6">
-                <label for="exampleInputEmail1">Mobile Number</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Mobile Number">
-          </div>
-         
-           <div class="form-group col-md-6 col-sm-6">
-            <label for=""> Date / Time In</label>
-                   <div class="input-group date">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control pull-right" id="datepicker">
-                </div>
-          </div> 
-         
-          
-        </div>
-        
-        <div class="row">
-                <div class="form-group col-md-6 col-sm-6">
-                <label for="exampleInputEmail1">Purpose </label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter e.g Personal , Official">
-          </div>
-          <div class="form-group col-md-6 col-sm-6">
-           <label for="exampleInputEmail1">Name of Person Seen</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Institution Name">
-          </div> 
-          
-        </div>
-         <div class="row">
-                <div class="form-group col-md-6 col-sm-6">
-                <label for="exampleInputEmail1">Clearing Officer Name</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Institution Name">
-          </div>
-           <div class="form-group col-md-6 col-sm-6">
-            <label for=""> Date / Time In</label>
-                   <div class="input-group date">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control pull-right" id="datepicker">
-                </div>
-          </div> 
-         
-        <div class="form-group">
-                  <label for="ammount">Means of Transport </label>
+         <div class="form-group">
+                  <label for="">Annual Event </label>
+                  <label class="radio-inline"><input type="radio" name="optradio">Yes</label>
                   <label class="radio-inline"><input type="radio" name="optradio">No</label>
-                    <label class="radio-inline"><input type="radio" name="optradio">Yes</label>
 
-          </div>
-        <center><h4 class="box-title">Transport Details</h4></center> 
+          </div> 
+           <div class="form-group">
+                  <label for="">Open to Public </label>
+                  <label class="radio-inline"><input type="radio" name="optradio">Yes</label>
+                  <label class="radio-inline"><input type="radio" name="optradio">No</label>
+
+          </div> 
         <div class="row">
                 <div class="form-group col-md-6 col-sm-6">
-                <label class="control-label">Transport Category</label>
-             <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">--select--</option>
-                  <option >Personal</option>
-                  <option>Commercial</option>
-                  <option>Cargo</option>
-                </select>
-               
+                <label for="">Venue / Place</label>
+                  <input type="" class="form-control"  placeholder="Enter Venue or Place">
           </div>
           <div class="form-group col-md-6 col-sm-6">
-          <label class="control-label">Transport Type</label>
-             <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">--select--</option>
-                  <option >Car</option>
-                  <option>Lorry</option>
-                  <option>Bus</option>
-                  <option>Bicycle</option>
-                  <option>Motor-Cycle</option>
-                  <option>Tractor</option>
-                </select>
+           <label for="">Location</label>
+                  <input type="email" class="form-control"  placeholder="Enter Location Name">
           </div> 
+          </div>
+        </div>
+          <div class="row">
+               <div class="form-group col-md-6 col-sm-6">
+               <label for=""> Start Date / Time </label>
+                   <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="datepicker">
+                </div>
+          </div>
+         
+           <div class="form-group col-md-6 col-sm-6">
+            <label for=""> End Date / Time </label>
+                   <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="datepicker">
+                </div>
+          </div> 
+         
           
         </div>
-        <div class="row">
+         <div class="row">
                 <div class="form-group col-md-6 col-sm-6">
-                 <label for="exampleInputEmail1">Model</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Model Name">
+                <label >Description</label>
+                   <textarea name="" class="form-control" placeholder="Enter Description "  ></textarea>
           </div>
-          <div class="form-group col-md-6 col-sm-6">
-            <label for="exampleInputEmail1">Registration Number</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Registration Number">
-          </div> 
+         <div class="form-group col-md-6 col-sm-6">
+                <label >Address</label>
+                   <textarea name="" class="form-control" placeholder="Enter Address "  ></textarea>
+          </div>
           
         </div>
+        <center><h4 class="box-title">Applicant's Details</h4></center>
+         <div class="form-group">
+                  <label for="ammount">Applicant Type </label>
+                  <label class="radio-inline"><input type="radio" name="optradio">Individual</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">Organizor(s) / Sponsor(s)</label>
+
+          </div> 
+        <div class="row">
+         <div class="form-group col-md-6 col-sm-6">
+           <label for="exampleInputEmail1"> Name</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Full Name">
+          </div>
+                <div class="form-group col-md-6 col-sm-6">
+                 <label >Address</label>
+                   <textarea name="" class="form-control" placeholder="Enter Address "  ></textarea>
+          </div>
+          
+          
+        </div>
+          
+         
         <div class="box-footer">
                  <a id="add_row" class="btn btn-success pull-left">Submit</a><a id='delete_row' class="btn btn-danger pull-right">Exit</a>
               </div>
