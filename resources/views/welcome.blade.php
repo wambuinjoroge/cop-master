@@ -262,10 +262,10 @@
                         <img src="{{asset('assets/dist/img/user2-160x160.jpg')}}" class="img-responsive"  alt="Image">
                         <p>Name : Agweng'</p>
                         <p>Age : 15yrs</p>
-                        <p>Status: Missing</p>
+                        <!--p>Status: Missing</p>
                         <p>Gender: Female</p>
                         <p>Area Name : Runda</p>
-                        <p>Description : </p>
+                        <p>Description : </p-->
                         <p>Contact: 0704 207 449</p>
                     </div>
             </div>
@@ -282,7 +282,7 @@
         <div class="hline"></div><br>
          <div class="well">
                      
-                       <img src="{{asset('assets/img/medcamp.jpg')}}" class="img-responsive"  alt="Image">
+                       <img src="{{asset('assets/img/church.jpg')}}" class="img-responsive"  alt="Image">
                    
             </div>
        
