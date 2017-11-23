@@ -18,11 +18,11 @@ class UssdController extends Controller
 		if($input == "")
 		{
 			$response = "CON Respond using options\n";
-			$response .= "1 Visit website  www.ecp.co.ke\n";
+			$response .= "1 Please visit website www.ecp.co.ke\n";
 			$response .= "2 Inquire Information\n";
 			$response .= "3 Customer Care\n";
-			$response .= "4 Unsubscribe ecp\n";
-			$response .= "5 Subscribe ecp";
+			$response .= "4 Unsubscribe \n";
+			$response .= "5 Subscribe ";
 
 		}
 		else if($input == "1" || $input=="2")
