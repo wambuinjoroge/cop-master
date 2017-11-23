@@ -20,8 +20,9 @@ class UssdController extends Controller
 			$response = "CON Respond using options\n";
 			$response .= "1 Visit website  www.ecp.co.ke\n";
 			$response .= "2 Inquire Information\n";
-			$response .= "3 Call +254 727750 007 for more information\n";
-			$response .= "4 Unsubscribe ecp";
+			$response .= "3 Customer Care\n";
+			$response .= "4 Unsubscribe ecp\n";
+			$response .= "5 Subscribe ecp";
 
 		}
 		else if($input == "1" || $input=="2")
@@ -29,7 +30,7 @@ class UssdController extends Controller
 			$response = "CON Please Select Service\n";
 			$response .= "1 Verify Information\n";
 			$response .= "2 Check Logs\n";
-			$response .= "3 Retrieve Contact";
+			$response .= "3 Search Contact";
 		}
 		else if($input =="1*1" || $input =="1*2" || $input =="1*3" || $input =="2*1" || $input =="2*2" || $input =="2*3")
 		{
