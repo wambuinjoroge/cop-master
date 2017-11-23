@@ -17,8 +17,10 @@ class UssdController extends Controller
 
 		if($input == "")
 		{
+		"Welcome to ecp\n";
 			$response = "CON Respond using options\n";
-			$response .= "1 Please visit website www.ecp.co.ke\n";
+			"Press:\n";
+			$response .= "1 Please visit www.ecp.co.ke\n";
 			$response .= "2 Inquire Information\n";
 			$response .= "3 Customer Care\n";
 			$response .= "4 Unsubscribe \n";
