@@ -119,7 +119,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class=" section-heading">Welcome To <span class="span">ecp</span></h2>
+                    <h2 class=" section-heading">Welcome to <span class="span">ecp</span></h2>
                     <p class="text-center"><span class="span">ecp</span> is platform that connects Community Members , Faith-Based Organizations (FBOs) , Community-Based Organizations <br>(CBOs) , Non-Governmental Organizations (NGOs) , Government Policing Agencies (GPAs) , Private Organizations<br> and  Civil Society Organizations (CSOs) to share information and empower the society at large.</p>
                 </div>
             </div>
