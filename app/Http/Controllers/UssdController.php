@@ -31,7 +31,7 @@ class UssdController extends Controller
 		else if($input == "1" || $input=="2")
 		{
 			$response = "CON Choose Option\n";
-			$response .= "1:Verify Information\n";
+			$response .= "1:Verify Identification\n";
 			$response .= "2:Check Logs\n";
 			//$response .= "3:Contact Directory\n";
 			$response .= "0:BACK\n";
@@ -39,7 +39,7 @@ class UssdController extends Controller
 		}
 		else if($input =="1*1" || $input =="1*2" || $input =="1*3" || $input =="2*1" || $input =="2*2" || $input =="2*3")
 		{
-			$response = "END Thank you for using ecp service.";
+			$response = "END Thank you for using ecp.";
 		}
 
      	return response($response, 200)
