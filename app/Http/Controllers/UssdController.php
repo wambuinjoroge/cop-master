@@ -18,11 +18,11 @@ class UssdController extends Controller
 		if($input == "")
 		{
 		
-			$response = "CON Welcome to ecp\n Please Select Service\n";
+			$response = "CON Welcome to ecp\n Select a Service\n";
 			$response .= "1:Please visit www.ecp.co.ke\n";
 			$response .= "2:Inquire Information\n";
 			$response .= "3:Contact Directory\n";
-			$response .= "4:Call Care\n";
+			$response .= "4:Customer Care\n";
 			$response .= "5:Unsubscribe\n";
 			$response .= "6:Subscribe\n";
 			$response .= "7:Quit ";
