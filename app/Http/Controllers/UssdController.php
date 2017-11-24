@@ -20,11 +20,11 @@ class UssdController extends Controller
 		
 			$response = "CON Welcome to ecp\n Select a Service\n";
 			$response .= "1:Please visit www.ecp.co.ke\n";
-			$response .= "2:Inquire Information\n";
+			$response .= "2:Identification\n";
 			$response .= "3:Contact Directory\n";
 			$response .= "4:Customer Care\n";
-			$response .= "5:Unsubscribe\n";
-			$response .= "6:Subscribe\n";
+			$response .= "5:Subscribe\n";
+			$response .= "6:Unsubscribe\n";
 			$response .= "7:Quit ";
 
 		}
