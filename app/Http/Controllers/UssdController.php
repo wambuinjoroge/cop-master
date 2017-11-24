@@ -21,10 +21,11 @@ class UssdController extends Controller
 			$response = "CON Welcome to ecp\n Please Select Service\n";
 			$response .= "1:Please visit www.ecp.co.ke\n";
 			$response .= "2:Inquire Information\n";
-			$response .= "3:Customer Care\n";
-			$response .= "4:Unsubscribe\n";
-			$response .= "5:Subscribe\n";
-			$response .= "6:Quit ";
+			$response .= "3:Contact Directory\n";
+			$response .= "4:Call Care\n";
+			$response .= "5:Unsubscribe\n";
+			$response .= "6:Subscribe\n";
+			$response .= "7:Quit ";
 
 		}
 		else if($input == "1" || $input=="2")
@@ -32,7 +33,7 @@ class UssdController extends Controller
 			$response = "CON Choose Option\n";
 			$response .= "1:Verify Information\n";
 			$response .= "2:Check Logs\n";
-			$response .= "3:Search Contact\n";
+			//$response .= "3:Contact Directory\n";
 			$response .= "0:BACK\n";
 			$response .= "00:HOME";
 		}
