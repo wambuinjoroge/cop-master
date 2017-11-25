@@ -137,7 +137,7 @@
                                     <h4>Efficient</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="lead-in">Its secure , easy and fast.</p>
+                                    <p class="lead-in">It's secure , easy and fast.</p>
                                 </div>
                             </div>
                 </div>
@@ -165,7 +165,7 @@
                                     <h4> Alerts</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="lead-in">Receive instant SMS and email alerts for confirmation and status.</p>
+                                    <p class="lead-in">Receive instant alerts for<br>  confirmation and status.</p>
                                 </div>
                             </div>
                 </div>
@@ -179,7 +179,7 @@
                                     <h4>Online Services</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="lead-in">Fill online application forms, submit then receive feedback on Any device .</p>
+                                    <p class="lead-in">Fill online application forms,submit then get feedback on Any device .</p>
                                 </div>
                             </div>
                 </div>
