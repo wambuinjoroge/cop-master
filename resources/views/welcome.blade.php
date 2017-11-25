@@ -179,7 +179,8 @@
                                     <h4>Online Services</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="lead-in">Fill online application forms,submit then get feedback on Any device .</p>
+                                    <p class="lead-in">Fill online application forms , submit <br>
+                                     then get feedback on Any device.</p>
                                 </div>
                             </div>
                 </div>
