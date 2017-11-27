@@ -14,6 +14,14 @@
             <i class="fa fa-home"></i> <span>Dashboard</span>
           </a>
         </li>
+        <li>
+          <a href="#">
+           <i class="fa fa-shopping-cart"></i> <span>Report</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
          <li class="treeview">
           <a href="#">
             <i class="fa fa-edit"></i> <span>Applications</span>
@@ -27,6 +35,7 @@
             <li><a href="#">CDF</a></li>
             <li><a href="#">Conflict Resolution</a></li-->
             <li><a href="/event">Event Permit</a></li>
+            <li><a href="#">Reference Letter</a></li>
             <!--li><a href="#">Witness Protection</a></li>
             <!--li><a href="#">Private Security Service</a></li-->
           </ul>
