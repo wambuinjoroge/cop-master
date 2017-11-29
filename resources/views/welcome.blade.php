@@ -119,7 +119,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class=" section-heading">Welcome To <span class="span">ecp</span></h2>
+                    <h2 class=" section-heading">Welcome to <span class="span">ecp</span></h2>
                     <p class="text-center"><span class="span">ecp</span> is platform that connects Community Members , Faith-Based Organizations (FBOs) , Community-Based Organizations <br>(CBOs) , Non-Governmental Organizations (NGOs) , Government Policing Agencies (GPAs) , Private Organizations<br> and  Civil Society Organizations (CSOs) to share information and empower the society at large.</p>
                 </div>
             </div>
@@ -137,7 +137,7 @@
                                     <h4>Efficient</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="lead-in">Its secure , easy and fast.</p>
+                                    <p class="lead-in">It's secure , easy and fast.</p>
                                 </div>
                             </div>
                 </div>
@@ -165,7 +165,7 @@
                                     <h4> Alerts</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="lead-in">Receive instant SMS and email alerts for confirmation and status.</p>
+                                    <p class="lead-in">Receive instant alerts for<br>  confirmation and status.</p>
                                 </div>
                             </div>
                 </div>
@@ -179,7 +179,8 @@
                                     <h4>Online Services</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="lead-in">Fill online application forms, submit then receive feedback on Any device .</p>
+                                    <p class="lead-in">Fill online application forms , submit <br>
+                                     then get feedback on Any device.</p>
                                 </div>
                             </div>
                 </div>
