@@ -5,13 +5,16 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Role;
+use DB;
+use Session;
 
 class UserController extends Controller
 {
     //
       public function __construct(User $user)
     {
-        $this->middleware('auth');
+       // $this->middleware('auth');
         // Dependency injection
         $this->user = $user;
     }
@@ -75,4 +78,54 @@ class UserController extends Controller
         endif;
         return redirect()->back();
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $user = User::find($id);
+        return view('admin/user/show', compact('user'));
+    }
+
+    /**
+     * Show the form for changing the role of a 
+     * specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function getChangeRole($id)
+    {
+        $user = User::where('id', '=', $id)->first();
+        $roles = Role::all();
+        $user_roles = $user->roles()->pluck('id', 'id')->toArray();
+        return view('admin/user/change-role', compact('user', 'roles', 'user_roles'));
+    }
+
+    /**
+     * Change the role of a specified resource
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function postChangeRole(Request $request, $id)
+    {
+        $user = User::find($id);
+
+        DB::table('role_user')->where('user_id',$id)->delete();
+        $user->attachRoles($request->roles);
+        
+        //Flash Message
+        Session::flash('change-role', 'The role was changed successfully!');
+
+        // Redirect to view the post with saved changes
+        return redirect()->route('user.show', $user->id);
+    }
+
+
 }
