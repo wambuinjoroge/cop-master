@@ -59,11 +59,15 @@ class UssdController extends Controller
     private function verifyIdentity($id_number)
     {
         $user = User::where('id_no',$id_number)->get()->first();
-        $details = "ID No ".$user->id_no."\n";
-        $details .= "NAME ".$user->name."\n";
-        $details .= "PHONE ".$user->mobile_no."\n";
-        $details .= "COUNTY ".$user->residence->county_residence."\n";
-        $details .= "CONSTITUENCY ".$user->residence->constituency."\n";
+        if(!is_null($user)){
+            $details = "ID No ".$user->id_no."\n";
+            $details .= "NAME ".$user->name."\n";
+            $details .= "PHONE ".$user->mobile_no."\n";
+            $details .= "COUNTY ".$user->residence->county_residence."\n";
+            $details .= "CONSTITUENCY ".$user->residence->constituency."\n";
+        }
+        else
+          $details = "User not found\n";
         return $details;
     }
 }
