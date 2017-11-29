@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Role;
 use App\Permission;
 use DB;
+use Session;
 
 class RoleController extends Controller
 {
@@ -57,6 +58,7 @@ class RoleController extends Controller
            $role->attachPermissions($request->permissions);
        }
 
+       Session::flash('new-role', 'You have successfully created the '. $role->name . ' role');
        return redirect()->route('roles.show', $role->id);
     }
 
@@ -111,6 +113,7 @@ class RoleController extends Controller
            $role->attachPermissions($request->permissions);
         }
         
+        Session::flash('update-role', 'You have successfully created the '. $role->name . ' role');
         return redirect()->route('roles.show', $id);
     }
 

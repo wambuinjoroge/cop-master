@@ -84,6 +84,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function()
 {
     Route::resource('user', 'UserController');
     Route::resource('roles', 'RoleController');
+    Route::resource('permissions', 'PermissionController');
+    Route::get('change-role/{id}', 'UserController@getChangeRole')->name('user.role');
+	Route::post('change-role/{id}', 'UserController@postChangeRole')->name('user.role.change');
 });
 
 Route::post('/callback/ussd','UssdController@index');

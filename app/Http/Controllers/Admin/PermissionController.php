@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Permission;
+use Illuminate\Support\Facades\Session;
 
 class PermissionController extends Controller
 {
@@ -36,7 +38,20 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|alpha_dash|unique:permissions,name',
+            'display_name' => 'required|min:5|max:100',
+            'description' => 'required|min:5|max:255'
+        ]);
+
+        $permission = new Permission;
+        $permission->name = $request->name;
+        $permission->display_name = $request->display_name;
+        $permission->description = $request->description;
+        $permission->save();
+
+        Session::flash('new-permission', 'You have successfully created the '. $permission->name . ' permission');
+        return redirect()->route('permissions.show', $permission->id);
     }
 
     /**
@@ -47,7 +62,8 @@ class PermissionController extends Controller
      */
     public function show($id)
     {
-        //
+        $permission = Permission::find($id);
+        return view('admin/permission/show', compact('permission'));
     }
 
     /**
@@ -58,7 +74,8 @@ class PermissionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $permission = Permission::find($id);
+        return view('admin/permission/edit', compact('permission'));
     }
 
     /**
@@ -70,7 +87,18 @@ class PermissionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $this->validate($request, [
+            'display_name' => 'required|min:5|max:100',
+            'description' => 'required|min:5|max:255'
+        ]);
+
+        $permission = Permission::find($id);
+        $permission->display_name = $request->display_name;
+        $permission->description = $request->description;
+        $permission->save();
+        
+        Session::flash('update-permission', 'You have successfully updated the '. $permission->name . ' permission');
+        return redirect()->route('permissions.show', $id);
     }
 
     /**

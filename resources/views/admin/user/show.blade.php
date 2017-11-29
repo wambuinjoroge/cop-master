@@ -28,7 +28,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        All Users
+        View {{ $user->name }}
       </h1>
       <ol class="breadcrumb">
        <li><a href="/member"><i class="fa fa-home" ></i>Dashboard</a></li>
@@ -42,7 +42,7 @@
       <!-- SELECT2 EXAMPLE -->
       <div class="box box-default">
         <div class="box-header with-border">
-         <center><h3 class="box-title">Registered Users</h3></center> 
+         <center><h3 class="box-title">{{ $user->name }}'s Details</h3></center> 
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -51,41 +51,22 @@
         </div>
         <!-- /.box-header -->
         <div class="box-body">
+
+          <div>
+            @include('alerts/alerts')
+          </div>
       
-            <a href="" class="btn btn-success btn-xs">New User</a><br>
-    
-          <table class="table table-responsive table-striped table-bordered">
-            <thead>
-              <th>User ID</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Role</th>
-              <th>Joined On</th>
-              <th>Action</th>
-            </thead>
-            <tbody>
-              @forelse ($users as $user)
-                  <td>{{ $user->id }}</td>
-                  <td>{{ $user->name }}</td>
-                  <td>{{ $user->email }}</td>
-                  <td>
-                    @foreach($user->roles as $role)
-                      <span class="label label-info">{{ $role->name }}</span>
-                    @endforeach
-                  </td>
-                  <td>{{ $user->created_at->format('Y-m-d') }}</td>
-                  <td>
-                    <a href="{{ route('user.show', $user->id) }}" class="">View</a> &nbsp;&nbsp;
-                    <a href="" class="">Edit</a> &nbsp;&nbsp;
-                    <a href="" class="">Delete</a> &nbsp;&nbsp;
-                  </td>
-              @empty
-                  <td colspan="6" class="alert alert-warning">No users available</td>
-              @endforelse
-            </tbody>
-          </table>
-          {!! $users->links() !!}
-      
+          <strong>Name: </strong>{{ $user->name }} <br>
+          <strong>ID/Passport No: </strong>{{ $user->id_no }} <br>
+          <strong>Email: </strong>{{ $user->email }} <br>
+          <strong>Mobile No: </strong>{{ $user->mobile_no }} <br>
+          <strong>Role(s): </strong>
+          @foreach($user->roles as $role)
+            <span class="label label-primary">{{ $role->name }}</span>
+          @endforeach <br><br>
+          <a href="{{ route('user.role', $user->id) }}" class="btn btn-sm btn-primary">Change role</a>
+
+
         </div>
         <!-- /.box -->
 

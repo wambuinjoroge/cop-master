@@ -71,8 +71,8 @@
                   <td>{{ $role->description }}</td>
                   <td>{{ count($role->users) }}</td>
                   <td>
-                    <a href="" class="">View</a> &nbsp;&nbsp;
-                    <a href="" class="">Edit</a> &nbsp;&nbsp;
+                    <a href="{{ route('roles.show', $role->id) }}" class="">View</a> &nbsp;&nbsp;
+                    <a href="{{ route('roles.edit', $role->id) }}" class="">Edit</a> &nbsp;&nbsp;
                     <a href="" class="">Delete</a> &nbsp;&nbsp;
                   </td>
               @endforeach

@@ -28,7 +28,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        New Permission
+        Edit Permission
       </h1>
       <ol class="breadcrumb">
        <li><a href="/member"><i class="fa fa-home" ></i>Dashboard</a></li>
@@ -42,7 +42,7 @@
       <!-- SELECT2 EXAMPLE -->
       <div class="box box-default">
         <div class="box-header with-border">
-         <center><h3 class="box-title">Create New Permission</h3></center> 
+         <center><h3 class="box-title">Edit {{ $permission->name }} permission</h3></center> 
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -52,12 +52,13 @@
         <!-- /.box-header -->
         <div class="box-body">
       
-            <form action="{{ route('permissions.store') }}" method="POST">
-               {{ csrf_field() }} 
+            <form action="{{ route('permissions.update', $permission->id) }}" method="POST">
+               {{ csrf_field() }}
+               {{ method_field('PATCH') }} 
                <div id="basic">
                    <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                       <label>Name(Pick your choice carefully, this can't be edited later once saved)</label> 
-                        <input type="text" placeholder="eg create-user" value="{{ old('name') }}" name="name" class="form-control" required>
+                       <label>Name(This can't be edited)</label> 
+                        <input type="text" value="{{ $permission->name }}" name="name" class="form-control" required disabled>
                         <!-- If role name has error -->
                         @if ($errors->has('name'))
                             <span class="help-block">
@@ -67,7 +68,7 @@
                    </div>
                    <div class="form-group{{ $errors->has('display_name') ? ' has-error' : '' }}">
                        <label>Display Name</label> 
-                        <input type="text" placeholder="eg Create Users" value="{{ old('display_name') }}" name="display_name" class="form-control" minlength="5" maxlength="100" required>
+                        <input type="text" value="{{ $permission->display_name }}" name="display_name" class="form-control" minlength="5" maxlength="100" required>
                         <!-- If role name has error -->
                         @if ($errors->has('display_name'))
                             <span class="help-block">
@@ -77,7 +78,7 @@
                    </div>
                    <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
                        <label>Description</label> 
-                        <input type="text" placeholder="eg Allows a user to create other users" value="{{ old('description') }}" name="description" class="form-control" required>
+                        <input type="text" value="{{ $permission->description }}" name="description" class="form-control" required>
                         <!-- If display name has error -->
                         @if ($errors->has('description'))
                             <span class="help-block">
