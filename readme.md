@@ -1,19 +1,19 @@
 
-###################
+*******************
 ecp
-###################
+*******************
 
 e-community police 
 
-###################
+*******************
 What is ecp
-###################
+*******************
 
 ecp is platform that connects Community Members , Faith-Based Organizations (FBOs) , Community-Based Organizations (CBOs) , Non-Governmental Organizations (NGOs) , Government Policing Agencies (GPAs) , Private Organizations and Civil Society Organizations (CSOs) to share information and empower the society at large.
 
-*******************
+**************************************
 Release Version Information
-*******************
+**************************************
 
 Version Trial 1.0.0
 
