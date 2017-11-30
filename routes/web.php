@@ -78,7 +78,7 @@ Route::get('/bail', 'BailController@index');
 //contribution
 Route::get('/contribution', 'ContributionsController@index');
 // Administrator routes
-Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function()
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 {
     Route::resource('user', 'UserController');
     Route::resource('roles', 'RoleController');
