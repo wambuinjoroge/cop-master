@@ -46,9 +46,9 @@ class UssdController extends Controller
         {
             $matches = "";
             preg_match_all("!([0-9]{8})!",$input,$matches);
-            $id_no = $matches[0][0];
+            $id_number = $matches[0][0];
             $response="END Your Identification Details : \n";
-            $response .= $this->verifyIdentity($id_no);
+            $response .= $this->verifyIdentity($id_number);
         }
 
 
@@ -58,7 +58,7 @@ class UssdController extends Controller
 
     private function verifyIdentity($id_number)
     {
-        $user = User::where('id_no',$id_no)->get()->first();
+        $user = User::where('id_no',$id_number)->get()->first();
         if(!is_null($user)){
             
             $details .= "Name : ".$user->name."\n";
