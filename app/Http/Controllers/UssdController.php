@@ -38,7 +38,7 @@ class UssdController extends Controller
             $response .= "0:BACK\n";
             $response .= "00:HOME";
         }
-        else if($input =="1*1" )
+        else if($input =="2*1" )
         {
             $response = "CON Enter Identification Number\n";
         }
@@ -64,9 +64,9 @@ class UssdController extends Controller
             $details .= "Name : ".$user->name."\n";
             $details  = "ID No : ".$user->id_no."\n";
             $details .= "Mobile No : ".$user->mobile_no."\n";
-            //$details .= "Employment County : ".$user->residence->county_name."\n";
-            //$details .= "Employer Name : ".$user->residence->institution_name."\n";
-            //$details .= "Branch Name : ".$user->residence->branch_name."\n";
+            //$details .= "Employment County : ".$user->employment->county_name."\n";
+            //$details .= "Employer Name : ".$user->employment->institution_name."\n";
+            //$details .= "Branch Name : ".$user->employment->branch_name."\n";
             $details .= "Resident County : ".$user->residence->county_residence."\n";
             $details .= "Constituency : ".$user->residence->constituency."\n";
             $details .= "Household Name : ".$user->residence->household_name."\n";
