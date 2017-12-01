@@ -40,7 +40,7 @@ class UssdController extends Controller
         }
         else if($input =="1*1" )
         {
-            $response = "CON Enter ID Number\n";
+            $response = "CON Enter Identification Number\n";
         }
         else if(preg_match("/^1\*1\*[0-9]{8}$/",$input))
         {
@@ -60,11 +60,16 @@ class UssdController extends Controller
     {
         $user = User::where('id_no',$id_number)->get()->first();
         if(!is_null($user)){
-            $details = "ID No ".$user->id_no."\n";
-            $details .= "NAME ".$user->name."\n";
-            $details .= "PHONE ".$user->mobile_no."\n";
-            $details .= "COUNTY ".$user->residence->county_residence."\n";
-            $details .= "CONSTITUENCY ".$user->residence->constituency."\n";
+            
+            $details .= "Name : ".$user->name."\n";
+            $details  = "ID No : ".$user->id_no."\n";
+            $details .= "Mobile No : ".$user->mobile_no."\n";
+            //$details .= "Employment County : ".$user->residence->county_name."\n";
+            //$details .= "Employer Name : ".$user->residence->institution_name."\n";
+            //$details .= "Branch Name : ".$user->residence->branch_name."\n";
+            $details .= "Resident County : ".$user->residence->county_residence."\n";
+            $details .= "Constituency : ".$user->residence->constituency."\n";
+            $details .= "Household Name : ".$user->residence->household_name."\n";
         }
         else
           $details = "User not found\n";
