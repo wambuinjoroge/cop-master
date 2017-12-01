@@ -47,7 +47,7 @@ class UssdController extends Controller
             $matches = "";
             preg_match_all("!([0-9]{8})!",$input,$matches);
             $id_number = $matches[0][0];
-            $response="END USER DETAILS\n";
+            $response="END Your Identification Details : \n";
             $response .= $this->verifyIdentity($id_number);
         }
 
