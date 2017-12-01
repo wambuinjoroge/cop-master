@@ -60,9 +60,9 @@ class UssdController extends Controller
     {
         $user = User::where('id_no',$id_number)->get()->first();
         if(!is_null($user)){
-            $details  = "ID No : ".$user->id_no."\n";
+            
             $details .= "Name : ".$user->name."\n";
-            //$details  = "ID No : ".$user->id_no."\n";
+            $details  = "ID No : ".$user->id_no."\n";
             $details .= "Mobile No : ".$user->mobile_no."\n";
             //$details .= "Employment County : ".$user->employment->county_name."\n";
             //$details .= "Employer Name : ".$user->employment->institution_name."\n";
