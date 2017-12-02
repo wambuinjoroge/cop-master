@@ -65,8 +65,8 @@ class UssdController extends Controller
         $user = User::where('id_no',$id_number)->get()->first();
         if(!is_null($user)){
             
-            $details .= "Name : ".$user->name."\n";
-            $details  = "Identification : ".$user->id_no."\n";
+            $details  = "Name : ".$user->name."\n";
+            $details .= "Identification : ".$user->id_no."\n";
             $details .= "Mobile No : ".$user->mobile_no."\n";
             $details .= "Employment County : ".$user->employment->county_name."\n";
             $details .= "Employer Name : ".$user->employment->institution_name."\n";
@@ -79,6 +79,7 @@ class UssdController extends Controller
         }
         else
           $details = "User not found\n";
+
         return $details;
     }
 }
