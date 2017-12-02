@@ -65,7 +65,8 @@ class UssdController extends Controller
         $user = User::where('id_no',$id_number)->get()->first();
         if(!is_null($user)){
             
-            $details  = "Name : ".$user->name."\n";
+            // you must first create a variable before appending to it. your mistake was $details .= "Name : ".$user->name."\n";
+            $details  = "Name : ".$user->name."\n"; 
             $details .= "Identification : ".$user->id_no."\n";
             $details .= "Mobile No : ".$user->mobile_no."\n";
             //map relations in Models first before calling them. employmet relation is not mapped
