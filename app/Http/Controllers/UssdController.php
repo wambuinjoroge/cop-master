@@ -50,6 +50,10 @@ class UssdController extends Controller
             $response="END Your Identification Details : \n";
             $response .= $this->verifyIdentity($id_number);
         }
+        else
+	{
+	   $response = "END Invalid input\n";	
+	}
 
 
         return response($response, 200)
@@ -64,12 +68,14 @@ class UssdController extends Controller
             $details .= "Name : ".$user->name."\n";
             $details  = "Identification : ".$user->id_no."\n";
             $details .= "Mobile No : ".$user->mobile_no."\n";
-            //$details .= "Employment County : ".$user->employment->county_name."\n";
-            //$details .= "Employer Name : ".$user->employment->institution_name."\n";
-            //$details .= "Branch Name : ".$user->employment->branch_name."\n";
-            $details .= "Resident County : ".$user->residence->county_residence."\n";
-            $details .= "Constituency : ".$user->residence->constituency."\n";
-            $details .= "Building Name : ".$user->residence->household_name."\n";
+            $details .= "Employment County : ".$user->employment->county_name."\n";
+            $details .= "Employer Name : ".$user->employment->institution_name."\n";
+            $details .= "Branch Name : ".$user->employment->branch_name."\n";
+	    
+            //map relations in Models first before calling them
+            //$details .= "Resident County : ".$user->residence->county_residence."\n";
+            //$details .= "Constituency : ".$user->residence->constituency."\n";
+            //$details .= "Building Name : ".$user->residence->household_name."\n";
         }
         else
           $details = "User not found\n";
