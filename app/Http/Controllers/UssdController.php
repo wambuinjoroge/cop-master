@@ -42,7 +42,7 @@ class UssdController extends Controller
         {
             $response = "CON Please enter Identification\n e.g ID or Passport No\n";
         }
-        else if(preg_match("/^1\*1\*[0-9]{8}$/",$input))
+        else if(preg_match("/^2\*1\*[0-9]{8}$/",$input))
         {
             $matches = "";
             preg_match_all("!([0-9]{8})!",$input,$matches);
