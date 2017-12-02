@@ -40,7 +40,7 @@ class UssdController extends Controller
         }
         else if($input =="2*1" )
         {
-            $response = "CON Please enter Identification \ne.g National ID or Passport No\n";
+            $response = "CON Please enter Identification\n e.g ID or Passport No\n";
         }
         else if(preg_match("/^1\*1\*[0-9]{8}$/",$input))
         {
@@ -62,14 +62,14 @@ class UssdController extends Controller
         if(!is_null($user)){
             
             $details .= "Name : ".$user->name."\n";
-            $details  = "ID No : ".$user->id_no."\n";
+            $details  = "Identification : ".$user->id_no."\n";
             $details .= "Mobile No : ".$user->mobile_no."\n";
             //$details .= "Employment County : ".$user->employment->county_name."\n";
             //$details .= "Employer Name : ".$user->employment->institution_name."\n";
             //$details .= "Branch Name : ".$user->employment->branch_name."\n";
             $details .= "Resident County : ".$user->residence->county_residence."\n";
             $details .= "Constituency : ".$user->residence->constituency."\n";
-            $details .= "Household Name : ".$user->residence->household_name."\n";
+            $details .= "Building Name : ".$user->residence->household_name."\n";
         }
         else
           $details = "User not found\n";

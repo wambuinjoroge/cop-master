@@ -593,11 +593,12 @@
                                     <div class="form-bottom">
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('household_type') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label  >Household Type </label>
+                                                <label  >House Type </label>
                                                 <select class="form-control" name="household_type">
                                                     <option value="" selected>--select--</option>
                                                     <option value="Estate">Estate</option>
                                                     <option value="Market Center">Market Center</option>
+                                                    <option value="Slum">Slum</option>
                                                     <option value="Apartment">Apartment</option>
                                                     <option value="Homestead">Homestead</option>
                                                     <option value="Bulla">Bulla</option>
@@ -615,8 +616,8 @@
                                             </div>
 
                                             <div class="form-group{{ $errors->has('household_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">Household Name</label>
-                                                <input maxlength="100" type="text" name="household_name" class="form-control" placeholder="Enter Household or Building  Name" value="{{ old('household_name') }}" />
+                                                <label class="control-label">House Name</label>
+                                                <input maxlength="100" type="text" name="household_name" class="form-control" placeholder="Enter House or Building  Name" value="{{ old('household_name') }}" />
                                                 @if ($errors->has('household_name'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('household_name') }}</strong>
