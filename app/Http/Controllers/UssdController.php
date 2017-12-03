@@ -40,14 +40,14 @@ class UssdController extends Controller
         }
         else if($input =="2*1" )
         {
-            $response = "CON Enter Identification Number:\n e.g ID or Passport\n";
+            $response = "CON Enter Identification Number :\n e.g ID or Passport\n";
         }
         else if(preg_match("/^2\*1\*[0-9]{8}$/",$input))
         {
             $matches = "";
             preg_match_all("!([0-9]{8})!",$input,$matches);
             $id_number = $matches[0][0];
-            $response="END Your Community Membership Identification Details :\n";
+            $response="END Your Community Membership Details :\n";
             $response .= $this->verifyIdentity($id_number);
         }
         else
