@@ -42,7 +42,7 @@ class UssdController extends Controller
         {
             $response = "CON Please enter Identification No:\n e.g ID or Passport\n";
         }
-        else if(preg_match("/^1\*1\*[0-9]{8}$/",$input))
+        else if(preg_match("/^2\*1\*[0-9]{8}$/",$input))
         {
             $matches = "";
             preg_match_all("!([0-9]{8})!",$input,$matches);
@@ -51,7 +51,10 @@ class UssdController extends Controller
             $response .= $this->verifyIdentity($id_number);
         }
 
-
+             else
+                {
+                   $response = "END Invalid input\n";   
+                }
         return response($response, 200)
             ->header('Content-Type', 'text/plain');
     }
