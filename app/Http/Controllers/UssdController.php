@@ -65,8 +65,8 @@ class UssdController extends Controller
         $user = User::where('id_no',$id_number)->get()->first();
         if(!is_null($user)){
             // you must first create a variable before appending to it. your mistake was $details .= "Name : ".$user->name."\n";
+            $details .= "Identification No : ".$user->id_no."\n";
             $details  = "Full Name : ".$user->name."\n"; 
-            $details .= "ID No : ".$user->id_no."\n";
             $details .= "Mobile No : ".$user->mobile_no."\n";
             //map relations in Models first before calling them. employmet relation is not mapped
             //$details .= "Employment County : ".$user->employment->county_name."\n";
@@ -79,7 +79,7 @@ class UssdController extends Controller
 
         }
         else
-          $details = "User not found\n";
+          $details = " Community Member not found\n";
 
         return $details;
     }
