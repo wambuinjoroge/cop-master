@@ -40,7 +40,7 @@ class UssdController extends Controller
         }
         else if($input =="2*1" )
         {
-            $response = "CON Please enter Identification No:\n e.g ID or Passport\n";
+            $response = "CON Please enter Identification Number :\n e.g ID or Passport\n";
         }
         else if(preg_match("/^2\*1\*[0-9]{8}$/",$input))
         {
