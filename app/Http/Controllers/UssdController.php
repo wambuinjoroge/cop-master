@@ -31,7 +31,7 @@ class UssdController extends Controller
         }
         else if($input == "1" || $input=="2")
         {
-            $response = "CON Choose Option\n";
+            $response = "CON Choose an Option\n";
             $response .= "1:Verify Identification\n";
             $response .= "2:Check Logs\n";
             //$response .= "3:Contact Directory\n";
@@ -40,14 +40,14 @@ class UssdController extends Controller
         }
         else if($input =="2*1" )
         {
-            $response = "CON Please enter Identification\n e.g ID or Passport No\n";
+            $response = "CON Please enter Identification Number:\n e.g ID or Passport\n";
         }
         else if(preg_match("/^1\*1\*[0-9]{8}$/",$input))
         {
             $matches = "";
             preg_match_all("!([0-9]{8})!",$input,$matches);
             $id_number = $matches[0][0];
-            $response="END Your Identification Details : \n";
+            $response="END Your Community Membership Identification Details :\n";
             $response .= $this->verifyIdentity($id_number);
         }
 
@@ -60,16 +60,16 @@ class UssdController extends Controller
     {
         $user = User::where('id_no',$id_number)->get()->first();
         if(!is_null($user)){
-            
-            $details .= "Name : ".$user->name."\n";
-            $details  = "Identification : ".$user->id_no."\n";
-            $details .= "Mobile No : ".$user->mobile_no."\n";
+            $details .= "Full Name: ".$user->name."\n";
+            $details  = "Identification No: ".$user->id_no."\n";
+            $details .= "Mobile No: ".$user->mobile_no."\n";
             //$details .= "Employment County : ".$user->employment->county_name."\n";
             //$details .= "Employer Name : ".$user->employment->institution_name."\n";
             //$details .= "Branch Name : ".$user->employment->branch_name."\n";
-            $details .= "Resident County : ".$user->residence->county_residence."\n";
-            $details .= "Constituency : ".$user->residence->constituency."\n";
-            $details .= "Building Name : ".$user->residence->household_name."\n";
+            $details .= "Resident County: ".$user->residence->county_residence."\n";
+            $details .= "Constituency: ".$user->residence->constituency."\n";
+            $details .= "Building Name: ".$user->residence->household_name."\n";
+            //$details .= "Cluster Code : ".$user->household->cluster."\n";
         }
         else
           $details = "User not found\n";
