@@ -40,7 +40,7 @@ class UssdController extends Controller
         }
         else if($input =="2*1" )
         {
-            $response = "CON Please enter Identification\n e.g ID or Passport No\n";
+            $response = "CON Please enter Identification No:\n e.g ID or Passport\n";
         }
         else if(preg_match("/^1\*1\*[0-9]{8}$/",$input))
         {
@@ -60,9 +60,11 @@ class UssdController extends Controller
     {
         $user = User::where('id_no',$id_number)->get()->first();
         if(!is_null($user)){
+            // you must first create a variable before appending to it. your mistake was $details .= "Name : ".$user->name."\n";
             $details .= "Name : ".$user->name."\n";
             $details  = "Identification : ".$user->id_no."\n";
             $details .= "Mobile No : ".$user->mobile_no."\n";
+            //map relations in Models first before calling them. employmet relation is not mapped
             //$details .= "Employment County : ".$user->employment->county_name."\n";
             //$details .= "Employer Name : ".$user->employment->institution_name."\n";
             //$details .= "Branch Name : ".$user->employment->branch_name."\n";
