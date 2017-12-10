@@ -21,7 +21,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-unlock"></i>Permissions</a></li>
+                <!--li><a href="#"><i class="fa fa-unlock"></i>Permissions</a></li-->
                 <li><a href="{{ route('roles.index') }}"><i class="fa fa-cog"></i>Roles</a></li>
                 <li><a href="/admin/user"><i class="fa fa-user-plus"></i>Users</a></li>
 
