@@ -13,6 +13,8 @@ class CreateTableHouseholdDetails extends Migration
      */
     public function up()
     {
+        if(Schema::hasTable('household_details'))
+            return;
         Schema::create('household_details', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();

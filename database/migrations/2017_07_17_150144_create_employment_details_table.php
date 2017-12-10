@@ -13,6 +13,8 @@ class CreateEmploymentDetailsTable extends Migration
      */
     public function up()
     {
+        if(Schema::hasTable('employment_details'))
+            return;
         Schema::create('employment_details', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
