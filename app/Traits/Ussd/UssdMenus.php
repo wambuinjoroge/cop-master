@@ -18,7 +18,7 @@ trait UssdMenus
         $response .= "1:Visit our website\n";
         $response .= "2:Identification\n";
         $response .= "3:Contact Directory\n";
-        $response .= "4:Revenue Collection\n";
+        $response .= "4:Revenue\n";
         $response .= "5:Customer Care\n";
         $response .= "6:Subscribe\n";
         $response .= "7:Unsubscribe\n";
@@ -45,6 +45,16 @@ trait UssdMenus
         $response .= "4:Location\n";
         $response .= "5:Mobile Money\n";
         $response .= "6:Bank Account\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
+    private function revenue_menu()
+    {
+        $response = "CON Proceed\n";
+        $response .= "1:Revenue Collection\n";
+        $response .= "2:Revenue Statement\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;

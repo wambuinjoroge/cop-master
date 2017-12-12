@@ -24,7 +24,7 @@ class UssdController extends Controller
         }
         elseif($input == "1")
         {
-            $response = "END Our website adress is\n\n www.ecp.co.ke\n";
+            $response = "END Please Visit\n\n www.ecp.co.ke for more information\n";
         }
         else if($input=="2")
         {
@@ -50,8 +50,25 @@ class UssdController extends Controller
         }
         else if(preg_match("/^3\*1\*[a-zA-Z' ]+$/",$input))
         {
-            $response="END Contact Details :\n";
+            $response="END Institution Address  Details :\n";
             $response .= $this->findInstitution($input);
+        }
+        else if($input=="4")
+        {
+            $response = $this->revenue_menu();
+        }
+        else if($input =="4*1" )
+        {
+            $response = "CON Enter County Name :\n";
+        }
+        else if(preg_match("/^4\*1\*[a-zA-Z' ]+$/",$input))
+        {
+            $response="END Receipt Details :\n";
+            $response .= $this->revenue_menu($input);
+        }
+        elseif($input == "5")
+        {
+            $response = "END Customer Care\n\n +254 (0) 727-750-007\n\n contact@ecp.co.ke\n";
         }
         else
         {
