@@ -59,7 +59,7 @@ class UssdController extends Controller
         }
         else if($input =="4*1" )
         {
-            $response = "CON Enter County Name :\n";
+            $response = "CON Enter County Code :\n";
         }
         else if(preg_match("/^4\*1\*[a-zA-Z' ]+$/",$input))
         {
