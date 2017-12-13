@@ -24,7 +24,7 @@ class UssdController extends Controller
         }
         elseif($input == "1")
         {
-            $response = "END For more information Please Visit\n\n www.ecp.co.ke \n";
+            $response = "END For More Information Please Visit :\n\n www.ecp.co.ke \n";
         }
         else if($input=="2")
         {
@@ -68,7 +68,7 @@ class UssdController extends Controller
         }
         elseif($input == "5")
         {
-            $response = "END Customer Care\n\n +254 (0) 727-750-007\n\n contact@ecp.co.ke\n";
+            $response = "END Customer Care Contact :\n\n +254 (0) 727-750-007 | +254 (0) 736-436-900\n\n contact@ecp.co.ke\n";
         }
         else
         {
