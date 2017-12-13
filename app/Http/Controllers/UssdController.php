@@ -24,7 +24,7 @@ class UssdController extends Controller
         }
         elseif($input == "1")
         {
-            $response = "END Please Visit\n\n www.ecp.co.ke for more information\n";
+            $response = "END For more information Please Visit\n\n www.ecp.co.ke \n";
         }
         else if($input=="2")
         {
