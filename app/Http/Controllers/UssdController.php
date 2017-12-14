@@ -39,6 +39,14 @@ class UssdController extends Controller
             $response="END Community Membership Details :\n";
             $response .= $this->verifyIdentity($input);
         }
+        else if($input =="2*2" )
+        {
+            $response = "CON Enter Your Email Address :\n";
+        }
+        else if(preg_match("/^2\*2\*[0-9]{8}$/",$input))
+        {
+            $response="END Your Request for Identification Logs Statement has been received.Please wait for SMS confirmation\n";
+                    }
         else if($input == "3")
         {
             $response = $this->contact_drectory_menu();
@@ -115,6 +123,15 @@ class UssdController extends Controller
         {
             $response="END Receipt Details :\n";
             $response .= $this->revenue_menu($input);
+        }
+        else if($input =="4*2" )
+        {
+            $response = "CON Enter Your Email Address :\n";
+        }
+        else if(preg_match("/^2\*2\*[0-9]{8}$/",$input))
+        {
+            $response="END Your Request for Revenue Statement has been received.Please wait for SMS confirmation\n";
+            
         }
         elseif($input == "5")
         {
