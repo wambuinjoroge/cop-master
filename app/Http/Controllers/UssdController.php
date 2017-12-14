@@ -50,7 +50,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^3\*1\*[a-zA-Z' ]+$/",$input))
         {
-            $response="END Institution Address  Details :\n";
+            $response="END  Address  Details :\n";
             $response .= $this->findInstitution($input);
         }
         else if($input =="3*2" )
@@ -60,7 +60,47 @@ class UssdController extends Controller
         }
         else if(preg_match("/^3\*2\*[a-zA-Z' ]+$/",$input))
         {
-            $response="END Institution Contact Numbers Details :\n";
+            $response="END Contact Numbers Details :\n";
+            $response .= $this->findInstitution($input);
+        }
+        else if($input =="3*3" )
+        {
+
+            $response = "CON Enter Institution Name :\n";
+        }
+        else if(preg_match("/^3\*3\*[a-zA-Z' ]+$/",$input))
+        {
+            $response="END Social Media Details :\n";
+            $response .= $this->findInstitution($input);
+        }
+        else if($input =="3*4" )
+        {
+
+            $response = "CON Enter Institution Name :\n";
+        }
+        else if(preg_match("/^3\*4\*[a-zA-Z' ]+$/",$input))
+        {
+            $response="END Location Details :\n";
+            $response .= $this->findInstitution($input);
+        }
+        else if($input =="3*5" )
+        {
+
+            $response = "CON Enter Institution Name :\n";
+        }
+        else if(preg_match("/^3\*5\*[a-zA-Z' ]+$/",$input))
+        {
+            $response="END Mobile Money Details :\n";
+            $response .= $this->findInstitution($input);
+        }
+        else if($input =="3*6" )
+        {
+
+            $response = "CON Enter Institution Name :\n";
+        }
+        else if(preg_match("/^3\*6\*[a-zA-Z' ]+$/",$input))
+        {
+            $response="END Bank Account Details :\n";
             $response .= $this->findInstitution($input);
         }
         else if($input=="4")
