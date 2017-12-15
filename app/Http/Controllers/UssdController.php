@@ -45,6 +45,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^2\*2\*[0-9]{8}$/",$input))
         {
+            //$Response->Message ='Thank you. You will receive confirmation message shortly '. $ussdRequest->ClientState . ' shortly.';
             $response="END Your Request for Identification Logs Statement has been received.Please wait for SMS confirmation\n";
                     }
         else if($input == "3")
@@ -119,7 +120,7 @@ class UssdController extends Controller
         {
             $response = "CON Enter County Code :\n";
         }
-        else if(preg_match("/^4\*1\*[a-zA-Z' ]+$/",$input))
+        else if(preg_match("/^4\*1\*[0-9]{8}$/",$input))
         {
             $response="END Receipt Details :\n";
             $response .= $this->revenue_menu($input);
@@ -128,12 +129,12 @@ class UssdController extends Controller
         {
             $response = "CON Enter Your Email Address :\n";
         }
-        else if(preg_match("/^2\*2\*[0-9]{8}$/",$input))
+        else if(preg_match("/^4\*2\*[a-zA-Z' ]+$/",$input))
         {
             $response="END Your Request for Revenue Statement has been received.Please wait for SMS confirmation\n";
             
         }
-        elseif($input == "5")
+        elseif($input == "7")
         {
             $response = "END Customer Care Contact :\n\n +254 (0) 727-750-007 \n\n contact@ecp.co.ke\n";
         }

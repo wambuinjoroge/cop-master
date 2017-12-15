@@ -14,15 +14,17 @@ trait UssdMenus
 
     private function main_menu()
     {
-        $response = "CON Welcome to ecp\n Select a Service\n";
+        $response = "CON Welcome to ecp Service.\n";
         $response .= "1:Visit our website\n";
         $response .= "2:Identification\n";
         $response .= "3:Contact Directory\n";
         $response .= "4:Revenue\n";
-        $response .= "5:Customer Care\n";
-        $response .= "6:Subscribe\n";
-        $response .= "7:Unsubscribe\n";
-        $response .= "8:Quit ";
+        $response .= "5:Parcel\n";
+        $response .= "6:Ticket\n";
+        $response .= "7:Customer Care\n";
+        $response .= "8:Subscribe\n";
+        $response .= "9:Unsubscribe\n";
+        $response .= "10:Quit";
         return $response;
     }
 
@@ -52,9 +54,21 @@ trait UssdMenus
 
     private function revenue_menu()
     {
-        $response = "CON Proceed\n";
+        $response = "CON Select any\n";
         $response .= "1:Revenue Collection\n";
         $response .= "2:Revenue Statement\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
+    private function subscribe_menu()
+    {
+        $response = "CON Reply With\n";
+        $response .= "1:Daily @ Ksh.10\n";
+        $response .= "2:Weekly @ Ksh.50\n";
+        $response .= "3:Monthly @ Ksh.150\n";
+        $response .= "4:Yearly @ Ksh.500\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
