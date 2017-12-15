@@ -54,9 +54,9 @@ trait UssdMenus
 
     private function revenue_menu()
     {
-        $response = "CON Select any\n";
-        $response .= "1:Revenue Collection\n";
-        $response .= "2:Revenue Statement\n";
+        $response = "CON Select option\n";
+        $response .= "1:Collection\n";
+        $response .= "2:Statement\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;

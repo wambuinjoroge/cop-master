@@ -119,13 +119,13 @@ class UssdController extends Controller
         else if($input =="4*1" )
         {
                 $response = "CON Enter County Code :\n";
-                $response = "CON Enter Sub-County Name :\n";
-                $response = "CON Enter Payment Method :\ne.g Cash\n";
-                $response = "CON Enter Category :\ne.g Bus Park Fee \n";
-                $response = "CON Enter Service :\ne.g Matatu,Saloon Car\n";
-                $response = "CON Enter Reg No :\n";
-                $response = "CON Enter Amount Paid in Ksh.:\n";
-                $response = "CON Enter Staff ID :\n";
+                //$response = "CON Enter Sub-County Name :\n";
+                //$response = "CON Enter Payment Method :\ne.g Cash\n";
+                //$response = "CON Enter Category :\ne.g Bus Park Fee \n";
+                //$response = "CON Enter Service :\ne.g Matatu,Saloon Car\n";
+                //$response = "CON Enter Reg No :\n";
+                //$response = "CON Enter Amount Paid in Ksh.:\n";
+                //$response = "CON Enter Staff ID :\n";
             //$Response->Message ='Thank you for visiting Kisumu County '. $ussdRequest->ClientState . ' shortly.';    
             //$this->response->Message = 'Thank you for visiting Kisumu County.Karibu Tena !!!';. $ussdRequest->ClientState . ' shortly.';
             //return $this;
