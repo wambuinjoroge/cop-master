@@ -74,4 +74,14 @@ trait UssdMenus
         return $response;
     }
 
+    private function subscription_menu()
+    {
+        $response = "CON Choose Option\n";
+        $response .= "1:Accept\n";
+        $response .= "2:Decline\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
 }

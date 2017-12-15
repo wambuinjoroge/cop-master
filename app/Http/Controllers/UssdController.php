@@ -43,7 +43,7 @@ class UssdController extends Controller
         {
             $response = "CON Enter Your Email Address :\n";
         }
-        else if(preg_match("/^2\*2\*[0-9]{8}$/",$input))
+        else if(preg_match("/^2\*2\*[a-zA-Z' ]+$/",$input))
         {
             //$Response->Message ='Thank you. You will receive confirmation message shortly '. $ussdRequest->ClientState . ' shortly.';
             $response="END Your Request for Identification Logs Statement has been received.Please wait for SMS confirmation\n";
@@ -118,7 +118,17 @@ class UssdController extends Controller
         }
         else if($input =="4*1" )
         {
-            $response = "CON Enter County Code :\n";
+                $response = "CON Enter County Code :\n";
+                $response = "CON Enter Sub-County Name :\n";
+                $response = "CON Enter Payment Method :\ne.g Cash\n";
+                $response = "CON Enter Category :\ne.g Bus Park Fee \n";
+                $response = "CON Enter Service :\ne.g Matatu,Saloon Car\n";
+                $response = "CON Enter Reg No :\n";
+                $response = "CON Enter Amount Paid in Ksh.:\n";
+                $response = "CON Enter Staff ID :\n";
+            //$Response->Message ='Thank you for visiting Kisumu County '. $ussdRequest->ClientState . ' shortly.';    
+            //$this->response->Message = 'Thank you for visiting Kisumu County.Karibu Tena !!!';. $ussdRequest->ClientState . ' shortly.';
+            //return $this;
         }
         else if(preg_match("/^4\*1\*[0-9]{8}$/",$input))
         {
