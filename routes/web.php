@@ -90,3 +90,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 });
 
 Route::post('/callback/ussd','UssdController@index');
+Route::post('/send-sms', [
+   'uses'   =>  'SmsController@getUserNumber',
+   'as'     =>  'sendSms'
+]);
