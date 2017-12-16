@@ -19,12 +19,12 @@ trait UssdMenus
         $response .= "2:Identification\n";
         $response .= "3:Contact Directory\n";
         $response .= "4:Revenue\n";
-        $response .= "5:Parcel\n";
-        $response .= "6:Ticket\n";
-        $response .= "7:Customer Care\n";
-        $response .= "8:Subscribe\n";
-        $response .= "9:Unsubscribe\n";
-        $response .= "10:Quit";
+        //$response .= "5:Parcel\n";
+        //$response .= "6:Ticket\n";
+        $response .= "5:Customer Care\n";
+        $response .= "6:Subscribe\n";
+        $response .= "7:Unsubscribe\n";
+        $response .= "8:Quit";
         return $response;
     }
 
@@ -62,7 +62,7 @@ trait UssdMenus
         return $response;
     }
 
-    private function subscribe_menu()
+    private function subscription_menu()
     {
         $response = "CON Reply With\n";
         $response .= "1:Daily @ Ksh.10\n";
@@ -74,7 +74,7 @@ trait UssdMenus
         return $response;
     }
 
-    private function subscription_menu()
+    private function terms_menu()
     {
         $response = "CON Choose Option\n";
         $response .= "1:Accept\n";

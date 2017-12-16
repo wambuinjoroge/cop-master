@@ -144,7 +144,7 @@ class UssdController extends Controller
             $response="END Your Request for Revenue Statement has been received.Please wait for SMS confirmation\n";
             
         }
-        elseif($input == "7")
+        elseif($input == "5")
         {
             $response = "END Customer Care Contact :\n\n +254 (0) 727-750-007 \n\n contact@ecp.co.ke\n";
         }
