@@ -162,10 +162,10 @@
                     </span>
                      <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4> Alerts</h4>
+                                    <h4> Notifications</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="lead-in">Receive instant alerts for<br>  confirmation and status.</p>
+                                    <p class="lead-in">Receive instant notifications and <br>alerts for  confirmation and status.</p>
                                 </div>
                             </div>
                 </div>
@@ -203,7 +203,7 @@
                <div class="row text-center">
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Probation and Aftercare Service</h4>
+                    <h4 class="service-heading">Crime and Justice Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
