@@ -130,13 +130,45 @@ class UssdController extends Controller
         }
         else if($input =="4*1*1*1" )
         {
-         $response = $this->service_menu();       
+            $response = $this->service_menu();       
         }
         else if($input =="4*1*1*1*1" )
         {
-         $response = $this->payment_menu();       
+            $response = $this->payment_menu();       
         }
-        
+        //input reg no of vehicle by the county attendant officer
+        else if($input =="" )
+        {
+            $response = "CON Enter Reg No :\n";     
+        }
+        //input mobile no of client/customer by the county attendant officer
+        else if($input =="" )
+        {
+            $response = "CON Enter Mobile Number :\n";     
+        }
+        //input staff id of the county attendant officer
+        else if($input =="" )
+        {
+            $response = "CON Enter Staff ID :\n";     
+        }
+        //input county code by the county attendant officer then it should display sub county
+        else if($input =="" )
+        {
+            $response = "CON Enter County Code :\n";    
+        }
+        //input Amount Paid by the client/customer
+        else if($input =="" )
+        {
+            $response = "CON Enter Amount Paid in Ksh.:\n";  
+        }
+        //Cofirmation message sent to the phone number provided
+        //else if(preg_match("/^4\*2\*[a-zA-Z' ]+$/",$input))
+       // {
+            //$Response->Message ='Thank you for visiting Kisumu County '. $ussdRequest->ClientState . ' shortly.';    
+            //$this->response->Message = 'Thank you for visiting Kisumu County.Karibu Tena !!!';. $ussdRequest->ClientState . ' shortly.';
+            
+        //}
+         //REVENUE STATEMENT
         else if($input =="4*1" )
         {
             $response = $this->revenue_menu();

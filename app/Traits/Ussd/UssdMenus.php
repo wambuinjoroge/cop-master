@@ -14,7 +14,7 @@ trait UssdMenus
 
     private function main_menu()
     {
-        $response = "CON Welcome to ecp.Select service.\n";
+        $response = "CON Welcome to ecp Service.\n";
         $response .= "1:Visit our website\n";
         $response .= "2:Identification\n";
         $response .= "3:Contact Directory\n";
@@ -85,7 +85,7 @@ trait UssdMenus
     private function service_menu()
     {
         $response = "CON Proceed with Any\n";
-        $response .= "1:Matatu / Saloon Car\n";
+        $response .= "1:Matatu/Saloon Car\n";
         $response .= "2:Bus\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
