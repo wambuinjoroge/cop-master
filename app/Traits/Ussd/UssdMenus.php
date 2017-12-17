@@ -14,13 +14,11 @@ trait UssdMenus
 
     private function main_menu()
     {
-        $response = "CON Welcome to ecp Service.\n";
+        $response = "CON Welcome to ecp.Select service :\n";
         $response .= "1:Visit our website\n";
         $response .= "2:Identification\n";
         $response .= "3:Contact Directory\n";
-        $response .= "4:Revenue\n";
-        //$response .= "5:Parcel\n";
-        //$response .= "6:Ticket\n";
+        $response .= "4:Income\n";
         $response .= "5:Customer Care\n";
         $response .= "6:Subscribe\n";
         $response .= "7:Unsubscribe\n";
@@ -32,7 +30,7 @@ trait UssdMenus
     {
         $response = "CON Choose an Option\n";
         $response .= "1:Verify Identification\n";
-        $response .= "2:Check Logs\n";
+        $response .= "2:Logs Statement\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
@@ -52,11 +50,79 @@ trait UssdMenus
         return $response;
     }
 
+    private function income_menu()
+    {
+        $response = "CON Reply With\n";
+        $response .= "1:Revenue\n";
+        $response .= "2:Tax\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
     private function revenue_menu()
     {
         $response = "CON Select option\n";
         $response .= "1:Revenue Collection\n";
         $response .= "2:Revenue Statement\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
+    private function category_menu()
+    {
+        $response = "CON Choose Option\n";
+        $response .= "1:Parking Fee\n";
+        $response .= "2:Market Fee\n";
+        $response .= "3:Land Rate\n";
+        $response .= "4:Business licenses\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
+    private function service_menu()
+    {
+        $response = "CON Proceed with Any\n";
+        $response .= "1:Matatu / Saloon Car\n";
+        $response .= "2:Bus\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
+    private function payment_menu()
+    {
+        $response = "CON Choose Payment Method\n";
+        $response .= "1:Cash\n";
+        $response .= "2:Mobile Money\n";
+        $response .= "3:Bank\n";
+        $response .= "4:Internet Banking\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
+    private function tax_menu()
+    {
+        $response = "CON Select Option\n";
+        $response .= "1:Tax Compliant\n";
+        $response .= "2:Tax Statement\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
+    private function taxcomp_menu()
+    {
+        $response = "CON Choose Region\n";
+        $response .= "1:Western\n";
+        $response .= "2:Nairobi\n";
+        $response .= "3:Southern\n";
+        $response .= "4:Northern\n";
+        $response .= "5:Central\n";
+        $response .= "6:Rift Valey\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
@@ -83,5 +149,6 @@ trait UssdMenus
         $response .= "00:HOME";
         return $response;
     }
+
 
 }
