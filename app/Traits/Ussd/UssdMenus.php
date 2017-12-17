@@ -14,7 +14,7 @@ trait UssdMenus
 
     private function main_menu()
     {
-        $response = "CON Welcome to ecp.Select service :\n";
+        $response = "CON Welcome to ecp.Select service.\n";
         $response .= "1:Visit our website\n";
         $response .= "2:Identification\n";
         $response .= "3:Contact Directory\n";
@@ -114,7 +114,7 @@ trait UssdMenus
         return $response;
     }
 
-    private function taxcomp_menu()
+    private function region_menu()
     {
         $response = "CON Choose Region\n";
         $response .= "1:Western\n";

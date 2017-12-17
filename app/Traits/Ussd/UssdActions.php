@@ -55,7 +55,7 @@ trait UssdActions
             $details .= "Website : ".$institution->website."\n";
         }
         else
-            $details = " Institution not found\n";
+            $details = "Institution Record Unavailable\n";
 
         return $details;
     }
