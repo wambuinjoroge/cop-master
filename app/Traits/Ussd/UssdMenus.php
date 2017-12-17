@@ -76,7 +76,7 @@ trait UssdMenus
         $response .= "1:Parking Fee\n";
         $response .= "2:Market Fee\n";
         $response .= "3:Land Rate\n";
-        $response .= "4:Business licenses\n";
+        $response .= "4:Business Licenses\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
