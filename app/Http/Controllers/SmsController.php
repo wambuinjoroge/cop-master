@@ -11,7 +11,7 @@ class SmsController extends Controller
     $username   = "mancini85";
     $apikey     = "fa3b9115ca65fb6a3874795aea07167362b8822a0915787eeeae1c26d38080bc";
     $recipients = "+254790463533";
-    $message    = "Your Community Membership Details has been viewed.Thank you ";
+    $message    = "Dear {{ Auth::user()->name  }} ,Your profile has been viewed.Thank you ";
     $gateway    = new AfricasTalkingGateway($username, $apikey);
  
     try 
