@@ -177,7 +177,7 @@ class UssdController extends Controller
         {
             $response = "CON Enter Your Email Address :\n";
         }
-        else if(preg_match("/^4\*2\*[a-zA-Z' ]+$/",$input))
+        else if(preg_match("/^4\*1\*2\*[a-zA-Z' ]+$/",$input))
         {
             $response="END Your Request for Revenue Statement has been received.Please wait for SMS confirmation\n";
             
@@ -210,10 +210,14 @@ class UssdController extends Controller
         {
             $response = $this->terms_menu();
         }
-        else if(preg_match("/^6\*1\*[0-9]{8}$/",$input))
+        else if($input =="6*1*1" )
         {
-            $response="END Community Membership Details :\n";
-            $response .= $this->verifyIdentity($input);
+            $response = "CON Enter Your Subscription\n";
+        }
+        else if(preg_match("/^6\*1\*1\*[0-9]{8}$/",$input))
+        {
+            $response="END Your Subscription Request  has been received.Thank you\n";
+            
         }
         else
         {
