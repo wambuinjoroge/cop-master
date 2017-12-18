@@ -30,7 +30,7 @@ trait UssdMenus
     {
         $response = "CON Choose an Option\n";
         $response .= "1:Verify Identification\n";
-        $response .= "2:Logs Statement\n";
+        $response .= "2:Identification Statement\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
@@ -76,7 +76,7 @@ trait UssdMenus
         $response .= "1:Parking Fee\n";
         $response .= "2:Market Fee\n";
         $response .= "3:Land Rate\n";
-        $response .= "4:Business Licenses\n";
+        $response .= "4:Business License\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
@@ -85,8 +85,10 @@ trait UssdMenus
     private function service_menu()
     {
         $response = "CON Proceed with Any\n";
-        $response .= "1:Matatu/Saloon Car\n";
-        $response .= "2:Bus\n";
+        $response .= "1:Saloon Car\n";
+        $response .= "2:Matatu\n";
+        $response .= "3:Bus\n";
+        $response .= "4:Cargo Lorry\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
