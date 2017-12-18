@@ -205,15 +205,15 @@ class UssdController extends Controller
             $response .= $this->taxcompliant($input);
         }
         //TAX STATEMENT
-        else if($input =="4*2*2" )
+        else if($input =="4*2" )
         {
             $response = $this->tax_menu();
         }
-        else if($input =="4*2*2*1" )
+        else if($input =="4*2*2" )
         {
             $response = "CON Enter Your Email Address :\n";
         }
-        else if(preg_match("/^4\*2\*2\*1\*[a-zA-Z' ]+$/",$input))
+        else if(preg_match("/^4\*2\*2\*[a-zA-Z' ]+$/",$input))
         {
             $response="END Your Request for Tax Compliant Statement has been received.Please wait for SMS confirmation\n";
             
