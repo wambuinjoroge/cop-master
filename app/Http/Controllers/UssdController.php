@@ -189,17 +189,17 @@ class UssdController extends Controller
         }
         else if($input =="4*2*1" )
         {
-             $response = $this->tax_menu();
+             $response = $this->region_menu();
         }
-         //else if($input =="4*2*1*1" )
-       // {
-         //    $response = $this->region_menu();
-        //}
         else if($input =="4*2*1*1" )
+        {
+             $response = $this->tax_menu();
+        } 
+        else if($input =="4*2*1*1*1" )
         {
             $response = "CON Enter Institution/Business Reg No :\n";
         }
-        else if(preg_match("/^4\*2\*1\*1\*[0-9]{8}$/",$input))
+        else if(preg_match("/^4\*2\*1\*1\*1\*[0-9]{8}$/",$input))
         {
             $response="END Tax Compliant Details :\n";
             $response .= $this->taxcompliant($input);
