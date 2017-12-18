@@ -52,7 +52,7 @@ trait UssdMenus
 
     private function income_menu()
     {
-        $response = "CON Reply With\n";
+        $response = "CON Reply With Any\n";
         $response .= "1:Revenue\n";
         $response .= "2:Tax\n";
         $response .= "0:BACK\n";
@@ -98,9 +98,10 @@ trait UssdMenus
     {
         $response = "CON Choose Payment Method\n";
         $response .= "1:Cash\n";
-        $response .= "2:Mobile Money\n";
-        $response .= "3:Bank\n";
-        $response .= "4:Internet Banking\n";
+        $response .= "2:M-Pesa\n";
+        $response .= "3:Debit/Credit Card\n";
+        $response .= "4:Airtel Money\n";
+        $response .= "5:Equitel\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;

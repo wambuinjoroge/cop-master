@@ -197,7 +197,7 @@ class UssdController extends Controller
         } 
         else if($input =="4*2*1*1" )
         {
-            $response = "CON Enter Institution/Business Reg No :\n";
+            $response = "CON Enter Institution Registration No. :\n";
         }
         else if(preg_match("/^4\*2\*1\*1\*[0-9]{8}$/",$input))
         {
