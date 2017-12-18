@@ -201,6 +201,20 @@ class UssdController extends Controller
         {
             $response = "END Customer Care Contact :\n\n +254 (0) 727-750-007 \n\n contact@ecp.co.ke\n";
         }
+        //SUBSCRIPTION
+        else if($input=="6")
+        {
+            $response = $this->subscription_menu();
+        }
+        else if($input =="6*1" )
+        {
+            $response = $this->terms_menu();
+        }
+        else if(preg_match("/^6\*1\*[0-9]{8}$/",$input))
+        {
+            $response="END Community Membership Details :\n";
+            $response .= $this->verifyIdentity($input);
+        }
         else
         {
             $response = "END Invalid input\n";
