@@ -78,7 +78,7 @@ trait UssdMenus
         $response .= "3:Land Rates\n";
         $response .= "4:Business Licenses\n";
         $response .= "5:CESS\n";
-        $response .= "6:County Housing\n";
+        $response .= "6:County Houses\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;

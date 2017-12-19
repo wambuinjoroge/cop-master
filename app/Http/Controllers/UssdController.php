@@ -38,7 +38,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^2\*1\*[0-9]{8}$/",$input))
         {
-            $response="END Community Membership Details :\n";
+            $response="END Community Membership Information :\n";
             $response .= $this->verifyIdentity($input);
         }
         else if($input =="2*2" )
