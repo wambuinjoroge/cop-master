@@ -126,11 +126,11 @@ class UssdController extends Controller
         }
         else if($input=="4*1*1")
         {
-            $response = $this->category_menu();
+            $response = $this->service_menu();
         }
         else if($input =="4*1*1*1" )
         {
-            $response = $this->service_menu();       
+            $response = $this->category_menu();       
         }
         else if($input =="4*1*1*1*1" )
         {
@@ -139,7 +139,7 @@ class UssdController extends Controller
         //input reg no of vehicle by the county attendant officer
         else if($input =="" )
         {
-            $response = "CON Enter Reg No :\n";     
+            $response = "CON Enter Vehicle Reg No :\n";     
         }
         //input mobile no of client/customer by the county attendant officer
         else if($input =="" )

@@ -70,19 +70,21 @@ trait UssdMenus
         return $response;
     }
 
-    private function category_menu()
+    private function service_menu()
     {
         $response = "CON Choose Option\n";
-        $response .= "1:Parking Fee\n";
+        $response .= "1:Parking\n";
         $response .= "2:Market Fee\n";
-        $response .= "3:Land Rate\n";
-        $response .= "4:Business License\n";
+        $response .= "3:Land Rates\n";
+        $response .= "4:Business Licenses\n";
+        $response .= "5:CESS\n";
+        $response .= "6:County Housing\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
     }
 
-    private function service_menu()
+    private function category_menu()
     {
         $response = "CON Proceed with Any\n";
         $response .= "1:Saloon Car\n";
@@ -104,6 +106,7 @@ trait UssdMenus
         $response .= "4:Airtel Money\n";
         $response .= "5:Equitel\n";
         $response .= "6:Telkom Money\n";
+        $response .= "7:Eazzy Pay\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
