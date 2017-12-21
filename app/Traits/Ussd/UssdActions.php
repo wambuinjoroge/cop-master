@@ -10,6 +10,7 @@ namespace App\Traits\Ussd;
 
 use App\User;
 use App\Institution;
+use App\Utils\SMS\AfricasTalkingGateway;
 
 trait UssdActions
 {
@@ -57,7 +58,20 @@ trait UssdActions
         else
             $details = "Institution Record Unavailable\n";
 
+        $this->sendSMS("+254707563017","Somebody searched for a user");
+
         return $details;
+    }
+
+    public function SendSMS($recipients, $message)
+    {
+        $username = "sandbox";
+        $apikey = "1cb5670283c89bf3c187f8738369e16f393cac20dd0fdb664e6aeaf1c39f79a7";
+
+        $gateway    = new AfricasTalkingGateway($username, $apikey,"sandbox");
+        $results = $gateway->sendMessage($recipients, $message);
+
+        dump($results);
     }
 
 

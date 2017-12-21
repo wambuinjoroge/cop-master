@@ -16,7 +16,8 @@
  
 */
 
-class AfricasTalkingGatewayException extends Exception  {}
+namespace App\Utils\SMS;
+use Exception as AfricasTalkingGatewayException;
 
 class AfricasTalkingGateway
 {
