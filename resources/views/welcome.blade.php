@@ -203,8 +203,13 @@
                <div class="row text-center">
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Crime and Justice Service</h4>
+                    <h4 class="service-heading">Crime and Law Service</h4>
                     <p class="text-muted">coming soon.</p>
+                    <!--p class="text-muted">FAMILY JUSTICE</p>
+                    <p class="text-muted">NEIGHBOUR DISPUTES</p>
+                    <p class="text-muted">EMPLOYMENT JUSTICE</p>
+                    <p class="text-muted">MIGRATION JUSTICE</p>
+                    <p class="text-muted">LAND DISPUTE</p-->
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                 <div class="col-md-3">

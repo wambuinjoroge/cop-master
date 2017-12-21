@@ -14,15 +14,16 @@ trait UssdMenus
 
     private function main_menu()
     {
-        $response = "CON Welcome to ecp Service.\n";
+        $response = "CON Welcome to ecp Service :\n";
         $response .= "1:Visit our website\n";
         $response .= "2:Identification\n";
         $response .= "3:Contact Directory\n";
         $response .= "4:Income\n";
-        $response .= "5:Customer Care\n";
+        $response .= "5:Crime and Justice\n";
         $response .= "6:Subscribe\n";
         $response .= "7:Unsubscribe\n";
-        $response .= "8:Quit";
+        $response .= "8:Customer Care\n";
+        $response .= "9:Quit";
         return $response;
     }
 
@@ -158,5 +159,28 @@ trait UssdMenus
         return $response;
     }
 
+    private function crimejustice_menu()
+    {
+        $response = "CON Crime & Justice Option\n";
+        $response .= "1:Security\n";
+        $response .= "2:Court\n";
+        $response .= "3:Probation\n";
+        $response .= "4:Children Department\n";
+        $response .= "5:Anti-Corruption\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
+    private function security_menu()
+    {
+        $response = "CON Security Options :\n";
+        $response .= "1:Police Station\n";
+        $response .= "2:CID\n";
+        $response .= "3:Private Firm\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
 
 }
