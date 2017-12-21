@@ -71,7 +71,7 @@ trait UssdActions
         $gateway    = new AfricasTalkingGateway($username, $apikey,"sandbox");
         $results = $gateway->sendMessage($recipients, $message);
 
-        dump($results);
+        //dump($results);
     }
 
 
