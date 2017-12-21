@@ -66,7 +66,7 @@ trait UssdActions
     public function SendSMS($recipients, $message)
     {
         $username = "sandbox";
-        $apikey = "1cb5670283c89bf3c187f8738369e16f393cac20dd0fdb664e6aeaf1c39f79a7";
+        $apikey = "fd9507034878194fa400ea180354116ff4ff3efc5a98217e3ce6d1326bb4ae78";
 
         $gateway    = new AfricasTalkingGateway($username, $apikey,"sandbox");
         $results = $gateway->sendMessage($recipients, $message);
