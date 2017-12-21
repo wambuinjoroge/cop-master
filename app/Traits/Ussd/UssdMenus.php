@@ -14,15 +14,16 @@ trait UssdMenus
 
     private function main_menu()
     {
-        $response = "CON Welcome to ecp Service.\n";
+        $response = "CON Welcome to ecp Service :\n";
         $response .= "1:Visit our website\n";
         $response .= "2:Identification\n";
         $response .= "3:Contact Directory\n";
         $response .= "4:Income\n";
-        $response .= "5:Customer Care\n";
+        $response .= "5:Crime and Justice\n";
         $response .= "6:Subscribe\n";
         $response .= "7:Unsubscribe\n";
-        $response .= "8:Quit";
+        $response .= "8:Customer Care\n";
+        $response .= "9:Quit";
         return $response;
     }
 
@@ -52,7 +53,7 @@ trait UssdMenus
 
     private function income_menu()
     {
-        $response = "CON Reply With\n";
+        $response = "CON Reply With Any\n";
         $response .= "1:Revenue\n";
         $response .= "2:Tax\n";
         $response .= "0:BACK\n";
@@ -62,21 +63,9 @@ trait UssdMenus
 
     private function revenue_menu()
     {
-        $response = "CON Select option\n";
-        $response .= "1:Revenue Collection\n";
-        $response .= "2:Revenue Statement\n";
-        $response .= "0:BACK\n";
-        $response .= "00:HOME";
-        return $response;
-    }
-
-    private function category_menu()
-    {
-        $response = "CON Choose Option\n";
-        $response .= "1:Parking Fee\n";
-        $response .= "2:Market Fee\n";
-        $response .= "3:Land Rate\n";
-        $response .= "4:Business License\n";
+        $response = "CON Select Revenue option\n";
+        $response .= "1:Collection\n";
+        $response .= "2:Statement\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
@@ -84,11 +73,26 @@ trait UssdMenus
 
     private function service_menu()
     {
+        $response = "CON Choose Option\n";
+        $response .= "1:Parking\n";
+        $response .= "2:Market Fee\n";
+        $response .= "3:Land Rates\n";
+        $response .= "4:Business Licenses\n";
+        $response .= "5:CESS\n";
+        $response .= "6:County Houses\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
+    private function category_menu()
+    {
         $response = "CON Proceed with Any\n";
         $response .= "1:Saloon Car\n";
         $response .= "2:Matatu\n";
         $response .= "3:Bus\n";
-        $response .= "4:Cargo Lorry\n";
+        $response .= "4:Lorry\n";
+        $response .= "5:Pick Up\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
@@ -98,9 +102,12 @@ trait UssdMenus
     {
         $response = "CON Choose Payment Method\n";
         $response .= "1:Cash\n";
-        $response .= "2:Mobile Money\n";
-        $response .= "3:Bank\n";
-        $response .= "4:Internet Banking\n";
+        $response .= "2:M-Pesa\n";
+        $response .= "3:Debit/Credit Card\n";
+        $response .= "4:Airtel Money\n";
+        $response .= "5:Equitel\n";
+        $response .= "6:Telkom Money\n";
+        $response .= "7:Eazzy Pay\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
@@ -152,5 +159,28 @@ trait UssdMenus
         return $response;
     }
 
+    private function crimejustice_menu()
+    {
+        $response = "CON Crime & Justice Option\n";
+        $response .= "1:Security\n";
+        $response .= "2:Court\n";
+        $response .= "3:Probation\n";
+        $response .= "4:Children Department\n";
+        $response .= "5:Anti-Corruption\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
+    private function security_menu()
+    {
+        $response = "CON Security Options :\n";
+        $response .= "1:Police Station\n";
+        $response .= "2:CID\n";
+        $response .= "3:Private Firm\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
 
 }

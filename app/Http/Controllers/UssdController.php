@@ -38,7 +38,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^2\*1\*[0-9]{8}$/",$input))
         {
-            $response="END Community Membership Details :\n";
+            $response="END Profile Identification Information :\n";
             $response .= $this->verifyIdentity($input);
         }
         else if($input =="2*2" )
@@ -126,11 +126,11 @@ class UssdController extends Controller
         }
         else if($input=="4*1*1")
         {
-            $response = $this->category_menu();
+            $response = $this->service_menu();
         }
         else if($input =="4*1*1*1" )
         {
-            $response = $this->service_menu();       
+            $response = $this->category_menu();       
         }
         else if($input =="4*1*1*1*1" )
         {
@@ -139,7 +139,7 @@ class UssdController extends Controller
         //input reg no of vehicle by the county attendant officer
         else if($input =="" )
         {
-            $response = "CON Enter Reg No :\n";     
+            $response = "CON Enter Vehicle Reg No :\n";     
         }
         //input mobile no of client/customer by the county attendant officer
         else if($input =="" )
@@ -183,29 +183,62 @@ class UssdController extends Controller
             
         }
         //TAX
-        else if($input =="4*2" )
+        else if($input =="4" )
         {
              $response = $this->income_menu();
+        }
+        else if($input =="4*2" )
+        {
+             $response = $this->region_menu();
         }
         else if($input =="4*2*1" )
         {
              $response = $this->tax_menu();
-        }
-         else if($input =="4*2*1*1" )
-        {
-             $response = $this->region_menu();
-        }
+        } 
         else if($input =="4*2*1*1" )
         {
-            $response = "CON Enter Institution/Business Reg No :\n";
+            $response = "CON Enter Institution Registration No. :\n";
         }
-        else if(preg_match("/^4\*1\*[0-9]{8}$/",$input))
+        else if(preg_match("/^4\*2\*1\*1\*[0-9]{8}$/",$input))
         {
             $response="END Tax Compliant Details :\n";
             $response .= $this->taxcompliant($input);
         }
+        //TAX STATEMENT
+        else if($input =="4*2*2" )
+        {
+            $response = $this->tax_menu();
+        }
+        else if($input =="4*2*2*2" )
+        {
+            $response = "CON Enter Your Email Address :\n";
+        }
+        else if(preg_match("/^4\*2\*2\*2\*[a-zA-Z' ]+$/",$input))
+        {
+            $response="END Your Request for Tax Compliant Statement has been received.Please wait for SMS confirmation\n";
+            
+        }
+        //Private Security Firm
+        else if($input =="5" )
+        {
+             $response = $this->crimejustice_menu();
+        }
+        else if($input =="5*1" )
+        {
+             $response = $this->security_menu();
+        }
+        else if($input =="5*1*3" )
+        {
+            $response = "CON Enter Private Security Firm Name :\n";
+        }
+        else if(preg_match("/^5\*1\*3\*[a-zA-Z' ]+$/",$input))
+        {
+            $response="END Visitor Pass Details :\n";
+            $response .= $this->findPrivateFirm($input);
+            
+        }
         //CUSTOMER CARE
-        elseif($input == "5")
+        elseif($input == "8")
         {
             $response = "END Customer Care Contact :\n\n +254 (0) 727-750-007 \n\n contact@ecp.co.ke\n";
         }
