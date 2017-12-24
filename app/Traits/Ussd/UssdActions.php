@@ -23,6 +23,9 @@ trait UssdActions
             $details  = "Full Name : ".$user->name."\n";
             $details .= "Identification No : ".$user->id_no."\n";
             $details .= "Mobile No : ".$user->mobile_no."\n";
+            //$details .= "Employment County : ".$user->employment->county_name."\n";
+            //$details .= "Employmer Name : ".$user->employment->institution_name."\n";
+            //$details .= "Branch Name : ".$user->employment->branch_name."\n";
             $details .= "Resident County : ".$user->residence->county_residence."\n";
             $details .= "Constituency : ".$user->residence->constituency."\n";
             $details .= "Building Name : ".$user->residence->household_name."\n";

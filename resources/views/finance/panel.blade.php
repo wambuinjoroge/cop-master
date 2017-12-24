@@ -19,9 +19,9 @@
 <div class="wrapper">
 
  <!-- Main Header -->
-    @include('member.header')
+    @include('finance.header')
 <!-- Sidebar -->
-    @include('member.sidebar')
+    @include('finance.sidebar')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -51,7 +51,7 @@
 
             <div class="info-box-content">
               <span class="info-box-number">0</span>
-              <span class="info-box-text">Reminders</span>
+              <span class="info-box-text">Invoices</span>
                <span class="username"><a href="#">View Details</a></span>
             </div>
             <!-- /.info-box-content -->
@@ -65,7 +65,7 @@
 
             <div class="info-box-content">
               <span class="info-box-number">0</span>
-                <span class="info-box-text">Logs</span>
+                <span class="info-box-text">Transactions</span>
               <span class="username"><a href="#">View Details</a></span>
             </div>
             <!-- /.info-box-content -->
@@ -79,7 +79,7 @@
 
             <div class="info-box-content">
               <span class="info-box-number">0</span>
-              <span class="info-box-text">Events</span>
+              <span class="info-box-text">Clients</span>
               <span class="username"><a href="#">View Details</a></span>
             </div>
             <!-- /.info-box-content -->
@@ -93,7 +93,7 @@
 
             <div class="info-box-content">
               <span class="info-box-number">0</span>
-              <span class="info-box-text">Notices</span>
+              <span class="info-box-text">Businesses</span>
                <span class="username"><a href="#">View Details</a></span>
             </div>
             <!-- /.info-box-content -->

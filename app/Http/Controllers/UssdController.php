@@ -136,30 +136,34 @@ class UssdController extends Controller
         {
             $response = $this->payment_menu();       
         }
-        //input reg no of vehicle by the county attendant officer
-        else if($input =="" )
+        //input county code by the county attendant officer then it should display sub county
+        function getCountyCodeInput()
         {
-            $response = "CON Enter Vehicle Reg No :\n";     
+            return "Enter County Code " . PHP_EOL;
         }
         //input mobile no of client/customer by the county attendant officer
-        else if($input =="" )
+        function getPhoneNumberInput()
         {
-            $response = "CON Enter Mobile Number :\n";     
+            return "Enter Mobile Number" . PHP_EOL;
+        }
+        //input reg no of vehicle by the county attendant officer
+        function getVehicleRegNumberInput()
+        {
+            return "Enter Vehicle Reg No" . PHP_EOL;
         }
         //input staff id of the county attendant officer
-        else if($input =="" )
+        function getStaffIDInput()
         {
-            $response = "CON Enter Staff ID :\n";     
-        }
-        //input county code by the county attendant officer then it should display sub county
-        else if($input =="" )
-        {
-            $response = "CON Enter County Code :\n";    
+            return "Enter Staff ID" . PHP_EOL;
         }
         //input Amount Paid by the client/customer
-        else if($input =="" )
+        function getAmountInput()
         {
-            $response = "CON Enter Amount Paid in Ksh.:\n";  
+            return "Enter Amount to Pay" . PHP_EOL;
+        }
+        function getConfirmationDialog()
+        {
+
         }
         //Cofirmation message sent to the phone number provided
         //else if(preg_match("/^4\*2\*[a-zA-Z' ]+$/",$input))

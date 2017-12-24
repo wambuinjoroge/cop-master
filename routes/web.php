@@ -53,6 +53,10 @@ Route::get('agent', function () {
 //Route::get('account', function () {
 //    return view('account');
 //});
+
+Route::get('finance', function () {
+   return view('finance');
+});
 Auth::routes();
 
 //contacts
