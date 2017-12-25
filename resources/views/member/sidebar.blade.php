@@ -16,6 +16,14 @@
         </li>
         <li>
           <a href="#">
+           <i class="fa fa-envelope-o"></i> <span>Messages</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
            <i class="fa fa-shopping-cart"></i> <span>Report</span>
             <span class="pull-right-container">
               
@@ -135,14 +143,14 @@
             </span>
           </a>
         </li>
-           <li>
+           <!--li>
           <a href="#">
             <i class="glyphicon glyphicon-question-sign"></i><span>Sports Betting</span>
             <span class="pull-right-container">
               
             </span>
           </a>
-        </li>
+        </li-->
         <li>
           <a href="#">
           <i class="glyphicon glyphicon-cog"></i> <span>Account Settings</span>

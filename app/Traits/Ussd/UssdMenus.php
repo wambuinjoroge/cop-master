@@ -18,8 +18,8 @@ trait UssdMenus
         $response .= "1:Visit our website\n";
         $response .= "2:Identification\n";
         $response .= "3:Contact Directory\n";
-        $response .= "4:Income\n";
-        $response .= "5:Crime and Justice\n";
+        $response .= "4:Crime and Justice\n";
+        $response .= "5:Income\n";
         $response .= "6:Subscribe\n";
         $response .= "7:Unsubscribe\n";
         $response .= "8:Customer Care\n";
@@ -80,6 +80,18 @@ trait UssdMenus
         $response .= "4:Business Licenses\n";
         $response .= "5:CESS\n";
         $response .= "6:County Houses\n";
+        $response .= "7:Bill\n";
+        $response .= "0:BACK\n";
+        $response .= "00:HOME";
+        return $response;
+    }
+
+    private function bill_menu()
+    {
+        $response = "CON Select Bill Type\n";
+        $response .= "1:Water \n";
+        $response .= "2:Garbage\n";
+        //$response .= "3:Sewage\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
@@ -103,11 +115,12 @@ trait UssdMenus
         $response = "CON Choose Payment Method\n";
         $response .= "1:Cash\n";
         $response .= "2:M-Pesa\n";
-        $response .= "3:Debit/Credit Card\n";
+        $response .= "3:Debit/Credit/Prepaid Card\n";
         $response .= "4:Airtel Money\n";
         $response .= "5:Equitel\n";
         $response .= "6:Telkom Money\n";
         $response .= "7:Eazzy Pay\n";
+        $response .= "8:Local Bank Transfer\n";
         $response .= "0:BACK\n";
         $response .= "00:HOME";
         return $response;
@@ -163,8 +176,8 @@ trait UssdMenus
     {
         $response = "CON Crime & Justice Option\n";
         $response .= "1:Security\n";
-        $response .= "2:Court\n";
-        $response .= "3:Probation\n";
+        $response .= "2:Probation\n";
+        $response .= "3:Court\n"; 
         $response .= "4:Children Department\n";
         $response .= "5:Anti-Corruption\n";
         $response .= "0:BACK\n";

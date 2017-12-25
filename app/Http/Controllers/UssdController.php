@@ -115,56 +115,75 @@ class UssdController extends Controller
             $response="END Bank Account Details :\n";
             $response .= $this->findInstitution($input);
         }
-        //INCOME
-        else if($input=="4")
+        //Private Security Firm
+        else if($input =="4" )
         {
-            $response = $this->income_menu();
+             $response = $this->crimejustice_menu();
         }
         else if($input =="4*1" )
         {
+             $response = $this->security_menu();
+        }
+        else if($input =="4*1*3" )
+        {
+            $response = "CON Enter Private Security Firm Name :\n";
+        }
+        else if(preg_match("/^4\*1\*3\*[a-zA-Z' ]+$/",$input))
+        {
+            $response="END Visitor Pass Details :\n";
+            $response .= $this->findPrivateFirm($input);
+            
+        }
+        //INCOME
+        else if($input=="5")
+        {
+            $response = $this->income_menu();
+        }
+        else if($input =="5*1" )
+        {
             $response = $this->revenue_menu();
         }
-        else if($input=="4*1*1")
+        else if($input=="5*1*1")
         {
             $response = $this->service_menu();
         }
-        else if($input =="4*1*1*1" )
+        else if($input =="5*1*1*1" )
         {
             $response = $this->category_menu();       
         }
-        else if($input =="4*1*1*1*1" )
+        else if($input =="5*1*1*1*1" )
         {
             $response = $this->payment_menu();       
         }
         //input county code by the county attendant officer then it should display sub county
-        function getCountyCodeInput()
-        {
-            return "Enter County Code " . PHP_EOL;
-        }
+         //function getCountyCodeInput()
+        // {
+          //   return "Enter County Code " . PHP_EOL;
+        // }
         //input mobile no of client/customer by the county attendant officer
-        function getPhoneNumberInput()
-        {
-            return "Enter Mobile Number" . PHP_EOL;
-        }
+         //function getPhoneNumberInput()
+         //{
+         //    return "Enter Mobile Number" . PHP_EOL;
+         //}
         //input reg no of vehicle by the county attendant officer
-        function getVehicleRegNumberInput()
-        {
-            return "Enter Vehicle Reg No" . PHP_EOL;
-        }
+         //function getVehicleRegNumberInput()
+         //{
+          //   return "Enter Vehicle Reg No" . PHP_EOL;
+        // }
         //input staff id of the county attendant officer
-        function getStaffIDInput()
-        {
-            return "Enter Staff ID" . PHP_EOL;
-        }
+        // function getStaffIDInput()
+        // {
+         //    return "Enter Staff ID" . PHP_EOL;
+         //}
         //input Amount Paid by the client/customer
-        function getAmountInput()
-        {
-            return "Enter Amount to Pay" . PHP_EOL;
-        }
-        function getConfirmationDialog()
-        {
+         //function getAmountInput()
+         //{
+          //   return "Enter Amount to Pay" . PHP_EOL;
+        // }
+        // function getConfirmationDialog()
+         //{
 
-        }
+         //}
         //Cofirmation message sent to the phone number provided
         //else if(preg_match("/^4\*2\*[a-zA-Z' ]+$/",$input))
        // {
@@ -173,78 +192,88 @@ class UssdController extends Controller
             
         //}
          //REVENUE STATEMENT
-        else if($input =="4*1" )
+        else if($input =="5*1" )
         {
             $response = $this->revenue_menu();
         }
-        else if($input =="4*1*2" )
+        else if($input =="5*1*2" )
         {
             $response = "CON Enter Your Email Address :\n";
         }
-        else if(preg_match("/^4\*1\*2\*[a-zA-Z' ]+$/",$input))
+        else if(preg_match("/^5\*1\*2\*[a-zA-Z' ]+$/",$input))
         {
             $response="END Your Request for Revenue Statement has been received.Please wait for SMS confirmation\n";
             
         }
+        //BILL
+        else if($input=="5")
+        {
+            $response = $this->income_menu();
+        }
+        else if($input =="5*1" )
+        {
+            $response = $this->revenue_menu();
+        }
+        else if($input=="5*1*1")
+        {
+            $response = $this->service_menu();
+        }
+        else if($input =="5*1*1*7" )
+        {
+            $response = $this->bill_menu();       
+        }
+        else if($input =="5*1*1*7*1" )
+        {
+            $response = "CON Enter Your Meter Number :\n";      
+        }
+        else if($input =="5*1*1*1*1" )
+        {
+            $response = $this->payment_menu();       
+        }
+        //input Amount Paid by the client/customer
+         //function getAmountInput()
+        // {
+          //   return "Enter Amount to Pay" . PHP_EOL;
+        // }
+         //function getConfirmationDialog()
+         //{
+
+        // }
         //TAX
-        else if($input =="4" )
+        else if($input =="5" )
         {
              $response = $this->income_menu();
         }
-        else if($input =="4*2" )
+        else if($input =="5*2" )
         {
              $response = $this->region_menu();
         }
-        else if($input =="4*2*1" )
+        else if($input =="5*2*1" )
         {
              $response = $this->tax_menu();
         } 
-        else if($input =="4*2*1*1" )
+        else if($input =="5*2*1*1" )
         {
             $response = "CON Enter Institution Registration No. :\n";
         }
-        else if(preg_match("/^4\*2\*1\*1\*[0-9]{8}$/",$input))
+        else if(preg_match("/^5\*2\*1\*1\*[0-9]{8}$/",$input))
         {
             $response="END Tax Compliant Details :\n";
             $response .= $this->taxcompliant($input);
         }
         //TAX STATEMENT
-        else if($input =="4*2*2" )
+        else if($input =="5*2*2" )
         {
             $response = $this->tax_menu();
         }
-        else if($input =="4*2*2*2" )
+        else if($input =="5*2*2*2" )
         {
             $response = "CON Enter Your Email Address :\n";
         }
-        else if(preg_match("/^4\*2\*2\*2\*[a-zA-Z' ]+$/",$input))
+        else if(preg_match("/^5\*2\*2\*2\*[a-zA-Z' ]+$/",$input))
         {
             $response="END Your Request for Tax Compliant Statement has been received.Please wait for SMS confirmation\n";
             
-        }
-        //Private Security Firm
-        else if($input =="5" )
-        {
-             $response = $this->crimejustice_menu();
-        }
-        else if($input =="5*1" )
-        {
-             $response = $this->security_menu();
-        }
-        else if($input =="5*1*3" )
-        {
-            $response = "CON Enter Private Security Firm Name :\n";
-        }
-        else if(preg_match("/^5\*1\*3\*[a-zA-Z' ]+$/",$input))
-        {
-            $response="END Visitor Pass Details :\n";
-            $response .= $this->findPrivateFirm($input);
-            
-        }
-        //CUSTOMER CARE
-        elseif($input == "8")
-        {
-            $response = "END Customer Care Contact :\n\n +254 (0) 727-750-007 \n\n contact@ecp.co.ke\n";
         }
         //SUBSCRIPTION
         else if($input=="6")
@@ -263,6 +292,11 @@ class UssdController extends Controller
         {
             $response="END Your Subscription Request  has been received.Thank you\n";
             
+        }
+        //CUSTOMER CARE
+        elseif($input == "8")
+        {
+            $response = "END Customer Care Contact :\n\n +254 (0) 727-750-007 \n\n contact@ecp.co.ke\n";
         }
         else
         {

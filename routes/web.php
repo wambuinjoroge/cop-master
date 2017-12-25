@@ -31,16 +31,17 @@ Route::get('member', function () {
     return view('member.panel');
 });
 
-//Route::get('officer', function () {
- //   return view('officer.panel');
-//});
+Route::get('officer', function () {
+   return view('officer.panel');
+});
 
 Route::get('agent', function () {
    return view('agent.panel');
 });
-//Route::get('clerk', function () {
- //   return view('clerk.panel');
-//});
+
+Route::get('clerk', function () {
+   return view('clerk.panel');
+});
 
 //Route::get('faq', function () {
  //   return view('faq');
