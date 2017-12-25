@@ -23,6 +23,7 @@ trait UssdActions
             $details  = "Full Name : ".$user->name."\n";
             $details .= "Identification No : ".$user->id_no."\n";
             $details .= "Mobile No : ".$user->mobile_no."\n";
+            //MAP RELATIONS IN THE MODEL BEFORE CALLING THEM FIRST e.g employment relations is not mapped
             //$details .= "Employment County : ".$user->employment->county_name."\n";
             //$details .= "Employmer Name : ".$user->employment->institution_name."\n";
             //$details .= "Branch Name : ".$user->employment->branch_name."\n";

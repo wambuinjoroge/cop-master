@@ -38,7 +38,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^2\*1\*[0-9]{8}$/",$input))
         {
-            $response="END Profile Identification Information :\n";
+            $response="END Profile Information :\n";
             $response .= $this->verifyIdentity($input);
         }
         else if($input =="2*2" )
@@ -204,6 +204,56 @@ class UssdController extends Controller
         {
             $response="END Your Request for Revenue Statement has been received.Please wait for SMS confirmation\n";
             
+        }
+        //COUNTY RENTAL MARKET STALLS
+        else if($input=="5")
+        {
+            $response = $this->income_menu();
+        }
+        else if($input =="5*1" )
+        {
+            $response = $this->revenue_menu();
+        }
+        else if($input=="5*1*1")
+        {
+            $response = $this->service_menu();
+        }
+        else if($input =="5*1*1*6" )
+        {
+            $response = $this->bill_menu();       
+        }
+        else if($input =="5*1*1*6*1" )
+        {
+            $response = "CON Enter Stall Number :\n";      
+        }
+        else if($input =="5*1*1*1*1" )
+        {
+            $response = $this->payment_menu();       
+        }
+        //COUNTY HOUSES
+        else if($input=="5")
+        {
+            $response = $this->income_menu();
+        }
+        else if($input =="5*1" )
+        {
+            $response = $this->revenue_menu();
+        }
+        else if($input=="5*1*1")
+        {
+            $response = $this->service_menu();
+        }
+        else if($input =="5*1*1*6" )
+        {
+            $response = $this->bill_menu();       
+        }
+        else if($input =="5*1*1*6*2" )
+        {
+            $response = "CON Enter Constituency Name :\n";      
+        }
+        else if($input =="5*1*1*1*1" )
+        {
+            $response = $this->payment_menu();       
         }
         //BILL
         else if($input=="5")
