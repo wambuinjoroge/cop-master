@@ -32,9 +32,8 @@ trait UssdMenus
         $response = "CON Choose an Option\n";
         $response .= "1:Verify Identification\n";
         $response .= "2:Identification Statement\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU\n";
         return $response;
     }
 
@@ -47,9 +46,8 @@ trait UssdMenus
         $response .= "4:Location\n";
         $response .= "5:Mobile Money\n";
         $response .= "6:Bank Account\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 
@@ -58,9 +56,8 @@ trait UssdMenus
         $response = "CON Reply With Any\n";
         $response .= "1:Revenue\n";
         $response .= "2:Tax\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 
@@ -69,9 +66,8 @@ trait UssdMenus
         $response = "CON Select Revenue option\n";
         $response .= "1:Collection\n";
         $response .= "2:Statement\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 
@@ -85,9 +81,9 @@ trait UssdMenus
         $response .= "5:CESS\n";
         $response .= "6:County Houses\n";
         $response .= "7:Bill\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "8:Fine & Penalties\n";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 
@@ -96,9 +92,8 @@ trait UssdMenus
         $response = "CON Select House Type\n";
         $response .= "1:Market Stalls \n";
         $response .= "2:Rental House\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
     private function bill_menu()
@@ -106,9 +101,8 @@ trait UssdMenus
         $response = "CON Select Bill Type\n";
         $response .= "1:Water \n";
         $response .= "2:Garbage\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 
@@ -120,9 +114,8 @@ trait UssdMenus
         $response .= "3:Bus\n";
         $response .= "4:Lorry\n";
         $response .= "5:Pick Up\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 
@@ -137,9 +130,8 @@ trait UssdMenus
         $response .= "6:Telkom Money\n";
         $response .= "7:Eazzy Pay\n";
         $response .= "8:Local Bank Transfer\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 
@@ -148,9 +140,8 @@ trait UssdMenus
         $response = "CON Select Option\n";
         $response .= "1:Tax Compliant\n";
         $response .= "2:Tax Statement\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 
@@ -163,9 +154,8 @@ trait UssdMenus
         $response .= "4:Northern\n";
         $response .= "5:Central\n";
         $response .= "6:Rift Valey\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 
@@ -175,10 +165,9 @@ trait UssdMenus
         $response .= "1:Daily @ Ksh.10\n";
         $response .= "2:Weekly @ Ksh.50\n";
         $response .= "3:Monthly @ Ksh.150\n";
-        $response .= "4:Yearly @ Ksh.500\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "4:Yearly @ Ksh.900\n";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 
@@ -187,9 +176,8 @@ trait UssdMenus
         $response = "CON Choose Option\n";
         $response .= "1:Accept\n";
         $response .= "2:Decline\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 
@@ -201,9 +189,8 @@ trait UssdMenus
         $response .= "3:Court\n"; 
         $response .= "4:Children Department\n";
         $response .= "5:Anti-Corruption\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 
@@ -213,9 +200,8 @@ trait UssdMenus
         $response .= "1:Police Station\n";
         $response .= "2:CID\n";
         $response .= "3:Private Firm\n";
-        $response .= "0:Back\n";
-        $response .= "00:Menu\n";
-        $response .= "000:Exit";
+        $response .= "0:BACK\n";
+        $response .= "00:MENU";
         return $response;
     }
 

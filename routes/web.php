@@ -43,13 +43,13 @@ Route::get('clerk', function () {
    return view('clerk.panel');
 });
 
-//Route::get('faq', function () {
- //   return view('faq');
-//});
+Route::get('faq', function () {
+   return view('faq');
+});
 
-//Route::get('help', function () {
-//    return view('help');
-//});
+Route::get('help', function () {
+   return view('help');
+});
 
 //Route::get('account', function () {
 //    return view('account');
