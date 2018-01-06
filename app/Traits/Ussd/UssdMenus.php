@@ -187,8 +187,6 @@ trait UssdMenus
         $response .= "1:Security\n";
         $response .= "2:Probation\n";
         $response .= "3:Court\n"; 
-        $response .= "4:Children Department\n";
-        $response .= "5:Anti-Corruption\n";
         $response .= "0:BACK\n";
         $response .= "00:MENU";
         return $response;
@@ -198,8 +196,7 @@ trait UssdMenus
     {
         $response = "CON Security Options :\n";
         $response .= "1:Police Station\n";
-        $response .= "2:CID\n";
-        $response .= "3:Private Firm\n";
+        $response .= "2:Private Firm\n";
         $response .= "0:BACK\n";
         $response .= "00:MENU";
         return $response;
