@@ -62,7 +62,7 @@ trait UssdActions
         else
             $details = "Institution Record Unavailable\n";
 
-        $this->sendSMS("+254707563017","Somebody searched for a user");
+        $this->sendSMS("+254741271936","Somebody searched for a user");
 
         return $details;
     }
