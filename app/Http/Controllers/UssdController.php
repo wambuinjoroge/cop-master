@@ -124,11 +124,11 @@ class UssdController extends Controller
         {
              $response = $this->security_menu();
         }
-        else if($input =="4*1*3" )
+        else if($input =="4*1*2" )
         {
-            $response = "CON Enter Private Security Firm Name :\n";
+            $response = "CON Enter Security Firm Name :\n";
         }
-        else if(preg_match("/^4\*1\*3\*[a-zA-Z' ]+$/",$input))
+        else if(preg_match("/^4\*1\*2\*[a-zA-Z' ]+$/",$input))
         {
             $response="END Visitor Pass Details :\n";
             $response .= $this->findPrivateFirm($input);
