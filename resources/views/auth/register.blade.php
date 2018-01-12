@@ -73,7 +73,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="container">
-                        <!--div class="stepwizard " >
+                        <div class="stepwizard " >
                             <div class="stepwizard-row setup-panel">
                                 <div class="stepwizard-step">
                                     <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
@@ -92,7 +92,7 @@
                                     <p>Household</p>
                                 </div>
                             </div>   
-                        </div-->
+                        </div>
                     </div>
                 </div>
                 <div class="panel-body">         
@@ -221,7 +221,7 @@
                                         </div>
                                     </div>
                                   
-                                    <!--button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-1">Next</button-->
+                                    <button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-1">Next</button>
                                 </div>
                             </div>
                             <div class="row setup-content" id="step-2">
@@ -232,7 +232,7 @@
                                             <span>Status</span>
                                             <label class="radio-inline"><input type="radio" value="employed" name="employment" checked="checked" onclick="show3();">Employed</label>
                                             <label class="radio-inline"><input type="radio" value="self_employed" name="employment" onclick="show4();">Self-Employed</label>
-                                             <label class="radio-inline"><input type="radio" value="volunteer" name="employment" onclick="show6();">Volunteer / Student</label>
+                                             <label class="radio-inline"><input type="radio" value="volunteer" name="employment" onclick="show6();">Volunteer / Intern</label>
                                             <label class="radio-inline"><input type="radio" value="unemployed" name="employment" onclick="show5();">Unemployed</label>
                                         </label>
                                         @if ($errors->has('employment'))
@@ -495,14 +495,14 @@
                                         </div>
                                     </div>
                                     </div>
-                                    <!--div class="row">
+                                    <div class="row">
                                         <div class="col-md-4 col-md-offset-2">
                                             <button class="btn btn-success nextBtn btn-block" type="button" id="back-1">Back</button>
                                         </div>
                                         <div class="col-md-4">
                                             <button class="btn btn-success nextBtn btn-block" type="button" id="next-2">Next</button>
                                         </div>
-                                    </div-->
+                                    </div>
                                     
                                     
                                 </div>
@@ -670,14 +670,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!--div class="row">
+                                    <div class="row">
                                         <div class="col-md-offset-2 col-md-4">
                                             <button class="btn btn-success nextBtn btn-block" id="back-2">Back</button>
                                         </div>
                                         <div class="col-md-4">
                                             <button class="btn btn-success nextBtn btn-block" id="next-3">Next</button>
                                         </div>
-                                    </div-->
+                                    </div>
                                 </div>
                             </div>         
                             <div class="row setup-content" id="step-4">
@@ -715,15 +715,15 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <!--div class="row">
+                                    <div class="row">
                                         <div class=" col-md-offset-2 col-md-4">
                                             <button class="btn btn-success nextBtn btn-block" id="back-3">Back</button>
                                         </div>
                                         <div class="col-md-4">
                                             <button class="btn btn-success btn-block" type="submit">Submit</button>
                                         </div>
-                                    </div-->
-                                    <button class="btn btn-success btn-block" type="submit">Submit</button>
+                                    </div>
+                                    <!--button class="btn btn-success btn-block" type="submit">Submit</button-->
                                 </div>
                             </div>
                         </div>
@@ -747,6 +747,6 @@
                 </div>
 
             </form>
-            <!--script src="/assets/js/multistep_form.js"></script-->
+            <script src="/assets/js/multistep_form.js"></script>
         </body>
         </html>                
