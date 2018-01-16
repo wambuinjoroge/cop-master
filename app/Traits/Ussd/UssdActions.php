@@ -21,7 +21,7 @@ trait UssdActions
         $user = User::where('id_no',$id_number)->get()->first();
         if(!is_null($user)){
             $details  = "Full Name : ".$user->name."\n";
-            $details .= "Identification No : ".$user->id_no."\n";
+            $details .= "ID No : ".$user->id_no."\n";
             $details .= "Mobile No : ".$user->mobile_no."\n";
             //MAP RELATIONS IN THE MODEL BEFORE CALLING THEM FIRST e.g employment relations is not mapped
             //$details .= "Employment County : ".$user->employment->county_name."\n";
@@ -30,6 +30,9 @@ trait UssdActions
             $details .= "Resident County : ".$user->residence->county_residence."\n";
             $details .= "Constituency : ".$user->residence->constituency."\n";
             $details .= "Building Name : ".$user->residence->household_name."\n";
+            //MAP RELATIONS IN THE MODEL BEFORE CALLING THEM FIRST e.g household relations is not mapped
+            //$details .= "Cluster : ".$user->household->cluster."\n";
+           
         }
         else
             $details = " Community Member not found\n";
@@ -62,7 +65,7 @@ trait UssdActions
         else
             $details = "Institution Record Unavailable\n";
 
-        $this->sendSMS("+254741271936","Somebody searched for a user");
+        $this->sendSMS("+254741271936","Your Profile has been viewed by me");
 
         return $details;
     }

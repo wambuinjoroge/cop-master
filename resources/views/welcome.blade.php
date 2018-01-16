@@ -203,7 +203,7 @@
                <div class="row text-center">
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Crime and Law Service</h4>
+                    <h4 class="service-heading">Crime and Justice Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <!--p class="text-muted">FAMILY JUSTICE</p>
                     <p class="text-muted">NEIGHBOUR DISPUTES</p>
@@ -214,19 +214,19 @@
                 </div>
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Kenya Prison Service</h4>
+                    <h4 class="service-heading">Game Park Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Kenya Forest Service</h4>
+                    <h4 class="service-heading">Ticket and Courier Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                  <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Kenya Wildlife Service</h4>
+                    <h4 class="service-heading">Farmers Portal Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
@@ -362,9 +362,9 @@
                             <p class="text">
                             <ul>
                             <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of use</a></li>
                             <li><a href="#">Help</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of use</a></li> 
                             </ul>
                             </p> 
                           </address>
