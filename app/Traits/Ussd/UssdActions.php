@@ -21,7 +21,7 @@ trait UssdActions
         $user = User::where('id_no',$id_number)->get()->first();
         if(!is_null($user)){
             $details  = "Full Name : ".$user->name."\n";
-            $details .= "ID No : ".$user->id_no."\n";
+            $details .= "ID Number : ".$user->id_no."\n";
             $details .= "Mobile No : ".$user->mobile_no."\n";
             //MAP RELATIONS IN THE MODEL BEFORE CALLING THEM FIRST e.g employment relations is not mapped
             //$details .= "Employment County : ".$user->employment->county_name."\n";

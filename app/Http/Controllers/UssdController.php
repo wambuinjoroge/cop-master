@@ -38,7 +38,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^2\*1\*[0-9]{8}$/",$input))
         {
-            $response="END Profile Information :\n";
+            $response="END Your Profile Information :\n";
             $response .= $this->verifyIdentity($input);
         }
         else if($input =="2*2" )
@@ -130,9 +130,13 @@ class UssdController extends Controller
         }
         else if(preg_match("/^4\*1\*2\*[a-zA-Z' ]+$/",$input))
         {
-            $response="END Visitor Pass Details :\n";
-            $response .= $this->findPrivateFirm($input);
+            $response="END Visitor Identification Number :\n";
+            //$response .= $this->findPrivateFirm($input);
             
+        }
+        {
+            $response="END Visitor Identification Number :\n";
+             
         }
         //INCOME
         else if($input=="5")
@@ -325,28 +329,28 @@ class UssdController extends Controller
             $response="END Your Request for Tax Compliant Statement has been received.Please wait for SMS confirmation\n";
             
         }
-        //SUBSCRIPTION
-        else if($input=="6")
+        //CUSTOMER CARE
+        elseif($input == "6")
+        {
+            $response = "END Customer Care Contact :\n\n +254 (0) 727-750-007 \n\n contact@ecp.co.ke\n";
+        }
+         //SUBSCRIPTION
+        else if($input=="7")
         {
             $response = $this->subscription_menu();
         }
-        else if($input =="6*1" )
+        else if($input =="7*1" )
         {
             $response = $this->terms_menu();
         }
-        else if($input =="6*1*1" )
+        else if($input =="7*1*1" )
         {
             $response = "CON Enter Your Subscription\n";
         }
-        else if(preg_match("/^6\*1\*1\*[0-9]{8}$/",$input))
+        else if(preg_match("/^7\*1\*1\*[0-9]{8}$/",$input))
         {
             $response="END Your Subscription Request  has been received.Thank you\n";
             
-        }
-        //CUSTOMER CARE
-        elseif($input == "8")
-        {
-            $response = "END Customer Care Contact :\n\n +254 (0) 727-750-007 \n\n contact@ecp.co.ke\n";
         }
         else
         {

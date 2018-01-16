@@ -20,9 +20,9 @@ trait UssdMenus
         $response .= "3:Contact Directory\n";
         $response .= "4:Crime and Justice\n";
         $response .= "5:Income\n";
-        $response .= "6:Subscribe\n";
-        $response .= "7:Unsubscribe\n";
-        $response .= "8:Customer Care\n";
+        $response .= "6:Call Centre\n";
+        $response .= "7:Subscribe\n";
+        $response .= "8:Unsubscribe\n";
         $response .= "9:Quit";
         return $response;
     }
@@ -31,7 +31,7 @@ trait UssdMenus
     {
         $response = "CON Choose an Option\n";
         $response .= "1:Verify Identification\n";
-        $response .= "2:Identification Statement\n";
+        $response .= "2:Statement\n";
         $response .= "0:BACK\n";
         $response .= "00:MENU\n";
         return $response;
