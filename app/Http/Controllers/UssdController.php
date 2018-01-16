@@ -329,12 +329,7 @@ class UssdController extends Controller
             $response="END Your Request for Tax Compliant Statement has been received.Please wait for SMS confirmation\n";
             
         }
-        //CUSTOMER CARE
-        elseif($input == "6")
-        {
-            $response = "END Customer Care Contact :\n\n +254 (0) 727-750-007 \n\n contact@ecp.co.ke\n";
-        }
-         //SUBSCRIPTION
+        //SUBSCRIPTION
         else if($input=="7")
         {
             $response = $this->subscription_menu();
@@ -352,6 +347,12 @@ class UssdController extends Controller
             $response="END Your Subscription Request  has been received.Thank you\n";
             
         }
+        //CUSTOMER CARE
+        elseif($input == "6")
+        {
+            $response = "END Customer Care Contact :\n\n +254 (0) 727-750-007 \n\n contact@ecp.co.ke\n";
+        }
+        
         else
         {
             $response = "END Invalid input\n";
