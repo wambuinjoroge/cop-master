@@ -150,6 +150,22 @@
               
             </span>
           </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="glyphicon glyphicon-question-sign"></i><span>Payments</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="glyphicon glyphicon-question-sign"></i><span>Advertise</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
         </li-->
         <li>
           <a href="#">

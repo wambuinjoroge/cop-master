@@ -37,6 +37,8 @@ trait UssdActions
         else
             $details = " Community Member not found\n";
 
+        $this->sendSMS("+254741271936","Your Profile has been viewed by me");
+
         return $details;
     }
 
@@ -65,7 +67,7 @@ trait UssdActions
         else
             $details = "Institution Record Unavailable\n";
 
-        $this->sendSMS("+254741271936","Your Profile has been viewed by me");
+        $this->sendSMS("+254741271936","Contact has been searched by user");
 
         return $details;
     }
