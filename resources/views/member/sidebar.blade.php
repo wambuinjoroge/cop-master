@@ -16,14 +16,6 @@
         </li>
         <li>
           <a href="#">
-           <i class="fa fa-envelope-o"></i> <span>Messages</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
            <i class="fa fa-shopping-cart"></i> <span>Report</span>
             <span class="pull-right-container">
               
@@ -38,23 +30,15 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <!--li><a href="#">Bursary</a></li>
+            <li><a href="#">Bursary</a></li>
             <li><a href="#">Burial Permit</a></li>
             <li><a href="#">CDF</a></li>
             <li><a href="#">Conflict Resolution</a></li-->
             <li><a href="/event">Event Permit</a></li>
             <li><a href="#">Reference Letter</a></li>
-            <!--li><a href="#">Witness Protection</a></li>
+            <li><a href="#">Witness Protection</a></li>
             <!--li><a href="#">Private Security Service</a></li-->
           </ul>
-        </li>
-         <li>
-          <a href="#">
-           <i class="fa fa-shopping-cart"></i> <span>Appeal</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
         </li>
          <li class="treeview">
           <a href="#">
@@ -109,6 +93,15 @@
             </span>
           </a>
         </li>
+         <li>
+          <a href="#">
+          <i class="fa fa-shopping-cart"></i><span>Appeal</span>
+
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
         
          <li class="treeview">
           <a href="#">
@@ -143,14 +136,6 @@
             </span>
           </a>
         </li>
-           <!--li>
-          <a href="#">
-            <i class="glyphicon glyphicon-question-sign"></i><span>Sports Betting</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li>
         <li>
           <a href="#">
             <i class="glyphicon glyphicon-question-sign"></i><span>Payments</span>
@@ -159,6 +144,15 @@
             </span>
           </a>
         </li>
+           <!--li>
+          <a href="#">
+            <i class="glyphicon glyphicon-question-sign"></i><span>Sports Betting</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+        
         <li>
           <a href="#">
             <i class="glyphicon glyphicon-question-sign"></i><span>Advertise</span>

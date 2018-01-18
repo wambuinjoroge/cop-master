@@ -348,7 +348,9 @@ class UssdController extends Controller
             $response="END Your Subscription Request  has been received.Thank you\n";
             
         }
-        
+        //Thank you for using this service
+        //The user also receives an SMS. This is the end of this route.
+        //Or selects cancel and everything is cancelled. 
         else
         {
             $response = "END Invalid input\n";

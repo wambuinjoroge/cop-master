@@ -174,7 +174,7 @@ trait UssdMenus
     private function terms_menu()
     {
         $response = "CON Choose Option\n";
-        $response .= "1:Accept\n";
+        $response .= "1:Accept Subscription\n";
         $response .= "2:Decline\n";
         $response .= "0:BACK\n";
         $response .= "00:MENU";
