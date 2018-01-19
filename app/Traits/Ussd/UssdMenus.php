@@ -139,7 +139,7 @@ trait UssdMenus
     {
         $response = "CON Select Option\n";
         $response .= "1:Tax Compliant\n";
-        $response .= "2:Tax Statement\n";
+        $response .= "2:Statement\n";
         $response .= "0:BACK\n";
         $response .= "00:MENU";
         return $response;
@@ -165,7 +165,7 @@ trait UssdMenus
         $response .= "1:Daily @ Ksh.10\n";
         $response .= "2:Weekly @ Ksh.50\n";
         $response .= "3:Monthly @ Ksh.150\n";
-        $response .= "4:Yearly @ Ksh.900\n";
+        $response .= "4:Yearly @ Ksh.1000\n";
         $response .= "0:BACK\n";
         $response .= "00:MENU";
         return $response;
