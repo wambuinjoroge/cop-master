@@ -185,7 +185,7 @@
           <div class="box box-widget">
             <div class="box-header with-border">
               <div class="user-block" style="height: 50px;font-weight: bold;">
-              <span class="content-header">  <h1>Advertise Here</h1></span>
+              <span class="content-header">  <h1>Advertisement</h1></span>
                
               </div>
               <!-- /.user-block -->

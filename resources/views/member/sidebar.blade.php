@@ -14,20 +14,15 @@
             <i class="fa fa-home"></i> <span>Dashboard</span>
           </a>
         </li>
-         <li class="treeview">
-          <a href="#">
-          <i class="fa fa-calendar-check-o"></i> <span>Calender</span>
+         <li>
+          <a href="/reminder">
+            <i class="fa fa-clock-o"></i> <span>Reminder</span>
             <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
+              
             </span>
           </a>
-          <ul class="treeview-menu">
-          <li><a href="/reminder">  <i class="fa fa-clock-o"></i>Reminder</a>
-         
-            
-          </ul>
         </li>
-         <li>
+        <li>
           <a href="#">
             <i class="fa fa-laptop"></i> <span>Logs</span>
             <span class="pull-right-container">
@@ -58,6 +53,39 @@
               
             </span>
           </a>
+        </li>
+         <li>
+          <a href="#">
+          <i class="fa fa-calendar-check-o"></i> <span>Events</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+         <li>
+          <a href="#">
+           <i class="fa fa-bullhorn"></i><span>Notices</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+        
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-share-alt"></i> <span>Lost & Found</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+         
+           <li><a href="#">Item</a></li>
+            <li><a href="#">Missing Person</a></li>
+            <li><a href="#">Most Wanted</a></li>
+           
+            
+          </ul>
         </li>
          <li>
           <a href="/contribution">
