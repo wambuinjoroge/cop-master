@@ -14,9 +14,27 @@
             <i class="fa fa-home"></i> <span>Dashboard</span>
           </a>
         </li>
-      
-        
-       
+         <li class="treeview">
+          <a href="#">
+          <i class="fa fa-calendar-check-o"></i> <span>Calender</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+          <li><a href="/reminder">  <i class="fa fa-clock-o"></i>Reminder</a>
+         
+            
+          </ul>
+        </li>
+         <li>
+          <a href="#">
+            <i class="fa fa-laptop"></i> <span>Logs</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
         <li>
           <a href="/contacts">
            <i class="fa fa-book"></i> <span>Contact Directory</span>
@@ -49,10 +67,30 @@
             </span>
           </a>
         </li>
-     
+        <li class="treeview">
+          <a href="#">
+          <i class="fa fa-cc-mastercard"></i> <span>Payments</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+          <li><a href="#">  <i class="fa fa-credit-card"></i>Transactions</a>
+         
+            
+          </ul>
+        </li>
+         <li>
+          <a href="#">
+            <i class="fa fa-road"></i> <span>Black / Crime Spots</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
         <li>
           <a href="#">
-          <i class="glyphicon glyphicon-cog"></i> <span>Account Settings</span>
+          <i class="fa fa-volume-up"></i>Advertisement <span></span>
             <span class="pull-right-container">
               
             </span>
