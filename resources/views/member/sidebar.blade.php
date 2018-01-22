@@ -64,7 +64,15 @@
         </li>
          <li>
           <a href="#">
-           <i class="fa fa-bullhorn"></i><span>Notices</span>
+           <i class="fa fa-bullhorn"></i><span>Notices </span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+         <li>
+          <a href="#">
+           <i class="fa fa-shopping-cart"></i><span>Medical Appeal</span>
             <span class="pull-right-container">
               
             </span>

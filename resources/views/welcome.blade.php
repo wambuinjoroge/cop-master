@@ -203,7 +203,7 @@
                <div class="row text-center">
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Crime and Justice Service</h4>
+                    <h4 class="service-heading">Crime  and Justice Service</h4>
                     <p class="text-muted">Correction & Rehabilitation Dept.</p>
                     <!--p class="text-muted">Kenya Prison Department</p>
                     <p class="text-muted">Kenya Wildlife Department</p>
@@ -244,7 +244,7 @@
             </div>
              <div class="row">
                 <div class="col-sm-4">
-                   <h4><i class="fa fa-shopping-cart"></i> Appeal</h4>
+                   <h4><i class="fa fa-shopping-cart"></i> Medical Appeal</h4>
                 <div class="hline"></div><br>
                 <div class="well">
                      
