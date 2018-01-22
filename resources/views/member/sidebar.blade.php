@@ -34,6 +34,14 @@
           </a>
         </li>
          <li>
+          <a href="#">
+           <i class="fa fa-users"></i><span>Household</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+         <li>
           <a href="/contribution">
             <i class="fa fa-briefcase"></i> <span>Suggestion Box</span>
             <span class="pull-right-container">
