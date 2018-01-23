@@ -45,20 +45,7 @@
          
             <div class="box-body no-padding">
               <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="fa fa-clock-o"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-number">0</span>
-              <span class="info-box-text">Reminders</span>
-               <span class="username"><a href="#">View Details</a></span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
+               <!-- /.col -->
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
             <span class="info-box-icon bg-green"><i class="fa fa-laptop"></i></span>
@@ -67,6 +54,19 @@
               <span class="info-box-number">0</span>
                 <span class="info-box-text">Logs</span>
               <span class="username"><a href="#">View Details</a></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-clock-o"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-number">0</span>
+              <span class="info-box-text">Reminders</span>
+               <span class="username"><a href="#">View Details</a></span>
             </div>
             <!-- /.info-box-content -->
           </div>
