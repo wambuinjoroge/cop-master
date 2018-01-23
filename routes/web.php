@@ -17,11 +17,20 @@ Route::get('/', function () {
 });
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-Route::get('/register', function () {
-    return view('register');
-});
-Route::post('/register','AuthController@register');
+// Route::get('/register', function () {
+//     return view('register');
+// });
+// Route::post('/register','AuthController@register');
 Auth::routes();
+
+
+//registration detail 
+Route::get('/register', 'AuthController@register');
+Route::post('/registeruser', 'AuthController@registeruser');
+
+
+
+
 Route::get('register/verify/{token}', 'Auth\RegisterController@verifyEmail');
 Route::get('admin', function () {
     return view('admin.panel');

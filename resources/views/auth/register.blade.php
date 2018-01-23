@@ -67,7 +67,7 @@
                 </div>
             </div>
         </nav>
-    <form  method="POST" action="{{ route('register') }}" class="registration-form" >
+    <form  method="POST" action="{{ url('registeruser') }}" class="registration-form" >
     {{csrf_field()}}
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
