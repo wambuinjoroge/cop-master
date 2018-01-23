@@ -15,12 +15,13 @@ trait UssdMenus
     private function main_menu()
     {
         $response = "CON Welcome to ecp Service :\n";
+        //$response = "CON Welcome " . $userAvail['username']  . ". Please choose a service.\n";
         $response .= "1:Visit our website\n";
-        $response .= "2:Identification\n";
+        $response .= "2:eID\n";
         $response .= "3:Contact Directory\n";
         $response .= "4:Crime and Justice\n";
         $response .= "5:Income\n";
-        $response .= "6:Call Centre\n";
+        $response .= "6:Contact Centre\n";
         $response .= "7:Subscribe\n";
         $response .= "8:Unsubscribe\n";
         $response .= "9:Quit";
@@ -30,7 +31,7 @@ trait UssdMenus
     private function identification_menu()
     {
         $response = "CON Choose an Option\n";
-        $response .= "1:Verify Identification\n";
+        $response .= "1:Identification\n";
         $response .= "2:Statement\n";
         $response .= "0:BACK\n";
         $response .= "00:MENU\n";
@@ -164,7 +165,7 @@ trait UssdMenus
         $response = "CON Reply With\n";
         $response .= "1:Daily @ Ksh.10\n";
         $response .= "2:Weekly @ Ksh.50\n";
-        $response .= "3:Monthly @ Ksh.150\n";
+        $response .= "3:Monthly @ Ksh.500\n";
         $response .= "4:Yearly @ Ksh.1000\n";
         $response .= "0:BACK\n";
         $response .= "00:MENU";

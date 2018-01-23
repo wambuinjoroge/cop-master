@@ -15,16 +15,16 @@
           </a>
         </li>
          <li>
-          <a href="/reminder">
-            <i class="fa fa-clock-o"></i> <span>Reminder</span>
+          <a href="#">
+            <i class="fa fa-laptop"></i> <span>Logs</span>
             <span class="pull-right-container">
               
             </span>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-laptop"></i> <span>Logs</span>
+         <li>
+          <a href="/reminder">
+            <i class="fa fa-clock-o"></i> <span>Reminder</span>
             <span class="pull-right-container">
               
             </span>
