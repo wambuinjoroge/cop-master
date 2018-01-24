@@ -77,7 +77,7 @@
                             <div class="stepwizard-row setup-panel">
                                 <div class="stepwizard-step">
                                     <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
-                                    <p>Profile</p>
+                                    <p>Identity</p>
                                 </div>
                                 <div class="stepwizard-step">
                                     <a href="#step-2" type="button" class="btn btn-default btn-circle" id="step-2-progress" >2</a>
@@ -98,7 +98,7 @@
                 <div class="panel-body">         
                     <div class="row setup-content" id="step-1">
                         <div class="col-md-12">
-                            <h3> Profile</h3><hr>
+                            <h3> Identity</h3><hr>
                             <div class="form-group{{ $errors->has('id_no') ? ' has-error' : '' }}">
                                 <label class="control-label">Identification</label>
                                 <input  maxlength="8" minlength="7" type="text" required="required" class="form-control" placeholder="Enter National or Alien ID or Passport Number" name="id_no" value="{{ old('id_no') }}" />
