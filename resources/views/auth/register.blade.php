@@ -100,7 +100,7 @@
                         <div class="col-md-12">
                             <h3> Identity</h3><hr>
                             <div class="form-group{{ $errors->has('id_no') ? ' has-error' : '' }}">
-                                <label class="control-label">Identification Document</label>
+                                <label class="control-label">Identification</label>
                                 <input  maxlength="8" minlength="7" type="text" required="required" class="form-control" placeholder="Enter National or Alien ID or Passport Number" name="id_no" value="{{ old('id_no') }}" />
                                 @if ($errors->has('id_no'))
                                     <span class="help-block">
@@ -682,6 +682,7 @@
                             </div>         
                             <div class="row setup-content" id="step-4">
                                 <div class="col-md-12">
+                                    <!--h3>Profile</h3><hr-->
                                     <h3>Household</h3><hr>
                                     <div class="form-row{{ $errors->has('religion') ? 'has-error' : '' }}">
                                         <label>
