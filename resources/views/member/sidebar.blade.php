@@ -103,6 +103,14 @@
             </span>
           </a>
         </li>
+         <li>
+          <a href="#">
+          <i class="fa fa-volume-up"></i>Advertisement <span></span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
         <li class="treeview">
           <a href="#">
           <i class="fa fa-cc-mastercard"></i> <span>Payments</span>
@@ -118,20 +126,13 @@
         </li>
          <li>
           <a href="#">
-            <i class="fa fa-road"></i> <span>Black / Crime Spots</span>
+            <i class="fa fa-road"></i> <span>Crime Spots</span>
             <span class="pull-right-container">
               
             </span>
           </a>
         </li>
-        <li>
-          <a href="#">
-          <i class="fa fa-volume-up"></i>Advertisement <span></span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li>
+       
           </ul>
     </section>
     <!-- /.sidebar -->

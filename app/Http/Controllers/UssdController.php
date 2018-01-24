@@ -131,7 +131,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^4\*1\*1\*[a-zA-Z' ]+$/",$input))
         {
-            $response="END Visitor Identification No :\n";  
+            $response=   "CON Visitor Identification No :\n";  
             
         }
         //INCOME
