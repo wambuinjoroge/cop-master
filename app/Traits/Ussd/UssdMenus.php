@@ -15,7 +15,7 @@ trait UssdMenus
     private function main_menu()
     {
         $response = "CON Welcome to ecp Service :\n";
-        //$response = "CON Welcome " . $userAvail['username']  . ". Please choose a service.\n";
+        //$response = "CON Welcome " . $userAvail['username']  . ". Select Service.\n";
         $response .= "1:Visit our website\n";
         $response .= "2:eID\n";
         $response .= "3:Contact Directory\n";
@@ -110,11 +110,9 @@ trait UssdMenus
     private function category_menu()
     {
         $response = "CON Proceed with Any\n";
-        $response .= "1:Saloon Car\n";
-        $response .= "2:Matatu\n";
-        $response .= "3:Bus\n";
-        $response .= "4:Lorry\n";
-        $response .= "5:Pick Up\n";
+        $response .= "1:Personal Car\n";
+        $response .= "2:P.S.V\n";
+        $response .= "3:Cargo Vehicle\n";
         $response .= "0:BACK\n";
         $response .= "00:MENU";
         return $response;
@@ -196,8 +194,8 @@ trait UssdMenus
     private function security_menu()
     {
         $response = "CON Security Options :\n";
-        $response .= "1:Police Station\n";
-        $response .= "2:Private Firm\n";
+        $response .= "1:Private Firm\n";
+        $response .= "2:Police Station\n";
         $response .= "0:BACK\n";
         $response .= "00:MENU";
         return $response;

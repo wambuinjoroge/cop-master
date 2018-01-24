@@ -49,7 +49,7 @@ class UssdController extends Controller
         else if(preg_match("/^2\*2\*[a-zA-Z' ]+$/",$input))
         {
             //$Response->Message ='Thank you. You will receive confirmation message shortly '. $ussdRequest->ClientState . ' shortly.';
-            $response="END Your Request for Identification Logs Statement has been received.Please wait for SMS confirmation\n";
+            $response="END Your Request for Identification Statement has been received.Please wait for SMS confirmation\n";
         }
         //CONTACT DIRECTORY
         else if($input == "3")
@@ -125,11 +125,11 @@ class UssdController extends Controller
         {
              $response = $this->security_menu();
         }
-        else if($input =="4*1*2" )
+        else if($input =="4*1*1" )
         {
             $response = "CON Enter Security Firm Name :\n";
         }
-        else if(preg_match("/^4\*1\*2\*[a-zA-Z' ]+$/",$input))
+        else if(preg_match("/^4\*1\*1\*[a-zA-Z' ]+$/",$input))
         {
             $response="END Visitor Identification No :\n";  
             
