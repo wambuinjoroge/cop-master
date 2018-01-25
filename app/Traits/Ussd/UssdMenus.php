@@ -109,10 +109,10 @@ trait UssdMenus
 
     private function category_menu()
     {
-        $response = "CON Proceed with Any\n";
-        $response .= "1:Personal Car\n";
-        $response .= "2:P.S.V\n";
-        $response .= "3:Cargo Vehicle\n";
+        $response = "CON Proceed Vehicle Category\n";
+        $response .= "1:Personal\n";
+        $response .= "2:Commercial\n";
+        $response .= "3:Cargo\n";
         $response .= "0:BACK\n";
         $response .= "00:MENU";
         return $response;
