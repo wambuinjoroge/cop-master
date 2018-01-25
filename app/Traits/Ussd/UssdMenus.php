@@ -17,7 +17,7 @@ trait UssdMenus
         $response = "CON Welcome to ecp Service :\n";
         //$response = "CON Welcome " . $userAvail['username']  . ". Select Service.\n";
         $response .= "1:Visit our website\n";
-        $response .= "2:eID\n";
+        $response .= "2:e-ID\n";
         $response .= "3:Contact Directory\n";
         $response .= "4:Crime and Justice\n";
         $response .= "5:Income\n";
