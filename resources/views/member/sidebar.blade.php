@@ -126,7 +126,7 @@
         </li>
          <li>
           <a href="#">
-            <i class="fa fa-road"></i> <span>Crime Spots</span>
+            <i class="fa fa-road"></i> <span>Hot Spots</span>
             <span class="pull-right-container">
               
             </span>

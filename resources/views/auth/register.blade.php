@@ -89,7 +89,7 @@
                                 </div>
                                 <div class="stepwizard-step">
                                     <a href="#step-4" type="button" class="btn btn-default btn-circle" id="step-4-progress" >4</a>
-                                    <p>Household</p>
+                                    <p>Profile</p>
                                 </div>
                             </div>   
                         </div>
@@ -682,8 +682,8 @@
                             </div>         
                             <div class="row setup-content" id="step-4">
                                 <div class="col-md-12">
-                                    <!--h3>Profile</h3><hr-->
-                                    <h3>Household</h3><hr>
+                                    <h3>Profile</h3><hr>
+                                    <!--h3>Household</h3><hr-->
                                     <div class="form-row{{ $errors->has('religion') ? 'has-error' : '' }}">
                                         <label>
                                             <span>Religion</span>
