@@ -48,7 +48,7 @@
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo">
                        
-                        What is e-Community Police?
+                        What is ecp?
                       </a>
                     </h4>
                   </div>
@@ -79,13 +79,13 @@
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
                       
-                        What e-Community Police DOES ?
+                        What ecp DOES ?
                       </a>
                     </h4>
                   </div>
                   <div id="collapseFour" class="panel-collapse collapse">
                     <div class="panel-body">
-                      I didn't think so, until I started doing this Web Development course.
+                     
                     </div>
                   </div>
                 </div>
@@ -94,7 +94,7 @@
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion3" href="#collapseFive">
                         
-                        What e-Community Police DOES NOT do ?
+                        What ecp DOES NOT do ?
                       </a>
                     </h4>
                   </div>

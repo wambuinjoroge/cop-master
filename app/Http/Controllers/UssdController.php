@@ -155,6 +155,14 @@ class UssdController extends Controller
         {
             $response = $this->payment_menu();       
         }
+        else if($input =="5*1*1*1*1*2" )
+        {
+            $response = $this->payment_menu();       
+        }
+        else if($input =="5*1*1*1*1*2" )
+        {
+            $response = "CON Enter Amount to Pay :\n";      
+        }
         //input county code by the county attendant officer then it should display sub county
          //function getCountyCodeInput()
         // {
