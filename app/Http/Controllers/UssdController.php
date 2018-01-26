@@ -38,8 +38,10 @@ class UssdController extends Controller
         }
         else if(preg_match("/^2\*1\*[0-9]{8}$/",$input))
         {
-            $response="END Your Profile Information :\n";
+            //$response="END Your Profile Information :\n";
             //$response = "END  Hello " . $userAvail['username']  . ". Profile Information.\n";
+            $response = "END  Hello " . $user->name  . ". Profile Information.\n";
+           
             $response .= $this->verifyIdentity($input);
         }
         else if($input =="2*2" )
@@ -155,7 +157,7 @@ class UssdController extends Controller
         {
             $response = $this->payment_menu();       
         }
-        else if($input =="5*1*1*1*1*2" )
+        else if($input =="5*1*1*1*1" )
         {
             $response = "CON Enter Amount to Pay :\n";      
         }
@@ -308,7 +310,7 @@ class UssdController extends Controller
         } 
         else if($input =="5*2*1*1" )
         {
-            $response = "CON Enter Institution Registration No. :\n";
+            $response = "CON Enter Business Reg. No. :\n";
         }
         else if(preg_match("/^5\*2\*1\*1\*[0-9]{8}$/",$input))
         {
