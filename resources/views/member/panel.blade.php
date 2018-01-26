@@ -131,44 +131,15 @@
               </div>
               <!-- /.box-header -->
             <div class="box-body social-icons">
-             <button type="button" class="btn btn-default btn-xs"></i> Follow</button>
-              <button type="button" class="btn btn-default btn-xs"><i class="fa fa-facebook fa-"></i> Share</button>
-               <button type="button" class="btn btn-default btn-xs"></i> Comment</button>
-              <button type="button" class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
-              <span class="pull-right text-muted">1,207,00 likes - 503,000 comments</span>
-            </div>
-              <div class="box-comment">
-                <!-- User image -->
-                <img class="img-circle img-sm" src="{{ asset('assets/dist/img/user2-160x160.jpg') }}" alt="User Image">
-
-                <div class="comment-text">
-                      <span class="username">
-                        Maria Gonzales
-                        <span class="text-muted pull-right">8:03 PM Today</span>
-                      </span><!-- /.username -->
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </div>
-                <!-- /.comment-text -->
-              </div>
-              <div class="box-comment">
-                <!-- User image -->
-                <img class="img-circle img-sm" src="{{ asset('assets/dist/img/user2-160x160.jpg') }}" alt="User Image">
-
-                <div class="comment-text">
-                      <span class="username">
-                        Maria Gonzales
-                        <span class="text-muted pull-right">8:03 PM Today</span>
-                      </span><!-- /.username -->
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </div>
-                <!-- /.comment-text -->
-              </div>
+              <button type="button" class="btn btn-default btn-xs"></i> Follow</button>
+              <button type="button" class="btn btn-default btn-xs"></i> Share</button>
+              <button type="button" class="btn btn-default btn-xs"></i> Comment</button>
+              <button type="button" class="btn btn-default btn-xs"></i> Like</button>  
+            </div> 
             </div>
             <!-- /.box-footer -->
             <div class="box-footer">
-              <form action="#" method="post">
+              <form action="#" method="#">
                 <img class="img-circle img-sm" src="{{ asset('assets/dist/img/user2-160x160.jpg') }}" alt="User Image">
                 <!-- .img-push is used to add margin to elements next to floating images -->
                 <div class="img-push">

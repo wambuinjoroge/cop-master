@@ -29,9 +29,9 @@ Route::get('/register', 'AuthController@register');
 Route::post('/registeruser', 'AuthController@registeruser');
 
 Route::get('register/verify/{token}', 'Auth\RegisterController@verifyEmail');
-Route::get('admin', function () {
-    return view('admin.panel');
-});
+//Route::get('admin', function () {
+//    return view('admin.panel');
+//});
 
 Route::get('member', function () {
     return view('member.panel');

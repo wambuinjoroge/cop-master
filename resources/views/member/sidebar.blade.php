@@ -56,7 +56,7 @@
         </li>
          <li>
           <a href="#">
-           <i class="fa fa-users"></i><span>Membership</span>
+           <i class="fa fa-group"></i><span>Cluster Membership</span>
             <span class="pull-right-container">
               
             </span>
