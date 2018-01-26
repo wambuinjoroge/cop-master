@@ -19,9 +19,9 @@
 <div class="wrapper">
 
  <!-- Main Header -->
-    @include('member.header')
+    @include('admin.header')
 <!-- Sidebar -->
-    @include('member.sidebar')
+    @include('admin.sidebar')
 
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -31,7 +31,7 @@
         Edit Role
       </h1>
       <ol class="breadcrumb">
-       <li><a href="/member"><i class="fa fa-home" ></i>Dashboard</a></li>
+       <li><a href="/admin"><i class="fa fa-home" ></i>Dashboard</a></li>
        <li class="active"><a href="#"><i class="fa fa-book"></i>Roles</a></li>
       </ol>
     </section>

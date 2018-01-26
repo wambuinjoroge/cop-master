@@ -203,7 +203,7 @@
                <div class="row text-center">
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Crime  and Justice Service</h4>
+                    <h4 class="service-heading">Crime , Law & Justice Service</h4>
                     <p class="text-muted">Correction & Rehabilitation Dept.</p>
                     <!--p class="text-muted">Kenya Prison Department</p>
                     <p class="text-muted">Kenya Wildlife Department</p>
@@ -213,14 +213,14 @@
                 </div>
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Game Park Service</h4>
+                    <h4 class="service-heading">Fire Department Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Ticket and Courier Service</h4>
-                    <p class="text-muted">coming soon.</p>
+                    <h4 class="service-heading">e-Safari Service</h4>
+                    <p class="text-muted">Ticket and Courier.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                  <div class="col-md-3">

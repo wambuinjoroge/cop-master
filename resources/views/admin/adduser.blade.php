@@ -77,9 +77,11 @@
 				         <label for="role">Role: </label>
 					        <select name="role" title="Select Role">
 					        	<option value="{{old('role')}}">Admin</option>
-					        	<option value="{{old('role')}}">Officer</option>
 					        	<option value="{{old('role')}}">Agent</option>
+					        	<option value="{{old('role')}}">Authority</option>
 					        	<option value="{{old('role')}}">Clerk</option>
+					        	<option value="{{old('role')}}">Finance</option>
+					        	<option value="{{old('role')}}">Probation</option>
 					        </select>
 					            @if ($errors->has('first_name'))
 					                <span class="help-block">

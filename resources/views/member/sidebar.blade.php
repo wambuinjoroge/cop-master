@@ -23,7 +23,7 @@
           </a>
         </li>
          <li>
-          <a href="/reminder">
+          <a href="#">
             <i class="fa fa-clock-o"></i> <span>Reminder</span>
             <span class="pull-right-container">
               
@@ -39,7 +39,7 @@
           </a>
         </li>
         <li>
-          <a href="/item">
+          <a href="#">
            <i class="fa fa-bars"></i><span>Register Item</span>
             <span class="pull-right-container">
               
@@ -49,6 +49,14 @@
          <li>
           <a href="#">
            <i class="fa fa-users"></i><span>Household</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+         <li>
+          <a href="#">
+           <i class="fa fa-users"></i><span>Membership</span>
             <span class="pull-right-container">
               
             </span>
@@ -96,7 +104,7 @@
           </ul>
         </li>
          <li>
-          <a href="/contribution">
+          <a href="#">
             <i class="fa fa-briefcase"></i> <span>Suggestion Box</span>
             <span class="pull-right-container">
               
@@ -126,7 +134,7 @@
         </li>
          <li>
           <a href="#">
-            <i class="fa fa-road"></i> <span>Hot Spots</span>
+            <i class="fa fa-road"></i> <span>Hotspots</span>
             <span class="pull-right-container">
               
             </span>
