@@ -675,7 +675,7 @@
                                             <button class="btn btn-success nextBtn btn-block" id="back-2">Back</button>
                                         </div>
                                         <div class="col-md-4">
-                                            <button class="btn btn-success nextBtn btn-block" id="next-3">Next</button>
+                                            <button class="btn btn-success nextBtn btn-block" id="next-3">Verify</button>
                                         </div>
                                     </div>
                                 </div>
