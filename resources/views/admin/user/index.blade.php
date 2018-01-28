@@ -32,7 +32,7 @@
       </h1>
       <ol class="breadcrumb">
        <li><a href="/admin"><i class="fa fa-home" ></i>Dashboard</a></li>
-      <li class="active"><a href="#"><i class="fa fa-users"></i>Users List</a></li>
+      <li class="active"><a href="#"><i class="fa fa-users"></i>User List</a></li>
       </ol>
     </section>
 

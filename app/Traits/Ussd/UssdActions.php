@@ -30,8 +30,7 @@ trait UssdActions
             $details .= "Resident County : ".$user->residence->county_residence."\n";
             $details .= "Constituency : ".$user->residence->constituency."\n";
             $details .= "Building Name : ".$user->residence->household_name."\n";
-            //MAP RELATIONS IN THE MODEL BEFORE CALLING THEM FIRST e.g household relations is not mapped
-            //$details .= "Cluster : ".$user->household->cluster."\n";
+            
            
         }
         else
