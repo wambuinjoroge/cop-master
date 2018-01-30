@@ -617,7 +617,7 @@
                                             </div>
 
                                             <div class="form-group{{ $errors->has('household_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">House Name</label>
+                                                <label class="control-label">House or Area Name</label>
                                                 <input maxlength="100" type="text" name="household_name" class="form-control" placeholder="Enter House or Building  Name" value="{{ old('household_name') }}" />
                                                 @if ($errors->has('household_name'))
                                                     <span class="help-block">

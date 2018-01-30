@@ -30,7 +30,7 @@ Route::post('/registeruser', 'AuthController@registeruser');
 
 Route::get('register/verify/{token}', 'Auth\RegisterController@verifyEmail');
 //Route::get('admin', function () {
-//    return view('admin.panel');
+ //  return view('admin.panel');
 //});
 
 Route::get('member', function () {
@@ -56,11 +56,12 @@ Route::post('/contacts', 'ContactsController@searchContact');
 // Administrator routes
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 {
+    //Route::resource('adduser', 'UserController');
     Route::resource('user', 'UserController');
     Route::resource('roles', 'RoleController');
     Route::resource('permissions', 'PermissionController');
     Route::get('change-role/{id}', 'UserController@getChangeRole')->name('user.role');
-	Route::post('change-role/{id}', 'UserController@postChangeRole')->name('user.role.change');
+	  Route::post('change-role/{id}', 'UserController@postChangeRole')->name('user.role.change');
 });
 
 Route::post('/callback/ussd','UssdController@index');

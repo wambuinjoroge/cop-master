@@ -111,12 +111,12 @@
                     
                   </div>
                    <div class="col-md-12">
-                    <p><strong>SMS No. : </strong></p>
+                    <p><strong>SMS : </strong></p>
                     
                   </div>
   
                    <div class="col-md-12">
-                    <p><strong>USSD Code : </strong></p>
+                    <p><strong>USSD : </strong></p>
                     
                   </div>
                 </div>

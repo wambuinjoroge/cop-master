@@ -259,23 +259,17 @@
                 <div class="col-sm-4"> 
                     
          <div class="event-title">
-         <h4><i class="fa fa-share-alt"></i> Lost & Found</h4>
+         <h4><i class="fa fa-bullhorn"></i> Notices</h4>
       </div>
         <div class="hline"></div><br>
       <div class="well">
                       <div class="well" >
-                        <img src="{{asset('assets/dist/img/user2-160x160.jpg')}}" class="img-responsive"  alt="Image">
-                        <p>Name : Agweng'</p>
-                        <p>Age : 15yrs</p>
-                        <!--p>Status: Missing</p>
-                        <p>Gender: Female</p>
-                        <p>Area Name : Runda</p>
-                        <p>Description : </p-->
-                        <p>Contact: 0704 207 449</p>
+                        <img src="{{asset('assets/dist/img/kabu.jpg')}}" class="img-responsive"  alt="Image">
+                        
                     </div>
             </div>
         
-         <a href="{{ url('/login') }}" class="btn btn-success">More Lost & Found ...</a>  
+         <a href="{{ url('/login') }}" class="btn btn-success">More Notices ...</a>  
  
                 </div>
                 

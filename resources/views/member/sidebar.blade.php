@@ -54,7 +54,7 @@
             </span>
           </a>
         </li>
-         <li>
+         <!--li>
           <a href="#">
            <i class="fa fa-medkit"></i><span>Special Condition</span>
             <span class="pull-right-container">
@@ -69,7 +69,7 @@
               
             </span>
           </a>
-        </li>
+        </li-->
          <li>
           <a href="#">
           <i class="fa fa-calendar-check-o"></i> <span>Events</span>
