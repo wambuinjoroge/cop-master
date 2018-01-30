@@ -33,8 +33,7 @@ trait UssdMenus
         $response = "CON Choose an Option\n";
         $response .= "1:Identification\n";
         $response .= "2:Statement\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU\n";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
 
@@ -47,8 +46,7 @@ trait UssdMenus
         $response .= "4:Location\n";
         $response .= "5:Mobile Money\n";
         $response .= "6:Bank Account\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
 
@@ -57,8 +55,7 @@ trait UssdMenus
         $response = "CON Reply With Any\n";
         $response .= "1:Revenue\n";
         $response .= "2:Tax\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
 
@@ -67,8 +64,7 @@ trait UssdMenus
         $response = "CON Select Revenue option\n";
         $response .= "1:Collection\n";
         $response .= "2:Statement\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
 
@@ -83,8 +79,7 @@ trait UssdMenus
         $response .= "6:County Houses\n";
         $response .= "7:Bill\n";
         $response .= "8:Fine & Penalties\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
 
@@ -93,8 +88,7 @@ trait UssdMenus
         $response = "CON Select House Type\n";
         $response .= "1:Market Stalls \n";
         $response .= "2:Rental House\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
     private function bill_menu()
@@ -102,8 +96,7 @@ trait UssdMenus
         $response = "CON Select Bill Type\n";
         $response .= "1:Water \n";
         $response .= "2:Garbage\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
 
@@ -113,8 +106,7 @@ trait UssdMenus
         $response .= "1:Personal\n";
         $response .= "2:Commercial\n";
         $response .= "3:Cargo\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
 
@@ -129,8 +121,7 @@ trait UssdMenus
         $response .= "6:Telkom Money\n";
         $response .= "7:Eazzy Pay\n";
         $response .= "8:Local Bank Transfer\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
 
@@ -139,8 +130,7 @@ trait UssdMenus
         $response = "CON Select Option\n";
         $response .= "1:Tax Compliant\n";
         $response .= "2:Statement\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
 
@@ -153,8 +143,7 @@ trait UssdMenus
         $response .= "4:Northern\n";
         $response .= "5:Central\n";
         $response .= "6:Rift Valey\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
 
@@ -165,8 +154,7 @@ trait UssdMenus
         $response .= "2:Weekly @ Ksh.50\n";
         $response .= "3:Monthly @ Ksh.500\n";
         $response .= "4:Yearly @ Ksh.1000\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "8:Unsubscribe\n";
         return $response;
     }
 
@@ -175,8 +163,6 @@ trait UssdMenus
         $response = "CON Choose Option\n";
         $response .= "1:Accept\n";
         $response .= "2:Decline\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
         return $response;
     }
 
@@ -186,8 +172,7 @@ trait UssdMenus
         $response .= "1:Security\n";
         $response .= "2:Probation\n";
         $response .= "3:Court\n"; 
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
 
@@ -196,8 +181,7 @@ trait UssdMenus
         $response = "CON Security Options :\n";
         $response .= "1:Private Firm\n";
         $response .= "2:Police Station\n";
-        $response .= "0:BACK\n";
-        $response .= "00:MENU";
+        $response .= "0:BACK 00:MENU\n";
         return $response;
     }
 
