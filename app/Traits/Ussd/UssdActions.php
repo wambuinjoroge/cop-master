@@ -9,8 +9,7 @@
 namespace App\Traits\Ussd;
 
 use App\User;
-use App\EmploymentDetails;
-//use App\Institution;
+use App\Institution;
 use App\Utils\SMS\AfricasTalkingGateway;
 
 trait UssdActions
@@ -42,12 +41,12 @@ trait UssdActions
         return $details;
     }
 
-    private function findEmploymentDetails($input)
+    private function findInstitution($input)
     {
         preg_match_all("!([a-zA-Z' ]+)!",$input,$matches);
         $name = $matches[0][0];
-        $institution = EmploymentDetails::where('name','LIKE',"%".$name."%")->get()->first();
-        if(!is_null($EmploymentDetails)){
+        $institution = Institution::where('name','LIKE',"%".$name."%")->get()->first();
+        if(!is_null($institution)){
 
             $details  = "Institution Name : ".$institution->name."\n";
             $details .= "Institution Reg No : ".$institution->reg_no."\n";
