@@ -9,7 +9,8 @@
 namespace App\Traits\Ussd;
 
 use App\User;
-use App\Institution;
+use App\EmploymentDetails;
+//use App\Institution;
 use App\Utils\SMS\AfricasTalkingGateway;
 
 trait UssdActions
@@ -29,7 +30,7 @@ trait UssdActions
             //$details .= "Branch Name : ".$user->employment->branch_name."\n";
             $details .= "Resident County : ".$user->residence->county_residence."\n";
             $details .= "Constituency : ".$user->residence->constituency."\n";
-            $details .= "Building Name : ".$user->residence->household_name."\n";
+            $details .= "Area Name : ".$user->residence->household_name."\n";
             
            
         }
@@ -41,12 +42,12 @@ trait UssdActions
         return $details;
     }
 
-    private function findInstitution($input)
+    private function findEmploymentDetails($input)
     {
         preg_match_all("!([a-zA-Z' ]+)!",$input,$matches);
         $name = $matches[0][0];
-        $institution = Institution::where('name','LIKE',"%".$name."%")->get()->first();
-        if(!is_null($institution)){
+        $institution = EmploymentDetails::where('name','LIKE',"%".$name."%")->get()->first();
+        if(!is_null($EmploymentDetails)){
 
             $details  = "Institution Name : ".$institution->name."\n";
             $details .= "Institution Reg No : ".$institution->reg_no."\n";
