@@ -19,9 +19,9 @@
 <div class="wrapper">
 
  <!-- Main Header -->
-    @include('member.header')
+    @include('finance.header')
 <!-- Sidebar -->
-    @include('member.sidebar')
+    @include('finance.sidebar')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -45,28 +45,28 @@
          
             <div class="box-body no-padding">
               <div class="row">
-               <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="fa fa-laptop"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-number">0</span>
-                <span class="info-box-text">Logs</span>
-              <span class="username"><a href="#">View Details</a></span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
             <span class="info-box-icon bg-aqua"><i class="fa fa-clock-o"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-number">0</span>
-              <span class="info-box-text">Reminders</span>
+              <span class="info-box-text">Invoices</span>
                <span class="username"><a href="#">View Details</a></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-laptop"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-number">0</span>
+                <span class="info-box-text">Transactions</span>
+              <span class="username"><a href="#">View Details</a></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -79,7 +79,7 @@
 
             <div class="info-box-content">
               <span class="info-box-number">0</span>
-              <span class="info-box-text">Events</span>
+              <span class="info-box-text">Clients</span>
               <span class="username"><a href="#">View Details</a></span>
             </div>
             <!-- /.info-box-content -->
@@ -93,7 +93,7 @@
 
             <div class="info-box-content">
               <span class="info-box-number">0</span>
-              <span class="info-box-text">Notices</span>
+              <span class="info-box-text">Businesses</span>
                <span class="username"><a href="#">View Details</a></span>
             </div>
             <!-- /.info-box-content -->
@@ -131,15 +131,44 @@
               </div>
               <!-- /.box-header -->
             <div class="box-body social-icons">
-              <button type="button" class="btn btn-default btn-xs"></i> Follow</button>
-              <button type="button" class="btn btn-default btn-xs"></i> Share</button>
-              <button type="button" class="btn btn-default btn-xs"></i> Comment</button>
-              <button type="button" class="btn btn-default btn-xs"></i> Like</button>  
-            </div> 
+             <button type="button" class="btn btn-default btn-xs"></i> Follow</button>
+              <button type="button" class="btn btn-default btn-xs"><i class="fa fa-facebook fa-"></i> Share</button>
+               <button type="button" class="btn btn-default btn-xs"></i> Comment</button>
+              <button type="button" class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
+              <span class="pull-right text-muted">1,207,00 likes - 503,000 comments</span>
+            </div>
+              <div class="box-comment">
+                <!-- User image -->
+                <img class="img-circle img-sm" src="{{ asset('assets/dist/img/user2-160x160.jpg') }}" alt="User Image">
+
+                <div class="comment-text">
+                      <span class="username">
+                        Maria Gonzales
+                        <span class="text-muted pull-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                </div>
+                <!-- /.comment-text -->
+              </div>
+              <div class="box-comment">
+                <!-- User image -->
+                <img class="img-circle img-sm" src="{{ asset('assets/dist/img/user2-160x160.jpg') }}" alt="User Image">
+
+                <div class="comment-text">
+                      <span class="username">
+                        Maria Gonzales
+                        <span class="text-muted pull-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                </div>
+                <!-- /.comment-text -->
+              </div>
             </div>
             <!-- /.box-footer -->
             <div class="box-footer">
-              <form action="#" method="#">
+              <form action="#" method="post">
                 <img class="img-circle img-sm" src="{{ asset('assets/dist/img/user2-160x160.jpg') }}" alt="User Image">
                 <!-- .img-push is used to add margin to elements next to floating images -->
                 <div class="img-push">
@@ -155,8 +184,8 @@
           <!-- Box Comment -->
           <div class="box box-widget">
             <div class="box-header with-border">
-              <div class="user-block">
-              <span class="content-header">  <h1>SMS Message Dashboard</h1></span>
+              <div class="user-block" style="height: 50px;font-weight: bold;">
+              <span class="content-header">  <h1>Advertise Here</h1></span>
                
               </div>
               <!-- /.user-block -->
@@ -169,54 +198,18 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-             <form  method="POST" action="" class="form-horizontal" >
-                {{csrf_field()}}
-                <div class="form-group{{ $errors->has('household_type') ? 'has-error' : '' }} col-md-12">
-                <label class="control-label">Subject</label>
-                                                
-                                                <select class="form-control" name="household_type">
-                                                    <option value="" selected>--select--</option>
-                                                    <option value="Report">Report</option>
-                                                    <option value="Advertise">Advertise</option>
-                                                    <option value="Notice">Notice</option>
-                                                </select>
-                                                @if ($errors->has('household_type'))
-                                                    <span class="help-block">
-                                                        <strong>{{ $errors->first('household_type') }}</strong>
-                                                    </span>
-                                                @endif
-                                            </div>
-                <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }} col-md-12">
-                  <label class="control-label">Message</label>
-                    <textarea name="postal_address" class="form-control" placeholder="Enter Message " value="{{ old('postal_address') }}" ></textarea>
-                       @if ($errors->has('first_name'))
-                          <span class="help-block">
-                             <strong>{{ $errors->first('first_name') }}</strong>
-                          </span>
-                        @endif
+            <div class="medium-4 columns wow slideInRight" data-wow-duration="2s">
+                   <div class="partners">
+                       <img  src="{{ asset('assets/bootstrap/img/partners/africastalking.png') }}" width = "45%" alt="africastalking logo" />
+                 <img src="{{ asset('assets/bootstrap/img/partners/afrilabs.png') }}" width="50%" alt="afrilabs logo" />
                </div>
-               <table class="table table-responsive table-striped table-bordered">
-                  <thead>
-                    <th></th>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Mobile</th>
-                    <th>Email</th>
-                    <!--th>Property Number</th-->
-                    
-                  </thead>
-               <tbody>
-                 
-                  
-               </tbody>
-             </table> 
-              <div class="form-group col-md-6 col-sm-6">
-                   <button class="btn btn-success " type="button">Send Message</button>                            
-                                                 
-                                            </div>
-              
-            
-             </form>
+            </div><br>
+            <div class="medium-4 columns wow slideInRight" data-wow-duration="2s">
+                   <div class="partners">
+                       <img  src="{{ asset('assets/bootstrap/img/payment/airtel.jpeg') }}" width = "45%" alt="africastalking logo" />
+                 <img src="{{ asset('assets/bootstrap/img/payment/saf.jpeg') }}" width="50%" alt="afrilabs logo" />
+               </div>
+            </div><br>
             </div>  
           
             </div>

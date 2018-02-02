@@ -1,10 +1,3 @@
-
-*******************
-ecp
-*******************
-
-e-community police 
-
 *******************
 What is ecp
 *******************
@@ -15,7 +8,7 @@ ecp is platform that connects Community Members , Faith-Based Organizations (FBO
 Release Version Information
 **************************************
 
-Version Trial 1.0.0
+Trial Version 
 
 *******************
 How to contribute

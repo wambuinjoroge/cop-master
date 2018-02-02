@@ -203,7 +203,7 @@
                <div class="row text-center">
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Crime , Law & Justice Service</h4>
+                    <h4 class="service-heading">Law & Justice Service</h4>
                     <p class="text-muted">Correction & Rehabilitation Dept.</p>
                     <!--p class="text-muted">Kenya Prison Department</p>
                     <p class="text-muted">Kenya Wildlife Department</p>
@@ -213,14 +213,14 @@
                 </div>
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Fire Department Service</h4>
+                    <h4 class="service-heading">Tenant Portal Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
                     <h4 class="service-heading">e-Safari Service</h4>
-                    <p class="text-muted">Ticket and Courier.</p>
+                    <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                  <div class="col-md-3">
@@ -339,8 +339,8 @@
                         <div class="widget-body">
                             <address>
                             <i class="fa fa-phone fa-3x sr-contact"></i> : 
-                             <a href="call">+254 736 436 900 </a><br><br>
-                               <i class="fa fa-envelope fa-3x sr-contact"></i> : <a href="mailto:#">  contact@ecp.co.ke</a><br>
+                             <a href="call"> +254 736 436 900 </a><br><br>
+                            <i class="fa fa-envelope fa-3x sr-contact"></i> : <a href="mailto:#">  contact@ecp.co.ke</a><br>
                                
                                 
                             </address>
@@ -354,8 +354,8 @@
                         <address>
                             <p class="text">
                             <ul>
-                            <li><a href="/faq">FAQ</a></li>
-                            <li><a href="/help">Help</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Help</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms of use</a></li> 
                             </ul>
@@ -407,7 +407,7 @@
        <div class="container">
             <div class="row">
                 <div class=" pull-left">
-                    <span class="copyright">Copyright &copy; <?=date('Y');?> - Machini Technologies . All Rights Reserved</span>
+                    <span class="copyright">&copy; <?=date('Y');?> - Machini Technologies . All Rights Reserved</span>
                 </div>
                 <div class="col-md-8">
                     <div class="pull-right">

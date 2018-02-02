@@ -574,7 +574,7 @@
                                             </div> 
                                             <div class="form-group{{ $errors->has('street') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label"> Road Name</label>
-                                                <input type="text" name="street" class="form-control" maxlength="100" placeholder="Enter Street, Road or Avenue or lane" value="{{ old('street') }}">
+                                                <input type="text" name="street" class="form-control" maxlength="100" placeholder="Enter Street or Road or Avenue or Lane" value="{{ old('street') }}">
                                                 @if ($errors->has('street'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('street') }}</strong>
@@ -610,7 +610,7 @@
 
                                             <div class="form-group{{ $errors->has('household_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label">House or Area Name</label>
-                                                <input maxlength="100" type="text" name="household_name" class="form-control" placeholder="Enter House or Building  Name" value="{{ old('household_name') }}" />
+                                                <input maxlength="100" type="text" name="household_name" class="form-control" placeholder="Enter House or Area Name" value="{{ old('household_name') }}" />
                                                 @if ($errors->has('household_name'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('household_name') }}</strong>

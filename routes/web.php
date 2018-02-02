@@ -11,27 +11,19 @@
 |
 */
 //Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('/welcome', 'WelcomeController@index')->name('welcome');
+//Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('/', function () {
     return view('welcome');
 });
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-// Route::get('/register', function () {
-//     return view('register');
-// });
-// Route::post('/register','AuthController@register');
 Auth::routes();
-
-
 //registration detail 
 Route::get('/register', 'AuthController@register');
 Route::post('/registeruser', 'AuthController@registeruser');
 
 Route::get('register/verify/{token}', 'Auth\RegisterController@verifyEmail');
-//Route::get('admin', function () {
- //  return view('admin.panel');
-//});
+
 
 Route::get('member', function () {
     return view('member.panel');
@@ -54,6 +46,9 @@ Route::get('/contacts/{id}/details', 'ContactsController@viewContactDetails');
 Route::post('/contacts', 'ContactsController@searchContact');
 
 // Administrator routes
+//Route::get('admin', function () {
+ //  return view('admin.panel');
+//});
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 {
     //Route::resource('adduser', 'UserController');
@@ -65,6 +60,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 });
 
 Route::post('/callback/ussd','UssdController@index');
+
+Route::post('/message', 'MessageController@message');
+
 Route::post('/send-sms', [
    'uses'   =>  'SmsController@getUserNumber',
    'as'     =>  'sendSms'
