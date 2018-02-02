@@ -7,6 +7,7 @@ use App\Role;
 use App\ResidentialDetails;
 use App\EmploymentDetails;
 use App\HouseholdDetails;
+use DB;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -108,6 +109,72 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return User
      */
+
+public function store(Request $request)
+    {
+$nextid = DB::table('users')->max('id') + 1;
+        $user = new User();
+        $fname = $request->input('first_name');
+        $lname = $request->input('last_name');
+        $user->id_no = $request->input('id_no');
+        $user->name = $request->input('first_name').' '.$request->input('last_name');
+        $user->email = $request->input('email');
+        $user->mobile_no = $request->input('mobile_no');
+        $user->password = bcrypt($request->input('password'));
+
+        //employment
+ $employment = new EmploymentDetails();
+        $employment->user_id = $nextid;
+        $employment->employment = $request->input('employment');
+        $employment->county_name = $request->input('county_name');
+        $employment->city_name = $request->input('city_name');
+        $employment->sector = $request->input('sector');
+        $employment->business_category = $request->input('business_category');
+        $employment->institution_name = $request->input('institution_name');
+        $employment->building_name = $request->input('building_name');
+        $employment->floor_num = $request->input('floor_num');
+        $employment->room_num = $request->input('room_num');
+        $employment->branch_name = $request->input('branch_name');
+        $employment->street_name = $request->input('street_name');
+        $employment->postal_address = $request->input('postal_address');
+        $employment->email_address = $request->input('email_address');
+        $employment->telephone = $request->input('telephone');
+        $employment->fax_num = $request->input('fax_num');
+        $employment->website = $request->input('website');
+
+ $residential = new ResidentialDetails();
+        $residential->user_id = $nextid;
+        $residential->county_residence = $request->input('county_residence');
+        $residential->sub_county = $request->input('sub_county');
+        $residential->constituency = $request->input('constituency');
+        $residential->household_name = $request->input('household_name');
+        $residential->household_type = $request->input('household_type');
+        $residential->property_number = $request->input('property_number');
+        $residential->street = $request->input('street');
+        $residential->floor_number =$request->input('floor_number');
+        $residential->door_number = $request->input('door_number');
+       
+
+
+        $household = new HouseholdDetails();
+        $household->user_id = $nextid;
+        $household->religion = $request->input('religion');
+        $household->cluster = $request->input('cluster');
+
+
+        $employment->save();
+       $residential->save();
+        $household->save();
+        $user->save();
+
+      
+      session::flash ('msg','success') ; 
+
+return redirect('login');
+         
+    }
+
+
     protected function create(array $data)
     {
         $input = $data;

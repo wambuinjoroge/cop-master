@@ -15,14 +15,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('login', 'Auth\LoginController@login');
+// Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Auth::routes();
 //registration detail 
 Route::get('/register', 'AuthController@register');
 Route::post('/registeruser', 'AuthController@registeruser');
-
 Route::get('register/verify/{token}', 'Auth\RegisterController@verifyEmail');
+
+
+
+
+//REGISTER USER DETAILS ROUTES
+Route::post('reg', 'Auth\RegisterController@store');
+Route::get('regi', 'Auth\RegisterController@store');
 
 
 Route::get('member', function () {
@@ -36,6 +42,8 @@ Route::get('faq', function () {
 Route::get('help', function () {
    return view('help');
 });
+
+
 
 
 Auth::routes();
