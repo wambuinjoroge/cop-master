@@ -19,9 +19,15 @@
 <div class="wrapper">
 
  <!-- Main Header -->
+<<<<<<< HEAD
+    @include('member.header')
+<!-- Sidebar -->
+    @include('member.sidebar')
+=======
     @include('finance.header')
 <!-- Sidebar -->
     @include('finance.sidebar')
+>>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -51,7 +57,11 @@
 
             <div class="info-box-content">
               <span class="info-box-number">0</span>
+<<<<<<< HEAD
+              <span class="info-box-text">Reminders</span>
+=======
               <span class="info-box-text">Invoices</span>
+>>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
                <span class="username"><a href="#">View Details</a></span>
             </div>
             <!-- /.info-box-content -->
@@ -65,7 +75,11 @@
 
             <div class="info-box-content">
               <span class="info-box-number">0</span>
+<<<<<<< HEAD
+                <span class="info-box-text">Logs</span>
+=======
                 <span class="info-box-text">Transactions</span>
+>>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
               <span class="username"><a href="#">View Details</a></span>
             </div>
             <!-- /.info-box-content -->
@@ -79,7 +93,11 @@
 
             <div class="info-box-content">
               <span class="info-box-number">0</span>
+<<<<<<< HEAD
+              <span class="info-box-text">Events</span>
+=======
               <span class="info-box-text">Clients</span>
+>>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
               <span class="username"><a href="#">View Details</a></span>
             </div>
             <!-- /.info-box-content -->
@@ -93,7 +111,11 @@
 
             <div class="info-box-content">
               <span class="info-box-number">0</span>
+<<<<<<< HEAD
+              <span class="info-box-text">Notices</span>
+=======
               <span class="info-box-text">Businesses</span>
+>>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
                <span class="username"><a href="#">View Details</a></span>
             </div>
             <!-- /.info-box-content -->
