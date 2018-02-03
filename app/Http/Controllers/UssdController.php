@@ -25,11 +25,7 @@ class UssdController extends Controller
         //WEBSITE URL
         elseif($input == "1")
         {
-<<<<<<< HEAD
-            $response = "END For More Information Please Visit :\n\n\n www.ecp.co.ke \n";
-=======
             $response = "END For More Information Please Visit :\n\n www.ecp.co.ke \n";
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
         }
         //IDENTIFICATION
         else if($input=="2")
@@ -43,10 +39,7 @@ class UssdController extends Controller
         else if(preg_match("/^2\*1\*[0-9]{8}$/",$input))
         {
             $response="END Your Profile Information :\n";
-<<<<<<< HEAD
-=======
             //$response = "END  Hello " . $userAvail['username']  . ". Profile Information.\n";
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
             $response .= $this->verifyIdentity($input);
         }
         else if($input =="2*2" )
@@ -56,11 +49,7 @@ class UssdController extends Controller
         else if(preg_match("/^2\*2\*[a-zA-Z' ]+$/",$input))
         {
             //$Response->Message ='Thank you. You will receive confirmation message shortly '. $ussdRequest->ClientState . ' shortly.';
-<<<<<<< HEAD
-            $response="END Your Request for Identification Logs Statement has been received.Please wait for SMS confirmation\n";
-=======
             $response="END Your Request for Identification Statement has been received.Please wait for SMS confirmation\n";
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
         }
         //CONTACT DIRECTORY
         else if($input == "3")
@@ -74,11 +63,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^3\*1\*[a-zA-Z' ]+$/",$input))
         {
-<<<<<<< HEAD
-            $response="END  Address  Details :\n";
-=======
             $response="END  Institution Address  Details :\n";
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
             $response .= $this->findInstitution($input);
         }
         else if($input =="3*2" )
@@ -88,11 +73,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^3\*2\*[a-zA-Z' ]+$/",$input))
         {
-<<<<<<< HEAD
-            $response="END Contact Numbers Details :\n";
-=======
             $response="END Institution Contact Numbers Details :\n";
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
             $response .= $this->findInstitution($input);
         }
         else if($input =="3*3" )
@@ -102,11 +83,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^3\*3\*[a-zA-Z' ]+$/",$input))
         {
-<<<<<<< HEAD
-            $response="END Social Media Details :\n";
-=======
             $response="END Institution Social Media Details :\n";
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
             $response .= $this->findInstitution($input);
         }
         else if($input =="3*4" )
@@ -116,11 +93,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^3\*4\*[a-zA-Z' ]+$/",$input))
         {
-<<<<<<< HEAD
-            $response="END Location Details :\n";
-=======
             $response="END Institution Location Details :\n";
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
             $response .= $this->findInstitution($input);
         }
         else if($input =="3*5" )
@@ -130,11 +103,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^3\*5\*[a-zA-Z' ]+$/",$input))
         {
-<<<<<<< HEAD
-            $response="END Mobile Money Details :\n";
-=======
             $response="END Institution Mobile Money Details :\n";
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
             $response .= $this->findInstitution($input);
         }
         else if($input =="3*6" )
@@ -144,11 +113,7 @@ class UssdController extends Controller
         }
         else if(preg_match("/^3\*6\*[a-zA-Z' ]+$/",$input))
         {
-<<<<<<< HEAD
-            $response="END Bank Account Details :\n";
-=======
             $response="END Institution Bank Account Details :\n";
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
             $response .= $this->findInstitution($input);
         }
         //Private Security Firm
@@ -160,16 +125,6 @@ class UssdController extends Controller
         {
              $response = $this->security_menu();
         }
-<<<<<<< HEAD
-        else if($input =="4*1*3" )
-        {
-            $response = "CON Enter Private Firm Name :\n";
-        }
-        else if(preg_match("/^4\*1\*3\*[a-zA-Z' ]+$/",$input))
-        {
-            $response="END Visitor Pass Details :\n";
-            $response .= $this->findPrivateFirm($input);
-=======
         else if($input =="4*1*1" )
         {
             $response = "CON Enter Security Firm Name :\n";
@@ -177,7 +132,6 @@ class UssdController extends Controller
         else if(preg_match("/^4\*1\*1\*[a-zA-Z' ]+$/",$input))
         {
             $response=   "CON Visitor Identification Number :\n";  
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
             
         }
         //INCOME
@@ -201,13 +155,10 @@ class UssdController extends Controller
         {
             $response = $this->payment_menu();       
         }
-<<<<<<< HEAD
-=======
         else if($input =="5*1*1*1*1" )
         {
             $response = "CON Enter Amount to Pay :\n";      
         }
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
         //input county code by the county attendant officer then it should display sub county
          //function getCountyCodeInput()
         // {
@@ -357,11 +308,7 @@ class UssdController extends Controller
         } 
         else if($input =="5*2*1*1" )
         {
-<<<<<<< HEAD
-            $response = "CON Enter Institution Registration No. :\n";
-=======
             $response = "CON Enter Business Reg. No. :\n";
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
         }
         else if(preg_match("/^5\*2\*1\*1\*[0-9]{8}$/",$input))
         {
@@ -382,22 +329,6 @@ class UssdController extends Controller
             $response="END Your Request for Tax Compliant Statement has been received.Please wait for SMS confirmation\n";
             
         }
-<<<<<<< HEAD
-        //SUBSCRIPTION
-        else if($input=="6")
-        {
-            $response = $this->subscription_menu();
-        }
-        else if($input =="6*1" )
-        {
-            $response = $this->terms_menu();
-        }
-        else if($input =="6*1*1" )
-        {
-            $response = "CON Enter Your Subscription\n";
-        }
-        else if(preg_match("/^6\*1\*1\*[0-9]{8}$/",$input))
-=======
         //CUSTOMER CARE
         elseif($input == "6")
         {
@@ -417,22 +348,13 @@ class UssdController extends Controller
             $response = "CON Enter Your Subscription\n";
         }
         else if(preg_match("/^7\*1\*1\*[0-9]{8}$/",$input))
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
         {
             $response="END Your Subscription Request  has been received.Thank you\n";
             
         }
-<<<<<<< HEAD
-        //CUSTOMER CARE
-        elseif($input == "8")
-        {
-            $response = "END Customer Care Contact :\n\n +254 (0) 727-750-007 \n\n contact@ecp.co.ke\n";
-        }
-=======
         //Thank you for using this service
         //The user also receives an SMS. This is the end of this route.
         //Or selects cancel and everything is cancelled. 
->>>>>>> 16c39ad4c157f6bb403ceffaa6c4b2103bfbb007
         else
         {
             $response = "END Invalid input\n";

@@ -549,10 +549,10 @@
                                                     </span>
                                                 @endif
                                             </div> 
-                                             <div class="form-group{{ $errors->has('property_number') ? 'has-error' : '' }} col-md-6 col-sm-6">
+                                             <div class="form-group{{ $errors->has('ward') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label">Ward</label>
-                                                <input maxlength="200" type="text" name="property_number" class="form-control" value="{{ old('ward') }}" />
-                                                @if ($errors->has('property_number'))
+                                                <input maxlength="200" type="text" name="ward" class="form-control" value="{{ old('ward') }}" />
+                                                @if ($errors->has('ward'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('ward') }}</strong>
                                                     </span>

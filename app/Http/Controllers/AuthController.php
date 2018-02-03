@@ -39,9 +39,6 @@ $user = new User();
         $user->name = $request->input('first_name');
         $user->email = $request->input('email');
         $user->mobile_no = $request->input('mobile_no');
-        $user->special_needs = $request->input('special_needs');
-        $user->needs = $request->input('needs');
-        $user->needs_description = $request->input('needs_description');
         $user->verified = 1;
         $user->password = bcrypt($request->input('password')) ;
 
@@ -51,20 +48,17 @@ $residential = new ResidentialDetails();
 		$residential->county_residence = $request->input('county_residence');
 		$residential->sub_county = $request->input('sub_county');
 		$residential->constituency = $request->input('constituency');
-		$residential->household_name = $request->input('household_name');
+		$residential->ward = $request->input('ward');
+		$residential->city_name = $request->input('city_name');
+		$residential->road = $request->input('road');
 		$residential->household_type = $request->input('household_type');
-		$residential->property_number = $request->input('property_number');
-		$residential->building_type = $request->input('building_type');
-		$residential->floor_number = $request->input('floor_number');
-		$residential->door_num = $request->input('door_number');
+		$residential->household_name = $request->input('household_name');
+		
 	
-
 $employment = new EmploymentDetails();
 		$employment->user_id = $id;
 		$employment->employment = $request->input('employment');
-		// $employment->emp_bus_number = $request->input('emp_bus_number');
 		$employment->sector = $request->input('sector');
-		// $employment->occupation = $request->input('occupation');
 		$employment->business_name = $request->input('business_name');
 		$employment->business_loc = $request->input('business_loc');
 		$employment->floor_num = $request->input('floor_num');

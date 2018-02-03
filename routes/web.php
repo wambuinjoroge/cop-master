@@ -15,24 +15,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::post('login', 'Auth\LoginController@login');
+Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Auth::routes();
 //registration detail 
 Route::get('/register', 'AuthController@register');
 Route::post('/registeruser', 'AuthController@registeruser');
+
 Route::get('register/verify/{token}', 'Auth\RegisterController@verifyEmail');
 
-<<<<<<< HEAD
-=======
-
-
-
-//REGISTER USER DETAILS ROUTES
-Route::post('reg', 'Auth\RegisterController@store');
-Route::get('regi', 'Auth\RegisterController@store');
-
->>>>>>> f7efda814d6746b957a5e5359016e1a434a49a92
 
 Route::get('member', function () {
     return view('member.panel');
@@ -47,8 +38,6 @@ Route::get('help', function () {
 });
 
 
-
-
 Auth::routes();
 
 //contacts
@@ -57,9 +46,9 @@ Route::get('/contacts/{id}/details', 'ContactsController@viewContactDetails');
 Route::post('/contacts', 'ContactsController@searchContact');
 
 // Administrator routes
-//Route::get('admin', function () {
- //  return view('admin.panel');
-//});
+Route::get('admin', function () {
+  return view('admin.panel');
+});
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 {
     //Route::resource('adduser', 'UserController');
@@ -67,7 +56,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
     Route::resource('roles', 'RoleController');
     Route::resource('permissions', 'PermissionController');
     Route::get('change-role/{id}', 'UserController@getChangeRole')->name('user.role');
-	  Route::post('change-role/{id}', 'UserController@postChangeRole')->name('user.role.change');
+    Route::post('change-role/{id}', 'UserController@postChangeRole')->name('user.role.change');
 });
 
 Route::post('/callback/ussd','UssdController@index');
