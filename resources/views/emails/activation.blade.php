@@ -8,11 +8,21 @@
 </head>
 
 <body>
-	<h1>Hello {{ $user->name }}, Welcome to ecp</h1>
+	<h1>Dear {{ $user->name }},</h1>
 
-	<p>Please click on the following link to activate your account , 
+	<p>Thanks for registering on ecp .Please click on the following link to confirm / activate your 
+
+	   ecp account ,Proceed to login into your account.
+
+	   Thank you !!! 
+
+	  Regards ,
+
+	  ecp Team
 
 	<a href="{{ url('register/verify',$user->token) }}">activate account</a>
+
+	Email : contact@ecp.co.ke
 
 	</p>
 </body>

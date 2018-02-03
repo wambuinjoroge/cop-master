@@ -70,4 +70,9 @@ class User extends Authenticatable
         $this->notify(new MailResetPasswordToken($token));
     }
 
+    public function residence()
+    {
+        return $this->hasOne('App\ResidentialDetails');
+    }
+
 }

@@ -60,9 +60,9 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                     <li>
+                     <!--li>
                         <a class="page-scroll" href="#page-top">Home</a>
-                    </li>
+                    </li-->
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
@@ -76,6 +76,12 @@
                    
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                      <li>
+                        <a class="page-scroll" href="{{ url('/login') }}">Login</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{ url('/register') }}">Register</a>
                     </li>
                 </ul>
             </div>
@@ -113,8 +119,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class=" section-heading">Welcome To <span class="span">ecp</span></h2>
-                    <p class="text-center"><span class="span">ecp</span> is platform that connects community members , faith-based organizations (FBOs) , community-based organizations <br>(CBOs) , Non-Governmental Organizations (NGOs) , Government Policing Agencies (GPAs)<br> and Private organizations to share information and empower the society at large.</p>
+                    <h2 class=" section-heading">Welcome to <span class="span">ecp</span></h2>
+                    <p class="text-center"><span class="span">ecp</span> is platform that connects Community Members , Faith-Based Organizations (FBOs) , Community-Based Organizations <br>(CBOs) , Non-Governmental Organizations (NGOs) , Government Policing Agencies (GPAs) , Private Organizations<br> and  Civil Society Organizations (CSOs) to share information and empower the society at large.</p>
                 </div>
             </div>
             <div class="row">
@@ -131,7 +137,7 @@
                                     <h4>Efficient</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="lead-in">Its secure , easy and fast.</p>
+                                    <p class="lead-in">It's secure , easy and fast.</p>
                                 </div>
                             </div>
                 </div>
@@ -156,10 +162,10 @@
                     </span>
                      <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4> Alerts</h4>
+                                    <h4> Notifications</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="lead-in">Receive instant SMS and email alerts for confirmation and status.</p>
+                                    <p class="lead-in">Receive instant notifications and <br>alerts for  confirmation and status.</p>
                                 </div>
                             </div>
                 </div>
@@ -173,7 +179,8 @@
                                     <h4>Online Services</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="lead-in">Fill online application forms, submit then receive feedback on Any device .</p>
+                                    <p class="lead-in">Fill online application forms , submit <br>
+                                     then get feedback on Any device.</p>
                                 </div>
                             </div>
                 </div>
@@ -196,25 +203,29 @@
                <div class="row text-center">
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Probation and Aftercare Service</h4>
+                    <h4 class="service-heading">Law & Justice Service</h4>
+                    <p class="text-muted">Correction & Rehabilitation Dept.</p>
+                    <!--p class="text-muted">Kenya Prison Department</p>
+                    <p class="text-muted">Kenya Wildlife Department</p>
+                    <p class="text-muted">Kenya Forest Department</p>
+                    <p class="text-muted">LAND DISPUTE</p-->
+                    <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
+                </div>
+                <div class="col-md-3">
+                     <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
+                    <h4 class="service-heading">Tenant Portal Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                 <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Kenya Prison Service</h4>
-                    <p class="text-muted">coming soon.</p>
-                    <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
-                </div>
-                <div class="col-md-3">
-                     <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Kenya Forest Service</h4>
+                    <h4 class="service-heading">e-Safari Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                  <div class="col-md-3">
                      <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <h4 class="service-heading">Kenya Wildlife Service</h4>
+                    <h4 class="service-heading">Farmers Portal Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
@@ -233,43 +244,32 @@
             </div>
              <div class="row">
                 <div class="col-sm-4">
-                   <h4><i class="fa fa-shopping-cart"></i> Appeal</h4>
+                   <h4><i class="fa fa-shopping-cart"></i> Medical Appeal</h4>
                 <div class="hline"></div><br>
                 <div class="well">
+                     
                       <div class="well" >
-                      <img src="{{asset('assets/dist/img/user2-160x160.jpg')}}" class="img-responsive"  alt="Image">
-                        <p>Name : Agweng'</p>
-                        <p>Age : 15yrs</p>
-                        <p>Category: Medical </p>
-                        <p>Condition Category: </p>
-                        <p>Condition Name : </p>
-                        <p>Description : </p>
-                        <p>Amount: Ksh. 5 Million</p>
+                       <img src="{{asset('assets/img/appeal.jpeg')}}" class="img-responsive"  alt="Image">
                     </div>
+                   
             </div>
-         <a href="index.php/login" class="btn btn-success">More Appeals ...</a> 
+         <a href="{{ url('/login') }}" class="btn btn-success">More Appeals ...</a> 
         
                 </div>
                 <div class="col-sm-4"> 
                     
          <div class="event-title">
-         <h4><i class="fa fa-share-alt"></i> Lost & Found</h4>
+         <h4><i class="fa fa-bullhorn"></i> Notices</h4>
       </div>
         <div class="hline"></div><br>
       <div class="well">
                       <div class="well" >
-                        <img src="{{asset('assets/dist/img/user2-160x160.jpg')}}" class="img-responsive"  alt="Image">
-                        <p>Name : Agweng'</p>
-                        <p>Age : 15yrs</p>
-                        <p>Status: Missing</p>
-                        <p>Gender: Female</p>
-                        <p>Area Name : Runda</p>
-                        <p>Description : </p>
-                        <p>Contact: 0704 207 449</p>
+                        <img src="{{asset('assets/dist/img/kabu.jpg')}}" class="img-responsive"  alt="Image">
+                        
                     </div>
             </div>
         
-         <a href="index.php/login" class="btn btn-success">More Lost & Found ...</a>  
+         <a href="{{ url('/login') }}" class="btn btn-success">More Notices ...</a>  
  
                 </div>
                 
@@ -280,21 +280,13 @@
       </div>
         <div class="hline"></div><br>
          <div class="well">
-                      <div class="well" >
-                        <p>Category : Technology</p>
-                         <p>County : Nakuru</p>
-                        <p>Tittle : 7TH  ANNUAL INTERNATIONAL CONFERENCE</p>
-                        <p>Description : RESEARCH, INNOVATION AND KNOWLEDGE TRANSLATION FOR   COMMUNITY TRANSFORMATION</p>
-                        <p>Date  : 21/09/2017 </p>
-                        <p>Time : 08:00 AM - 5:00 PM</p>
-                        <p>Venue : KABARAK UNIVERSITY MAIN CAMPUS</p>
-                        <p>Cost : Free </p>
-                        <p>Contact: 0704 207 449</p>
-                    </div>
+                     
+                       <img src="{{asset('assets/img/church.jpg')}}" class="img-responsive"  alt="Image">
+                   
             </div>
        
         <br>
-         <a href="index.php/login" class="btn btn-success">More Events ...</a>  
+         <a href="{{ url('/login') }}" class="btn btn-success">More Events ...</a>  
   
                 </div>
             </div>
@@ -347,8 +339,8 @@
                         <div class="widget-body">
                             <address>
                             <i class="fa fa-phone fa-3x sr-contact"></i> : 
-                             <a href="call">+254 (0) 727-750-007 </a><br><br>
-                               <i class="fa fa-envelope fa-3x sr-contact"></i> : <a href="mailto:#">  contact@ecp.co.ke</a><br>
+                             <a href="call"> +254 736 436 900 </a><br><br>
+                            <i class="fa fa-envelope fa-3x sr-contact"></i> : <a href="mailto:#">  contact@ecp.co.ke</a><br>
                                
                                 
                             </address>
@@ -363,9 +355,9 @@
                             <p class="text">
                             <ul>
                             <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of use</a></li>
                             <li><a href="#">Help</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of use</a></li> 
                             </ul>
                             </p> 
                           </address>
@@ -415,7 +407,7 @@
        <div class="container">
             <div class="row">
                 <div class=" pull-left">
-                    <span class="copyright">Copyright &copy; <?=date('Y');?> - Machini Technologies . All Rights Reserved</span>
+                    <span class="copyright">&copy; <?=date('Y');?> - Machini Technologies . All Rights Reserved</span>
                 </div>
                 <div class="col-md-8">
                     <div class="pull-right">

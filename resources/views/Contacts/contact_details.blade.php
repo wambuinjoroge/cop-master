@@ -111,12 +111,12 @@
                     
                   </div>
                    <div class="col-md-12">
-                    <p><strong>SMS No. : </strong></p>
+                    <p><strong>SMS : </strong></p>
                     
                   </div>
   
                    <div class="col-md-12">
-                    <p><strong>USSD Code : </strong></p>
+                    <p><strong>USSD : </strong></p>
                     
                   </div>
                 </div>
@@ -178,10 +178,10 @@
                                   <div class="form-row">
                                       <label>
                                 
-                                      <label class="radio-inline"><input type="radio" value="employed" name="employment" checked="checked">M-pesa</label>
-                                      <label class="radio-inline"><input type="radio" value="self_employed" name="employment">Airtel Money</label>
-                                      <label class="radio-inline"><input type="radio" value="unemployed" name="employment">Telkom Money</label>
-                                      <label class="radio-inline"><input type="radio" value="student" name="employment">EazzyPay</label>
+                                      <label class="radio-inline"><input type="radio" value="mpesa" name="mpesa" checked="checked">M-pesa</label>
+                                      <label class="radio-inline"><input type="radio" value="airtelmoney" name="airtelmoney">Airtel Money</label>
+                                      <label class="radio-inline"><input type="radio" value="telkom" name="telkom">Telkom Money</label>
+                                      <label class="radio-inline"><input type="radio" value="eazzypay" name="eazzypay">EazzyPay</label>
                                       </label>
                                  </div>
                             </div>

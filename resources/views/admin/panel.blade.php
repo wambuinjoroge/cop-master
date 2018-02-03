@@ -52,7 +52,7 @@
             <span class="info-box-icon bg-green"><i class="ion ion-stats-bars"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Invalid Rate</span>
+              <span class="info-box-text">Invalid Logins</span>
               <span class="info-box-number">0</span>
             </div>
             <!-- /.info-box-content -->
@@ -78,7 +78,7 @@
             <span class="info-box-icon bg-red"> <i class="ion ion-pie-graph"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Regions</span>
+              <span class="info-box-text">County</span>
               <span class="info-box-number">0</span>
             </div>
             <!-- /.info-box-content -->

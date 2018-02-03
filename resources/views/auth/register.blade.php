@@ -67,17 +67,17 @@
                 </div>
             </div>
         </nav>
-    <form  method="POST" action="{{ route('register') }}" class="registration-form" >
+    <form  method="POST" action="{{ url('reg') }}" class="registration-form" >
     {{csrf_field()}}
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="container">
-                        <!--div class="stepwizard " >
+                        <div class="stepwizard " >
                             <div class="stepwizard-row setup-panel">
                                 <div class="stepwizard-step">
                                     <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
-                                    <p>Profile</p>
+                                    <p>Identity</p>
                                 </div>
                                 <div class="stepwizard-step">
                                     <a href="#step-2" type="button" class="btn btn-default btn-circle" id="step-2-progress" >2</a>
@@ -89,16 +89,16 @@
                                 </div>
                                 <div class="stepwizard-step">
                                     <a href="#step-4" type="button" class="btn btn-default btn-circle" id="step-4-progress" >4</a>
-                                    <p>Household</p>
+                                    <p>Profile</p>
                                 </div>
                             </div>   
-                        </div-->
+                        </div>
                     </div>
                 </div>
                 <div class="panel-body">         
                     <div class="row setup-content" id="step-1">
                         <div class="col-md-12">
-                            <h3> Profile</h3><hr>
+                            <h3> Identity</h3><hr>
                             <div class="form-group{{ $errors->has('id_no') ? ' has-error' : '' }}">
                                 <label class="control-label">Identification</label>
                                 <input  maxlength="8" minlength="7" type="text" required="required" class="form-control" placeholder="Enter National or Alien ID or Passport Number" name="id_no" value="{{ old('id_no') }}" />
@@ -157,47 +157,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <label>
-                                    <span>Any Special Need </span>
-                                    <label class="radio-inline"><input type="radio" name="special_needs" value="0" onclick="show1();" />
-                                            No</label>
-                                    <label class="radio-inline"><input type="radio" name="special_needs" value="1" onclick="show2();" />
-                                        Yes</label>
-                                        
-                                        </label>
-                                    </div>&nbsp;
+                           
                                     
 
-                                    <div  id="div1" class="" > 
-                                        <div class="form-group{{ $errors->has('needs') ? 'has-error' : '' }}" >
-                                            <label >Special Need Category</label>
-                                            <select class="form-control" name="needs">
-                                                <option value="" selected>--select--</option>
-                                                <option value="disability">Disability</option>
-                                                <option value="addiction">Addiction</option>
-                                                <option value="health">Health</option>
-                                                <option value="drugs">Drugs</option>
-                                                <option value="substance_abuse">Substance Abuse</option>
-                                            </select> 
-                                            @if ($errors->has('needs'))
-                                                <span class="help-block">
-                                                    <strong>{{ $errors->first('needs') }}</strong>
-                                                </span>
-                                            @endif
-                                        </div>
-
-                                        <div class="form-group{{ $errors->has('needs_description') ? 'has-error' : '' }}">
-                                            <label class="control-label">Specify Special Need</label>
-                                            <textarea name="needs_description" class="form-control" placeholder="Specify Special Need"></textarea>
-                                             @if ($errors->has('needs_description'))
-                                                <span class="help-block">
-                                                    <strong>{{ $errors->first('needs_description') }}</strong>
-                                                </span>
-                                            @endif
-                                        </div>
-
-                                    </div>
+                                 
                                     <div class="form-bottom">
                                         <div class="row">
                                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} col-md-6 col-sm-6">
@@ -221,7 +184,7 @@
                                         </div>
                                     </div>
                                   
-                                    <!--button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-1">Next</button-->
+                                    <button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-1">Next</button>
                                 </div>
                             </div>
                             <div class="row setup-content" id="step-2">
@@ -230,10 +193,10 @@
                                     <div class="form-row{{ $errors->has('employment') ? 'has-error' : '' }}">
                                         <label>
                                             <span>Status</span>
-                                            <label class="radio-inline"><input type="radio" value="employed" name="employment" checked="checked" onclick="show3();">Employed</label>
+                                            <label class="radio-inline"><input type="radio" value="unemployed" name="employment" checked="checked" onclick="show5();">Unemployed</label>
+                                            <label class="radio-inline"><input type="radio" value="employed" name="employment" onclick="show3();">Employed</label>
                                             <label class="radio-inline"><input type="radio" value="self_employed" name="employment" onclick="show4();">Self-Employed</label>
                                              <label class="radio-inline"><input type="radio" value="volunteer" name="employment" onclick="show6();">Volunteer / Intern</label>
-                                            <label class="radio-inline"><input type="radio" value="unemployed" name="employment" onclick="show5();">Unemployed</label>
                                         </label>
                                         @if ($errors->has('employment'))
                                             <span class="help-block">
@@ -301,7 +264,7 @@
                                             @endif
                                             </div>    
                                             <div class="form-group{{ $errors->has('city_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label  >City / Town Name</label>
+                                                <label  >Town</label>
                                                 <input type="text" name="city_name" class="form-control" placeholder="Enter City or Town Name" value="{{ old('city_name') }}">
                                                 @if ($errors->has('city_name'))
                                                     <span class="help-block">
@@ -318,7 +281,7 @@
                                                 <label >Sector</label>
                                                 <select class="form-control" name="sector">
                                                     <option value="select" selected>--select--</option>
-                                                    <option value="Government">Government</option>
+                                                    <option value="Public">Public</option>
                                                     <option value ="Private">Private</option>
                                                     <option value ="International">International</option>
                                                 </select>
@@ -333,26 +296,37 @@
                                                 <label  >Business Category</label>
                                                 <select class="form-control" name="business_category">
                                                     <option value="" selected>--select--</option>
-                                                    <option value="aviation">Aviation</option>
+                                                    <option value="Advertising" >Advertising / Marketing / PR / Media / Publishing</option>
+                                                    <option value="Accounting" >Accounting / Auditing</option>
+                                                    <option value="Agriculture">Agriculture / Chemicals</option>
+                                                    <option value="aviation">Airline &amp; Travel</option>
+                                                     <option value="Security">Armed Forces / Security Forces</option>
+                                                    <option value="Banking & Finance">Banking / Money  &amp; Finance</option>
+                                                     <option value="Beauty & Product">Beauty & Beauty Products </option>
                                                     <option value="Business Support">Business Support</option>
-                                                    <option value="Building & Construction">Building &amp; Construction</option>
-                                                    <option value="Computer & Internet">Computer &amp; Internet</option>
+                                                    <option value="Building & Construction">Building / Architecture / Real Estate &amp; Construction</option>
+                                                    <option value="Computer & Internet">Computer Hardware / Software / Networking &amp; Internet</option>
                                                     <option value="Cars & Vehicles">Cars &amp; Vehicles</option>
-                                                    <option value="Electrical & Electronic">Electrical &amp; Electronic</option>
-                                                    <option value="Energy">Energy</option>
-                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Electrical & Electronic">Electrical / Electronic &amp; Engineering </option>
+                                                    <option value="Education">Education / Learning Institutions</option>
+                                                     <option value="Energy">Energy</option>
+                                                    <option value="Entertainment">Entertainment / Film &amp;  Music </option>
                                                     <option value="Fashion & Lifestyle">Fashion &amp; Lifestyle</option>
-                                                    <option value="Health">Health</option>
-                                                    <option value="Hotel & Restaurant">Hotel &amp; Restaurant</option>
-                                                    <option value="Money & Finance">Money &amp; Finance</option>
-                                                    <option value="Manufacturing & Industry">Manufacturing &amp; Industry</option>
+                                                    <option value="Insurance">Insurance &amp; Legal</option>
+                                                     <option value="Government & Parastatals">Government &amp; Institutions Parastatals </option>
+                                                    <option value="Health">Health Services / Medical / Pharmaciticals</option>
+                                                    <option value="Hotel & Restaurant">Hospitality /  Hotel &amp; Restaurant</option>
+                                                   
+                                                    <option value="Manufacturing & Industries">Manufacturing &amp; Industries</option>
+                                                    <option value="Shipping / clearing &amp; Forwarding">Shipping / Clearing &amp; Forwarding</option>
                                                     <option value="Others">Others</option>
-                                                    <option value="Property & Real Estate">Property &amp; Real Estate</option>
+                                                    <option value="Petroleum">Petroleum</option>
                                                     <option value="Professional Services">Professional Services</option>
-                                                    <option value="Security">Security</option>
-                                                    <option value="Society">Society</option>
+                                                    
+                                                    <option value="Society">NGOs / Religious / Society &amp; Charity Organizations</option>
                                                      <option value="Shopping">Shopping</option>
                                                     <option value="Sports & Betting">Sports &amp; Betting</option>
+                                                     <option value="UN & Diplomatic Missions">UN & Diplomatic Missions</option>
                                                 </select>
                                                 @if ($errors->has('business_category'))
                                                     <span class="help-block">
@@ -483,15 +457,7 @@
                                         </div>
                                     </div>
                                     </div>
-                                    <!--div class="row">
-                                        <div class="col-md-4 col-md-offset-2">
-                                            <button class="btn btn-success nextBtn btn-block" type="button" id="back-1">Back</button>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <button class="btn btn-success nextBtn btn-block" type="button" id="next-2">Next</button>
-                                        </div>
-                                    </div-->
-                                    
+                                  <button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-2">Next</button>   
                                     
                                 </div>
 
@@ -499,7 +465,10 @@
                             <div class="row setup-content" id="step-3">
                                 <div class="col-md-12">
                                     <h3> Residence</h3><hr>
-                                    <div class="form-group{{ $errors->has('county_residence') ? 'has-error' : '' }}">
+                                 
+                                       <div class="form-bottom">
+                                        <div class="row">
+                                        <div class="form-group{{ $errors->has('county_residence') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                         <label  >County</label>
                                         <select class="form-control" name="county_residence">
                                             <option value="" selected>--select--</option>
@@ -555,10 +524,8 @@
                                                 <strong>{{ $errors->first('county_residence') }}</strong>
                                             </span>
                                         @endif
-                                    </div>
-                                    <div class="form-bottom">
-                                        <div class="row">
-                                            <div class="form-group{{ $errors->has('sub_county') ? 'has-error' : '' }} col-md-6 col-sm-6">
+                                    </div>  
+                                    <div class="form-group{{ $errors->has('sub_county') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label  >Sub-County</label>
                                                 <input type="text" name="sub_county" class="form-control" value="{{ old('sub_county') }}">
                                                 @if ($errors->has('sub_county'))
@@ -567,6 +534,12 @@
                                                     </span>
                                                 @endif
                                             </div>    
+                                          
+                                        </div>
+                                    </div>
+                                    <div class="form-bottom">
+                                        <div class="row">
+                                             
                                             <div class="form-group{{ $errors->has('constituency') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label  >Constituency</label>
                                                 <input type="text" name="constituency" class="form-control" value="{{ old('constituency') }}">
@@ -575,22 +548,55 @@
                                                         <strong>{{ $errors->first('constituency') }}</strong>
                                                     </span>
                                                 @endif
-                                            </div>   
+                                            </div> 
+                                             <div class="form-group{{ $errors->has('property_number') ? 'has-error' : '' }} col-md-6 col-sm-6">
+                                                <label class="control-label">Ward</label>
+                                                <input maxlength="200" type="text" name="property_number" class="form-control" value="{{ old('ward') }}" />
+                                                @if ($errors->has('property_number'))
+                                                    <span class="help-block">
+                                                        <strong>{{ $errors->first('ward') }}</strong>
+                                                    </span>
+                                                @endif
+                                            </div> 
+                                                 
+                                        </div>
+                                    </div>
+                                     <div class="form-bottom">
+                                        <div class="row">
+                                         <div class="form-group{{ $errors->has('city_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
+                                                <label  >Town</label>
+                                                <input type="text" name="city_name" class="form-control" placeholder="Enter City or Town Name" value="{{ old('city_name') }}">
+                                                @if ($errors->has('city_name'))
+                                                    <span class="help-block">
+                                                        <strong>{{ $errors->first('city_name') }}</strong>
+                                                    </span>
+                                                @endif
+                                            </div> 
+                                            <div class="form-group{{ $errors->has('street') ? 'has-error' : '' }} col-md-6 col-sm-6">
+                                                <label class="control-label"> Road Name</label>
+                                                <input type="text" name="street" class="form-control" maxlength="100" placeholder="Enter Street or Road or Avenue or Lane" value="{{ old('street') }}">
+                                                @if ($errors->has('street'))
+                                                    <span class="help-block">
+                                                        <strong>{{ $errors->first('street') }}</strong>
+                                                    </span>
+                                                @endif
+                                            </div>
+                                           
                                         </div>
                                     </div>
                                     <div class="form-bottom">
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('household_type') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label  >Household Type </label>
+                                                <label  >House or Area Type </label>
                                                 <select class="form-control" name="household_type">
                                                     <option value="" selected>--select--</option>
                                                     <option value="Estate">Estate</option>
                                                     <option value="Market Center">Market Center</option>
+                                                    <option value="Slum">Slum</option>
                                                     <option value="Apartment">Apartment</option>
                                                     <option value="Homestead">Homestead</option>
                                                     <option value="Bulla">Bulla</option>
                                                     <option value="Manyatta">Manyatta</option>
-                                                    <option value="House">House</option>
                                                     <option value="Court">Court</option>
                                                     <option value="Village">Village</option>
                                                     <option value="Gated Community">Gated Community</option>
@@ -603,8 +609,8 @@
                                             </div>
 
                                             <div class="form-group{{ $errors->has('household_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">Household Name</label>
-                                                <input maxlength="100" type="text" name="household_name" class="form-control" placeholder="Enter Household or Building  Name" value="{{ old('household_name') }}" />
+                                                <label class="control-label">House or Area Name</label>
+                                                <input maxlength="100" type="text" name="household_name" class="form-control" placeholder="Enter House or Area Name" value="{{ old('household_name') }}" />
                                                 @if ($errors->has('household_name'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('household_name') }}</strong>
@@ -613,88 +619,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-bottom">
-                                        <div class="row">
-                                            <div class="form-group{{ $errors->has('street') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label"> Road Name</label>
-                                                <input type="text" name="street" class="form-control" maxlength="100" placeholder="Enter Street, Road or Avenue or lane" value="{{ old('street') }}">
-                                                @if ($errors->has('street'))
-                                                    <span class="help-block">
-                                                        <strong>{{ $errors->first('street') }}</strong>
-                                                    </span>
-                                                @endif
-                                            </div>
-                                            <div class="form-group{{ $errors->has('property_number') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">Property Number</label>
-                                                <input maxlength="200" type="text" name="property_number" class="form-control" placeholder="Enter Plot or House number" value="{{ old('property_number') }}" />
-                                                @if ($errors->has('property_number'))
-                                                    <span class="help-block">
-                                                        <strong>{{ $errors->first('property_number') }}</strong>
-                                                    </span>
-                                                @endif
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    <div class="form-bottom">
-                                        <div class="row">
-                                            <div class="form-group{{ $errors->has('floor_number') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">Floor Number</label>
-                                                <input maxlength="200" type="text" name="floor_number" class="form-control" placeholder="Enter floor number" value="{{ old('floor_number') }}" />
-                                                @if ($errors->has('floor_number'))
-                                                    <span class="help-block">
-                                                        <strong>{{ $errors->first('floor_number') }}</strong>
-                                                    </span>
-                                                @endif
-                                            </div>
-                                            <div class="form-group{{ $errors->has('door_number') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">Door Number </label>
-                                                <input maxlength="100" type="text" name="door_number" class="form-control" placeholder="Enter Door Number " value="{{ old('door_number') }}" />
-                                                @if ($errors->has('door_number'))
-                                                    <span class="help-block">
-                                                        <strong>{{ $errors->first('door_number') }}</strong>
-                                                    </span>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--div class="row">
-                                        <div class="col-md-offset-2 col-md-4">
-                                            <button class="btn btn-success nextBtn btn-block" id="back-2">Back</button>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <button class="btn btn-success nextBtn btn-block" id="next-3">Next</button>
-                                        </div>
-                                    </div-->
+                                    <button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-3">Verify</button>
+                                  
                                 </div>
                             </div>         
                             <div class="row setup-content" id="step-4">
                                 <div class="col-md-12">
-                                    <h3>Household</h3><hr>
-                                    <div class="form-row{{ $errors->has('religion') ? 'has-error' : '' }}">
-                                        <label>
-                                            <span>Religion</span>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="christian">Christian</label>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="islam">Muslim</label>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="hindu">Hindu</label>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="budhist">Budhist</label>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="atheist">Atheist</label>
-                                            <label class="radio-inline"><input type="radio" name="religion" value="others">Others</label>
-                                        </label>
-                                        @if ($errors->has('relgion'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('religion') }}</strong>
-                                            </span>
-                                        @endif
-                                    </div><br>
-                                    <div class="form-group{{ $errors->has('cluster') ? 'has-error' : '' }}">
-                                        <label class="control-label">County Code</label>
-                                        <input maxlength="100" type="text" name="cluster" class="form-control" placeholder="Enter County Code e.g KEN001" value="{{ old('cluster') }}" />
-                                        @if ($errors->has('cluster'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('cluster') }}</strong>
-                                            </span>
-                                        @endif
-                                    </div>
+                                    <h3>Profile</h3><hr>
+                                 
                                       <div class="col-xs-8">
                                         <div class="checkbox icheck">
                                             <label>
@@ -702,14 +634,6 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <!--div class="row">
-                                        <div class=" col-md-offset-2 col-md-4">
-                                            <button class="btn btn-success nextBtn btn-block" id="back-3">Back</button>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <button class="btn btn-success btn-block" type="submit">Submit</button>
-                                        </div>
-                                    </div-->
                                     <button class="btn btn-success btn-block" type="submit">Submit</button>
                                 </div>
                             </div>
@@ -734,6 +658,6 @@
                 </div>
 
             </form>
-            <!--script src="/assets/js/multistep_form.js"></script-->
+            <script src="/assets/js/multistep_form.js"></script>
         </body>
         </html>                

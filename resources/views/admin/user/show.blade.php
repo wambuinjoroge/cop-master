@@ -19,9 +19,9 @@
 <div class="wrapper">
 
  <!-- Main Header -->
-    @include('member.header')
+    @include('admin.header')
 <!-- Sidebar -->
-    @include('member.sidebar')
+    @include('admin.sidebar')
 
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -32,7 +32,7 @@
       </h1>
       <ol class="breadcrumb">
        <li><a href="/member"><i class="fa fa-home" ></i>Dashboard</a></li>
-       <li class="active"><a href="/contacts"><i class="fa fa-book"></i>Contact List</a></li>
+       <li class="active"><a href="/adduser"><i class="fa fa-users"></i>Users List</a></li>
       </ol>
     </section>
 

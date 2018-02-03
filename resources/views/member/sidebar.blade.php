@@ -14,69 +14,7 @@
             <i class="fa fa-home"></i> <span>Dashboard</span>
           </a>
         </li>
-         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>Applications</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#">Bursary</a></li>
-            <li><a href="#">Burial Permit</a></li>
-            <li><a href="#">CDF</a></li>
-            <li><a href="#">Conflict Resolution</a></li>
-            <li><a href="#">Event Permit</a></li>
-            <li><a href="#">Witness Protection</a></li>
-            <!--li><a href="#">Private Security Service</a></li-->
-          </ul>
-        </li>
          <li>
-          <a href="#">
-           <i class="fa fa-shopping-cart"></i> <span>Appeal</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li>
-         <li class="treeview">
-          <a href="#">
-          <i class="fa fa-calendar-check-o"></i> <span>Calender</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-          <li><a href="/reminder">  <i class="fa fa-clock-o"></i>  Reminder</a>
-         
-            
-          </ul>
-        </li>
-        <li>
-          <a href="/contacts">
-           <i class="fa fa-book"></i> <span>Contact Directory</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li>
-         <li>
-          <a href="/contribution">
-            <i class="fa fa-briefcase"></i> <span>Contributions</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li>
-         <li>
-          <a href="#">
-          <i class="fa fa-calendar"></i> <span>Events</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li>
-        <li>
           <a href="#">
             <i class="fa fa-laptop"></i> <span>Logs</span>
             <span class="pull-right-container">
@@ -86,7 +24,71 @@
         </li>
          <li>
           <a href="#">
-           <i class="fa fa-bullhorn"></i><span>Notices</span>
+            <i class="fa fa-clock-o"></i> <span>Reminder</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="/contacts">
+           <i class="fa fa-book"></i> <span>Contact Directory</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+           <i class="fa fa-bars"></i><span>Register Item</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+         <li>
+          <a href="#">
+           <i class="fa fa-users"></i><span>Household</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+         <!--li>
+          <a href="#">
+           <i class="fa fa-medkit"></i><span>Special Condition</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+         <li>
+          <a href="#">
+           <i class="fa fa-group"></i><span>Cluster Membership</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li-->
+         <li>
+          <a href="#">
+          <i class="fa fa-calendar-check-o"></i> <span>Events</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+         <li>
+          <a href="#">
+           <i class="fa fa-bullhorn"></i><span>Notices </span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+         <li>
+          <a href="#">
+           <i class="fa fa-shopping-cart"></i><span>Medical Appeal</span>
             <span class="pull-right-container">
               
             </span>
@@ -109,39 +111,44 @@
             
           </ul>
         </li>
-        <li>
-          <a href="/item">
-           <i class="fa fa-bars"></i><span>Register Item</span>
+         <li>
+          <a href="#">
+            <i class="fa fa-briefcase"></i> <span>Suggestion Box</span>
             <span class="pull-right-container">
               
             </span>
           </a>
         </li>
-        
-          <li>
+         <li>
           <a href="#">
-            <i class="fa fa-road"></i> <span>Black / Crime Spots</span>
+          <i class="fa fa-volume-up"></i>Advertisement <span></span>
             <span class="pull-right-container">
               
             </span>
           </a>
         </li>
-           <li>
+        <li class="treeview">
           <a href="#">
-            <i class="glyphicon glyphicon-question-sign"></i><span>Sports Betting</span>
+          <i class="fa fa-cc-mastercard"></i> <span>Payments</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+          <li><a href="#">  <i class="fa fa-credit-card"></i>Transactions</a>
+         
+            
+          </ul>
+        </li>
+         <li>
+          <a href="#">
+            <i class="fa fa-road"></i> <span>Hotspots</span>
             <span class="pull-right-container">
               
             </span>
           </a>
         </li>
-        <!--li>
-          <a href="#">
-          <i class="glyphicon glyphicon-cog"></i> <span>Account Settings</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li-->
+       
           </ul>
     </section>
     <!-- /.sidebar -->
