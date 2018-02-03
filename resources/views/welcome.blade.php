@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="connect | share | empower">
     <meta name="author" content="machini technologies">
-    <link rel="icon" type="image/png" sizes="200x200" href="assets/bootstrap/img/ecp.png">
+    <link rel="icon" type="image/png" sizes="200x200" href="{{asset('assets/bootstrap/img/ecp.png')}}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -28,7 +28,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
    
     <!-- Theme CSS -->
-    <link href="assets/css/agency.min.css" rel="stylesheet">
+    <link href="{{asset('assets/css/agency.min.css')}}" rel="stylesheet">
 
 
     
@@ -107,7 +107,7 @@
                       </div> 
                   </div>
                   <p class="m-button text-cente">
-                           <a href="/login" class="btn btn-success btn btnSwing">Login</a>
+                           <a href="{{url('/login')}}" class="btn btn-success btn btnSwing">Login</a>
                  </p>
                  
               </div>
@@ -202,7 +202,7 @@
             </div>
                <div class="row text-center">
                 <div class="col-md-3">
-                     <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
+                     <img src="{{asset('assets/img/portfolio/roundicons.png')}}" class="img-responsive" alt="">
                     <h4 class="service-heading">Law & Justice Service</h4>
                     <p class="text-muted">Correction & Rehabilitation Dept.</p>
                     <!--p class="text-muted">Kenya Prison Department</p>
@@ -212,19 +212,19 @@
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                 <div class="col-md-3">
-                     <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
+                     <img src="{{asset('assets/img/portfolio/roundicons.png')}}" class="img-responsive" alt="">
                     <h4 class="service-heading">Tenant Portal Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                 <div class="col-md-3">
-                     <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
+                     <img src="{{asset('assets/img/portfolio/roundicons.png')}}" class="img-responsive" alt="">
                     <h4 class="service-heading">e-Safari Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                  <div class="col-md-3">
-                     <img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt="">
+                     <img src="{{asset('assets/img/portfolio/roundicons.png')}}" class="img-responsive" alt="">
                     <h4 class="service-heading">Farmers Portal Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
@@ -430,13 +430,13 @@
       <a href="#page-top" class="cd-top btnSwing"><i class="fa fa-angle-up fa-2x"></i></a>
     </p>
     <!-- jQuery -->
-    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="{{asset('assets/jquery/jquery.min.js')}}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>
 
     <!-- Theme JavaScript -->
-    <script src="assets/js/agency.min.js"></script>
+    <script src="{{asset('assets/js/agency.min.js')}}"></script>
 
 </body>
 
