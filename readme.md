@@ -30,13 +30,13 @@ If you’d like to add features (or bug fixes) to improve the example applicatio
    ```
    
  ##### Create your feature branch 
-    ```bash
-    git checkout -b my-new-feature
-    ```
+```bash
+git checkout -b my-new-feature
+```
  ##### Commit your changes 
-   ```bash
-   git commit -m 'add some feature'
-   ```
+ ```bash
+ git commit -m 'add some feature'
+ ```
 
  ##### Push to the branch
 
