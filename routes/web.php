@@ -1,4 +1,5 @@
 <?php
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,23 +22,40 @@ Auth::routes();
 Route::get('/register', 'AuthController@register');
 Route::post('/registeruser', 'AuthController@registeruser');
 Route::get('register/verify/{token}', 'Auth\RegisterController@verifyEmail');
+
+<<<<<<< HEAD
+=======
+
+
+
 //REGISTER USER DETAILS ROUTES
 Route::post('reg', 'Auth\RegisterController@store');
 Route::get('regi', 'Auth\RegisterController@store');
+
+>>>>>>> f7efda814d6746b957a5e5359016e1a434a49a92
+
 Route::get('member', function () {
     return view('member.panel');
 });
+
 Route::get('faq', function () {
    return view('faq');
 });
+
 Route::get('help', function () {
    return view('help');
 });
+
+
+
+
 Auth::routes();
+
 //contacts
 Route::get('/contacts', 'ContactsController@index');
 Route::get('/contacts/{id}/details', 'ContactsController@viewContactDetails');
 Route::post('/contacts', 'ContactsController@searchContact');
+
 // Administrator routes
 //Route::get('admin', function () {
  //  return view('admin.panel');
@@ -49,10 +67,13 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
     Route::resource('roles', 'RoleController');
     Route::resource('permissions', 'PermissionController');
     Route::get('change-role/{id}', 'UserController@getChangeRole')->name('user.role');
-    Route::post('change-role/{id}', 'UserController@postChangeRole')->name('user.role.change');
+	  Route::post('change-role/{id}', 'UserController@postChangeRole')->name('user.role.change');
 });
+
 Route::post('/callback/ussd','UssdController@index');
+
 Route::post('/message', 'MessageController@message');
+
 Route::post('/send-sms', [
    'uses'   =>  'SmsController@getUserNumber',
    'as'     =>  'sendSms'
