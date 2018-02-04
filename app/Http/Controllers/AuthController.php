@@ -50,30 +50,49 @@ $residential = new ResidentialDetails();
 		$residential->constituency = $request->input('constituency');
 		$residential->ward = $request->input('ward');
 		$residential->city_name = $request->input('city_name');
-		$residential->road = $request->input('road');
+		$residential->street = $request->input('street');
 		$residential->household_type = $request->input('household_type');
 		$residential->household_name = $request->input('household_name');
 		
 	
+//$employment = new EmploymentDetails();
+	//	$employment->user_id = $id;
+	//	$employment->employment = $request->input('employment');
+	//	$employment->sector = $request->input('sector');
+	//	$employment->institution_name = $request->input('institution_name');
+	//	$employment->building_name = $request->input('building_name');
+	//	$employment->floor_num = $request->input('floor_num');
+	//	$employment->room_num = $request->input('room_num');
+	//	$employment->street_name = $request->input('street_name');
+	//	$employment->emp_address = $request->input('emp_address');
+	//	$employment->emp_phone_num = $request->input('emp_phone_num');
+	//	$employment->emp_fax_num = $request->input('emp_fax_num');
+	//	$employment->emp_website = $request->input('emp_website');
+	//	$employment->save();
+	//	$residential->save();
+	//	$user->save();
+
 $employment = new EmploymentDetails();
 		$employment->user_id = $id;
-		$employment->employment = $request->input('employment');
-		$employment->sector = $request->input('sector');
-		$employment->business_name = $request->input('business_name');
-		$employment->business_loc = $request->input('business_loc');
-		$employment->floor_num = $request->input('floor_num');
-		$employment->room_num = $request->input('room_num');
-		$employment->street_name = $request->input('street_name');
-		$employment->emp_address = $request->input('emp_address');
-		$employment->emp_phone_num = $request->input('emp_phone_num');
-		$employment->emp_fax_num = $request->input('emp_fax_num');
-		$employment->emp_website = $request->input('emp_website');
-		$employment->save();
+        $employment->employment = $request->input('employment');
+        $employment->county_name = $request->input('county_name');
+        $employment->city_name = $request->input('city_name');
+        $employment->sector = $request->input('sector');
+        $employment->business_category = $request->input('business_category');
+        $employment->institution_name = $request->input('institution_name');
+        $employment->building_name = $request->input('building_name');
+        $employment->floor_num = $request->input('floor_num');
+        $employment->room_num = $request->input('room_num');
+        $employment->branch_name = $request->input('branch_name');
+        $employment->street_name = $request->input('street_name');
+        $employment->postal_address = $request->input('postal_address');
+        $employment->email_address = $request->input('email_address');
+        $employment->telephone = $request->input('telephone');
+        $employment->fax_num = $request->input('fax_num');
+        $employment->website = $request->input('website');
+        $employment->save();
 		$residential->save();
 		$user->save();
-
-
-
 
  // $user->save();
 session::flash ('msg','Registration successful') ;
@@ -92,9 +111,6 @@ session::flash ('msg','Registration successful') ;
 		// 		'email' => $input['email'], 
 		// 		'password'=> base64_encode($input['password']), 
 		// 		'mobile_no' => $input['mobile_number'], 
-		// 		'special_needs' => 0, 
-		// 		'needs' => $input['needs'] , 
-		// 		'needs_description' => $input['needs_description']
 		// 	]);
 		
 

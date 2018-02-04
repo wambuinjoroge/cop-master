@@ -21,9 +21,6 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('mobile_no');
-            $table->boolean('special_needs')->default(0);
-            $table->string('needs')->nullable();
-            $table->text('needs_description')->nullable();
             $table->string('password');
             $table->boolean('verified')->default(0);
             $table->string('token')->nullable();
@@ -40,5 +37,8 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+            $table->boolean('special_needs')->default(0);
+            $table->string('needs')->nullable();
+            $table->text('needs_description')->nullable();
     }
 }

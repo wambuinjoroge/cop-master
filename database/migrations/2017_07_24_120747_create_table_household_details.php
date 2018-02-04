@@ -32,5 +32,7 @@ class CreateTableHouseholdDetails extends Migration
     public function down()
     {
         Schema::dropIfExists('household_details');
+
+        
     }
 }

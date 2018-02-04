@@ -6,7 +6,7 @@ use App\User;
 use App\Role;
 use App\ResidentialDetails;
 use App\EmploymentDetails;
-use App\HouseholdDetails;
+//use App\HouseholdDetails;
 use DB;
 
 use App\Http\Controllers\Controller;
@@ -64,8 +64,6 @@ class RegisterController extends Controller
             'first_name' => 'required|max:255',
             'last_name' => 'required|max:255',
             'mobile_no' => 'required|min:10|max:10',
-            'needs' => 'sometimes|max:255',
-            'needs_description' => 'sometimes',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required',
             'terms' => 'accepted',
@@ -90,15 +88,13 @@ class RegisterController extends Controller
             'county_residence' => 'required|max:255',
             'sub_county' => 'required|max:255',
             'constituency' => 'required|max:255',
-            'household_type' => 'required|max:255',
-            'household_name' => 'required|max:100',
+            'ward' => 'required|max:200',
+            'city_name' => 'required|max:200',
             'street' => 'required|max:100',
-            'property_number' => 'required|max:200',
-            'floor_number' => 'required|max:200',
-            'door_number' => 'required|max:100',
-            //religion
-            'religion' => 'required',
-            'cluster' => 'sometimes|max:100',
+            'household_type' => 'required|max:255',
+            'household_name' => 'required|max:100', 
+            //profile
+           
 
         ]);
     }
@@ -142,29 +138,22 @@ $nextid = DB::table('users')->max('id') + 1;
         $employment->fax_num = $request->input('fax_num');
         $employment->website = $request->input('website');
 
+        //employment
  $residential = new ResidentialDetails();
         $residential->user_id = $nextid;
         $residential->county_residence = $request->input('county_residence');
         $residential->sub_county = $request->input('sub_county');
         $residential->constituency = $request->input('constituency');
+        $residential->ward = $request->input('ward');
+        $residential->city_name = $request->input('city_name');
+        $residential->street = $request->input('street');
         $residential->household_name = $request->input('household_name');
         $residential->household_type = $request->input('household_type');
-        $residential->property_number = $request->input('property_number');
-        $residential->street = $request->input('street');
-        $residential->floor_number =$request->input('floor_number');
-        $residential->door_number = $request->input('door_number');
-       
-
-
-        $household = new HouseholdDetails();
-        $household->user_id = $nextid;
-        $household->religion = $request->input('religion');
-        $household->cluster = $request->input('cluster');
 
 
         $employment->save();
-       $residential->save();
-        $household->save();
+        $residential->save();
+        //$profile->save();
         $user->save();
 
       
@@ -184,8 +173,6 @@ return redirect('login');
             'email' => $input['email'], 
             'password'=> bcrypt($input['password']), 
             'mobile_no' => $input['mobile_no'], 
-            'needs' => $input['needs'] , 
-            'needs_description' => $input['needs_description']
         ]);
 
         $id = $user->id;
@@ -193,7 +180,6 @@ return redirect('login');
         $employment = new EmploymentDetails();
         $employment->user_id = $id;
         $employment->employment = $input['employment'];
-        //$employment->employment = "employed"
         $employment->county_name = $input['county_name'];
         $employment->city_name = $input['city_name'];
         $employment->sector = $input['sector'];
@@ -216,20 +202,13 @@ return redirect('login');
         $residential->county_residence = $input['county_residence'];
         $residential->sub_county = $input['sub_county'];
         $residential->constituency = $input['constituency'];
-        $residential->household_name = $input['household_name'];
-        $residential->household_type = $input['household_type'];
-        $residential->property_number = $input['property_number'];
-        $residential->street = $input['street'];
-        $residential->floor_number = $input['floor_number'];
-        $residential->door_number = $input['door_number'];
+        $residential->ward = $request->input('ward');
+        $residential->city_name = $request->input('city_name');
+        $residential->street = $request->input('street');
+        $residential->household_name = $request->input('household_name');
+        $residential->household_type = $request->input('household_type');
         $residential->save();
 
-
-        $household = new HouseholdDetails();
-        $household->user_id = $id;
-        $household->religion = $input['religion'];
-        $household->cluster = $input['cluster'];
-        $household->save();
         
         //mail::send('mails.confirmation', $data ,function ($message) use ($data) {
         //    $message->to($data['email']);

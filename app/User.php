@@ -24,9 +24,6 @@ class User extends Authenticatable
        'email', 
        'password', 
        'mobile_no', 
-       'special_needs', 
-       'needs', 
-       'needs_description', 
        'token',
     ];
 
