@@ -26,7 +26,7 @@
 
                     <!-- Branding Image -->
                     <a class="logo" href="{{ url('/') }}">
-                       <img src="assets/bootstrap/img/ecp.png"  alt="ecp" style="height: 70px; width: 80px;">
+                       <img src="{{asset('assets/bootstrap/img/ecp.png')}}"  alt="ecp" style="height: 70px; width: 80px;">
                     </a>
                 </div>
 
@@ -67,7 +67,7 @@
                 </div>
             </div>
         </nav>
-    <form  method="POST" action="{{ url('registeruser') }}" class="registration-form" >
+    <form  method="POST" action="{{ url('registeruser') }}" class="registration-form">
     {{csrf_field()}}
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
@@ -658,6 +658,6 @@
                 </div>
 
             </form>
-            <script src="/assets/js/multistep_form.js"></script>
+            <script src="{{asset('assets/js/multistep_form.js')}}"></script>
         </body>
         </html>                
