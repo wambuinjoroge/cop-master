@@ -367,7 +367,7 @@ header .intro-text .intro-heading{
 **************************/
 section#contact
 {background-color:#000000;
-background-image:url(../img/bg/map-image.png);
+background-image:url(../img/map-image.png);
 background-position:center;background-repeat:no-repeat}
 section#contact .section-heading{color:#fff}
 section#contact .form-control:focus{border-color:#fed136;box-shadow:none}
