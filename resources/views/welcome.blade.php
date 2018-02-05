@@ -202,7 +202,7 @@
             </div>
                <div class="row text-center">
                 <div class="col-md-3">
-                     <img src="{{asset('assets/img/portfolio/roundicons.png')}}" class="img-responsive" alt="">
+                     <img src="{{asset('assets/img/services/roundicons.png')}}" class="img-responsive" alt="">
                     <h4 class="service-heading">Law & Justice Service</h4>
                     <p class="text-muted">Correction & Rehabilitation Dept.</p>
                     <!--p class="text-muted">Kenya Prison Department</p>
@@ -212,19 +212,19 @@
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                 <div class="col-md-3">
-                     <img src="{{asset('assets/img/portfolio/roundicons.png')}}" class="img-responsive" alt="">
+                     <img src="{{asset('assets/img/services/roundicons.png')}}" class="img-responsive" alt="">
                     <h4 class="service-heading">Tenant Portal Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                 <div class="col-md-3">
-                     <img src="{{asset('assets/img/portfolio/roundicons.png')}}" class="img-responsive" alt="">
+                     <img src="{{asset('assets/img/services/roundicons.png')}}" class="img-responsive" alt="">
                     <h4 class="service-heading">e-Safari Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
                 </div>
                  <div class="col-md-3">
-                     <img src="{{asset('assets/img/portfolio/roundicons.png')}}" class="img-responsive" alt="">
+                     <img src="{{asset('assets/img/services/roundicons.png')}}" class="img-responsive" alt="">
                     <h4 class="service-heading">Farmers Portal Service</h4>
                     <p class="text-muted">coming soon.</p>
                     <p><a href="{{ url('/login') }}" class="btn btn-default">Get Service </a></p>
@@ -249,7 +249,7 @@
                 <div class="well">
                      
                       <div class="well" >
-                       <img src="{{asset('assets/img/appeal.jpeg')}}" class="img-responsive"  alt="Image">
+                       <img src="{{asset('assets/img/resources/appeals/appeal.jpeg')}}" class="img-responsive"  alt="Image">
                     </div>
                    
             </div>
@@ -264,7 +264,7 @@
         <div class="hline"></div><br>
       <div class="well">
                       <div class="well" >
-                        <img src="{{asset('assets/dist/img/kabu.jpg')}}" class="img-responsive"  alt="Image">
+                        <img src="{{asset('assets/img/resources/notices/kabu.jpg')}}" class="img-responsive"  alt="Image">
                         
                     </div>
             </div>
@@ -281,7 +281,7 @@
         <div class="hline"></div><br>
          <div class="well">
                      
-                       <img src="{{asset('assets/img/church.jpg')}}" class="img-responsive"  alt="Image">
+                       <img src="{{asset('assets/img/resources/events/church.jpg')}}" class="img-responsive"  alt="Image">
                    
             </div>
        

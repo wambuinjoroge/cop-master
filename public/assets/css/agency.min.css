@@ -88,7 +88,7 @@ color:#777777;
  .navbar-custom .navbar-brand {
    width:80px;
    height:41px;
-   background-image:url(../img/ecp-mobile-logo.png);
+   background-image:url(../img/logo/ecp-mobile-logo.png);
    background-repeat:no-repeat; 
    margin:5px 0 0 5px; /*better position*/
     }
@@ -146,7 +146,7 @@ color:#777777;
   .navbar-custom .navbar-brand{
     width:137px;
         height:70px;
-        background-image:url(../img/ecp-logo1.png);
+        background-image:url(../img/logo/ecp-logo1.png);
         background-repeat:no-repeat;
     -webkit-transition:all .3s;
     -moz-transition:all .3s;
@@ -209,7 +209,7 @@ header .intro-text .intro-heading{
 #cd-intro-background {
     padding-top:70px;
     height:470px;
-    background-image:url(../img/mji.png) ;
+    background-image:url(../img/bg/mji.png) ;
     background-repeat:no-repeat;
     background-attachment:scroll;
     background-position:center center;

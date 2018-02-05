@@ -9,12 +9,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'ecp') }}</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{URL::asset('assets/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{URL::asset('/assets/font-awesome-4.5.0/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{URL::asset('/assets/ionicons-2.0.1/css/ionicons.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome-4.7.0/css/font-awesome.min.css') }}">
     <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
      <!-- Ionicons -->
     <link rel="stylesheet" href="{{ URL::asset('assets/ionicons-2.0.1/css/ionicons.min.css') }}">
