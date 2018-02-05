@@ -587,7 +587,7 @@
                                     <div class="form-bottom">
                                         <div class="row">
                                             <div class="form-group{{ $errors->has('household_type') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label  >House or Area Type </label>
+                                                <label  >Area Type </label>
                                                 <select class="form-control" name="household_type">
                                                     <option value="" selected>--select--</option>
                                                     <option value="Estate">Estate</option>
@@ -609,7 +609,7 @@
                                             </div>
 
                                             <div class="form-group{{ $errors->has('household_name') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label class="control-label">House or Area Name</label>
+                                                <label class="control-label">Area Name</label>
                                                 <input maxlength="100" type="text" name="household_name" class="form-control" placeholder="Enter House or Area Name" value="{{ old('household_name') }}" />
                                                 @if ($errors->has('household_name'))
                                                     <span class="help-block">
