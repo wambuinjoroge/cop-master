@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                    <form class="registration-form" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
                      <div class="row setup-content" id="step-1">
                         <div class="col-md-12">
@@ -135,7 +135,7 @@
                                     <button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-1">Next</button>
                                 </div>
                             </div>
-                                                                  <div class="row setup-content" id="step-2">
+                            <div class="row setup-content" id="step-2">
                                 <div class="col-md-12">
                                     <h3> Residence</h3><hr>
                                  
@@ -321,13 +321,13 @@
                                                 @endif
                                             </div>
                                         </div>
-</div>
+                                    </div>
 
                                     <button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-2">Next</button>
                                   
                                 </div>
                             </div>
-                         <div class="row setup-content" id="step-3">
+                           <div class="row setup-content" id="step-3">
                                 <div class="col-md-12">
                                     <h3> Employment</h3><hr>
                                     <div class="form-row{{ $errors->has('employment') ? 'has-error' : '' }}">
@@ -336,7 +336,7 @@
                                             <label class="radio-inline"><input type="radio" value="unemployed" name="employment" checked="checked" onclick="show5();">Unemployed</label>
                                             <label class="radio-inline"><input type="radio" value="employed" name="employment" onclick="show3();">Employed</label>
                                             <label class="radio-inline"><input type="radio" value="self_employed" name="employment" onclick="show4();">Self-Employed</label>
-                                             <label class="radio-inline"><input type="radio" value="volunteer" name="employment" onclick="show6();">Volunteer / Intern</label>
+                                             <label class="radio-inline"><input type="radio" value="volunteer" name="employment" onclick="show6();">Volunteer</label>
                                         </label>
                                         @if ($errors->has('employment'))
                                             <span class="help-block">
@@ -477,23 +477,19 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group{{ $errors->has('institution_name') ? 'has-error' : '' }}">
-                                        <label class="control-label">Institution Name</label>
-                                        <input maxlength="200" type="text" name="institution_name" class="form-control" placeholder="Enter institution or Office or Office Block or Business Name " value="{{ old('institution_name') }}" />
-                                        @if ($errors->has('institution_name'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('institution_name') }}</strong>
-                                            </span>
-                                        @endif
+                                        <div class="form-group{{ $errors->has('institution_name') ? 'has-error' : '' }}">
+                                            <label class="control-label">Institution Name</label>
+                                            <input maxlength="200" type="text" name="institution_name" class="form-control" placeholder="Enter institution or Office or Office Block or Business Name " value="{{ old('institution_name') }}" />
+                                            @if ($errors->has('institution_name'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('institution_name') }}</strong>
+                                                </span>
+                                            @endif
+                                        </div>
                                     </div>
-                                  
-                                    </div>
-                                  <button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-3">Verify</button>   
-                                    
+                                  <button class="btn btn-success nextBtn btn-block " type="button" value="Next" name="next" id="next-3">Verify</button>      
                                 </div>
-
                             </div>
-                
                             <div class="row setup-content" id="step-4">
                                 <div class="col-md-12">
                                     <h3>Profile</h3><hr>
@@ -510,31 +506,26 @@
                             </div>
                        
                              <div class="wrapper" align="center">
-            <div class="row-fluid">
-                <div class="span12">
-                   <label><a href="/login">Have an Account ? Login</a>
-                </div>
-            </div>
-        </div>           
-          <hr>
+                                    <div class="row-fluid">
+                                        <div class="span12">
+                                           <label><a href="/login">Have an Account ? Login</a>
+                                        </div>
+                                    </div>
+                            </div>           
+                              <hr>
                       
-<div class="wrapper" align="center">
-            <div class="row-fluid">
-                <div class="span12">
-                    <div id="copyright">© <?=date('Y');?> - Machini Technologies . All Rights Reserved</div>
-                </div><!--span12-->
-            </div><!--row-fluid-->
-        </div><!--wrapper-->
-                      
-
-                      
-
-                       
+                            <div class="wrapper" align="center">
+                                <div class="row-fluid">
+                                     <div class="span12">
+                                        <div id="copyright">© <?=date('Y');?> - Machini Technologies . All Rights Reserved</div>
+                                    </div><!--span12-->
+                                </div><!--row-fluid-->
+                            </div><!--wrapper-->   
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
- <script src="{{asset('assets/js/multistep_form.js')}}"></script>
+<script src="assets/js/multistep_form.js"></script> 
 @endsection

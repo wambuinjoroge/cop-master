@@ -8,6 +8,19 @@
  /*************************
 *******Typography******
 **************************/
+.logo{
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  padding-top: 1px;
+  font-weight: bold;
+}
+
+.logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
  .btn {
   border-radius: 0;
   font-size: 15px;
@@ -342,7 +355,7 @@ header .intro-text .intro-heading{
 }
 
 .social-icons .fa-linkedin:hover {
-  color:yellow
+  color:blue
 }
 
 .social-icons .fa-youtube:hover{
@@ -453,7 +466,7 @@ footer span.copyright{line-height:40px;text-transform:uppercase;text-transform:n
 }
 .stepwizard {
     display: table;
-    width: 50%;
+    width: 45%;
     position: relative;
 }
 .stepwizard-step button[disabled] {
@@ -489,4 +502,10 @@ footer span.copyright{line-height:40px;text-transform:uppercase;text-transform:n
  text-align: center; 
  font-size: 12px;
 }
+/*************************
+******Register Steps*****
+**************************/
+.registration-form 
+{
 
+}

@@ -1,5 +1,3 @@
-@extends('layouts.master')
-
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
@@ -15,7 +13,20 @@
 
     <title>{{ config('app.name', 'ecp') }}</title>
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     
+    <!-- End Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('assets/css/AdminLTE.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('assets/css/ionicons.css') }}">
+    
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    
+    <!-- Main Style -->
+    <link href="{{asset('assets/css/agency.min.css')}}" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -330,7 +341,7 @@
                         <div class="widget-body">
                             <address>
                             <i class="fa fa-phone fa-3x sr-contact"></i> : 
-                             <a href="call"> +254 736 436 900 </a><br><br>
+                             <a href="call"> +254 727 750 007 </a><br><br>
                             <i class="fa fa-envelope fa-3x sr-contact"></i> : <a href="mailto:#">  contact@ecp.co.ke</a><br>
                                
                                 
@@ -428,6 +439,11 @@
 
     <!-- Theme JavaScript -->
     <script src="{{asset('assets/js/agency.min.js')}}"></script>
+
+
+    <script src="{{ asset('assets/bootstrap/js/smoothscroll.js') }}"></script>
+
+    <script src="{{ asset('assets/bootstrap/js/custom.js') }}"></script>
 
 </body>
 

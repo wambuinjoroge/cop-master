@@ -19,16 +19,12 @@
 
     <link rel="stylesheet" href="{{ asset('assets/css/ionicons.css') }}">
      <!-- Font Awesome -->
-     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="{{ asset('assets/font-awesome-4.7.0/css/font-awesome.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome-4.7.0/css/font-awesome.min.css') }}">
     
     <!-- Main Style -->
     <link href="{{asset('assets/css/agency.min.css')}}" rel="stylesheet">
-   <!-- Theme CSS -->
-    <!--link href="assets/css/agency.min.css" rel="stylesheet"-->
-
+   
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -115,34 +111,18 @@
     
 
     <!-- Scripts -->
+    <script src="{{ asset('assets/bootstrap/js/jquery.js') }}"></script>
+
+    <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+
+    <script src="{{ asset('assets/bootstrap/js/smoothscroll.js') }}"></script>
+
+    <script src="{{ asset('assets/bootstrap/js/custom.js') }}"></script>
+
+    <script src="{{URL::asset('assets/js/multistep_form.js')}}"></script>
+
     <script src="{{ URL::asset('/assets/js/app.js') }}"></script>
-    <script src=" {{ URL::asset('/assets/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
-    <script src=" {{ URL::asset('/assets/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/raphael/raphael-min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/morris/morris.min.js') }}"></script>
-    <!-- Sparkline -->
-    <script src="{{ URL::asset('assets/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
-    <!-- jvectormap -->
-    <script src="{{ URL::asset('assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
-    <!-- jQuery Knob Chart -->
-    <script src="{{ URL::asset('assets/plugins/knob/jquery.knob.js') }}"></script>
-    <!-- daterangepicker -->
-    <script src="{{ URL::asset('assets/plugins/moment/moment.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/daterangepicker/daterangepicker.js') }}"></script>
-    <!-- datepicker -->
-    <script src="{{ URL::asset('assets/plugins/datepicker/bootstrap-datepicker.js') }}"></script>
-    <!-- Bootstrap WYSIHTML5 -->
-    <script src="{{ URL::asset('assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
-    <!-- Slimscroll -->
-    <script src="{{ URL::asset('assets/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
-    <!-- FastClick -->
-    <script src="{{ URL::asset('assets/plugins/fastclick/fastclick.min.js') }}"></script>
-    <!-- AdminLTE App -->
-    <script src="{{ URL::asset('assets/dist/js/app.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/iCheck/icheck.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
+    
     <script src="{{ URL::asset('assets/dist/js/demo.js') }}"></script>
 </body>
 </html>
