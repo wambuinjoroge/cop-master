@@ -1,3 +1,5 @@
+@extends('layouts.master')
+
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
@@ -11,14 +13,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'e-community police') }}</title>
+    <title>{{ config('app.name', 'ecp') }}</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     
-    <!-- Custom Fonts -->
-    <link rel="stylesheet" href="{{ asset('assets/font-awesome-4.7.0/css/font-awesome.min.css') }}">
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -27,12 +24,6 @@
 
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
    
-    <!-- Theme CSS -->
-    <link href="{{asset('assets/css/agency.min.css')}}" rel="stylesheet">
-
-
-    
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -407,7 +398,7 @@
        <div class="container">
             <div class="row">
                 <div class=" pull-left">
-                    <span class="copyright">&copy; <?=date('Y');?> - Machini Technologies . All Rights Reserved</span>
+                    <span class="copyright">&copy; <?=date('Y');?> Machini Technologies . All Rights Reserved</span>
                 </div>
                 <div class="col-md-8">
                     <div class="pull-right">

@@ -11,30 +11,21 @@
 
     <title>{{ config('app.name', 'ecp') }}</title>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{URL::asset('assets/bootstrap/css/bootstrap.min.css')}}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    
+    <!-- End Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('assets/css/AdminLTE.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('assets/css/ionicons.css') }}">
+     <!-- Font Awesome -->
+     <!-- Custom Fonts -->
     <link rel="stylesheet" href="{{ asset('assets/font-awesome-4.7.0/css/font-awesome.min.css') }}">
-    <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
-     <!-- Ionicons -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/ionicons-2.0.1/css/ionicons.min.css') }}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/dist/css/AdminLTE.min.css') }}">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/dist/css/skins/_all-skins.min.css') }}">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/plugins/iCheck/flat/blue.css') }}">
-    <!-- Morris chart -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/plugins/morris/morris.css') }}">
-    <!-- jvectormap -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/plugins/jvectormap/jquery-jvectormap-1.2.2.css') }}">
-    <!-- Date Picker -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/plugins/datepicker/datepicker3.css') }}">
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/plugins/daterangepicker/daterangepicker.css') }}">
-    <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('assets/plugins/datatables/dataTables.bootstrap.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    
+    <!-- Main Style -->
+    <link href="{{asset('assets/css/agency.min.css')}}" rel="stylesheet">
    <!-- Theme CSS -->
     <!--link href="assets/css/agency.min.css" rel="stylesheet"-->
 
@@ -68,7 +59,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        ECP
+                        ecp
                     </a>
                 </div>
 
@@ -110,248 +101,18 @@
             </div>
         </nav>
         @if(!Auth::guest())
-        <div class="row">
-            <div class="col-md-offset-1 col-md-2">
-             <!-- Left side column. contains the logo and sidebar -->
-<aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-        
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu">
-          <li class="header">MAIN NAVIGATION</li>
-          <li class="active treeview">
-          <a href="/home">
-            <i class="fa fa-home"></i> <span>Dashboard</span>
-          </a>
-        </li>
-         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>Applications</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <!--li><a href="#">Bursary</a></li-->
-            <li><a href="#">Burial Permit</a></li>
-            <!--li><a href="#">CDF</a></li-->
-            <li><a href="#">Conflict Resolution</a></li>
-            <li><a href="#">Event Permit</a></li>
-            <li><a href="#">Witness Protection</a></li>
-            <!--li><a href="#">Private Security Service</a></li-->
-          </ul>
-        </li>
-         <li class="treeview">
-          <a href="#">
-          <i class="fa fa-calendar-check-o"></i> <span>Calender</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-          <li><a href="forms/reminder.blade.php">  <i class="fa fa-clock-o"></i>  Reminder</a>
-          <li><a href="forms/contact.blade.php">  <i class="fa fa-tablet"></i>  Diary  Book</a>
-            
-          </ul>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-laptop"></i> <span>Logs</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-bullhorn"></i><span>Notices</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-      <!-- /.search form -->
-            
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-calendar"></i> <span>Events</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-      <!-- /.search form -->
-           
-          </ul>
-        </li>
-         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-book"></i> <span>Contact Directory</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-          <li><a href="/contacts">Contacts</a></li>
-            <!-- search form -->
-            <form action="/contacts" method="POST" class="sidebar-form">
-                {{csrf_field()}}
-                <div class="input-group">
-                    <input type="text" name="search" id="search" class="form-control" placeholder="Search...">
-                    <span class="input-group-btn">
-                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-                       
-                    </span>
-                </div>
-            </form>
-            <!-- /.search form -->
-            
-          </ul>
-        </li>
-        
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-shopping-cart"></i> <span>Appeal</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-          <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-      <!-- /.search form -->
-            <li><a href="forms/appeal.blade.php">Make Appeal</a></li>
-           
-            
-          </ul>
-        </li>
-         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-share-alt"></i> <span>Lost & Found</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-         
-           <li><a href="#">Item</a></li>
-            <li><a href="#">Missing Person</a></li>
-            <li><a href="#">Most Wanted</a></li>
-           
-            
-          </ul>
-        </li>
-        <li>
-          <a href="#">
-           <i class="fa fa-bars"></i><span>Register Item</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li>
-         <li>
-          <a href="forms/contribution.blade.php">
-            <i class="fa fa-briefcase"></i> <span>Contributions</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-road"></i> <span>Black / Crime Spots</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-      <!-- /.search form -->
-           
-          </ul>
-        </li>
-         <li>
-          <a href="/help">
-            <i class="glyphicon glyphicon-question-sign"></i>  <span>Help</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li>
-        <!--li>
-          <a href="#">
-          <i class="glyphicon glyphicon-cog"></i> <span>Account Settings</span>
-            <span class="pull-right-container">
-              
-            </span>
-          </a>
-        </li-->
-         
-        </ul>
-    </section>
-    <!-- /.sidebar -->
-</aside>
+       
         </div>
        
         @endif
         <div class="col-md-8">
             @yield('content')
         </div>
-        </div>
+      
 
         
 
-    <!--footer-->
-    <footer class="main-footer footer navbar-fixed-bottom">
-        <!-- To the right -->
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 1.0.0
-        </div>
-        <strong>Copyright &copy; <?=date('Y');?>
-            <a href="#">Machini Technologies</a>. 
-        </strong> All Rights Reserved.                    
-    </footer>
+    
 
     <!-- Scripts -->
     <script src="{{ URL::asset('/assets/js/app.js') }}"></script>

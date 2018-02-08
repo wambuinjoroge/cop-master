@@ -9,16 +9,21 @@
     <link rel="icon" type="image/png" sizes="200x200" href="assets/bootstrap/img/ecp.png">
     <title>{{$title or 'ecp'}}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+     
      <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     
     <!-- End Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('assets/css/AdminLTE.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('assets/css/ionicons.css') }}">
      <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('assets/font-awesome-4.5.0/css/font-awesome.min.css') }}">
+     <!-- Custom Fonts -->
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+     <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
     
     <!-- Main Style -->
-    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/main.css') }}">
+    <link href="{{asset('assets/css/agency.min.css')}}" rel="stylesheet">
 
 
 
