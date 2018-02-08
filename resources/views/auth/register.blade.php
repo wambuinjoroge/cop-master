@@ -1,6 +1,48 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="{{ config('app.locale') }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="connect | share | empower">
+    <meta name="author" content="machini technologies">
+    <link rel="icon" type="image/png" sizes="200x200" href="assets/bootstrap/img/ecp.png">
 
-@section('content')
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'ecp') }}</title>
+
+     <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    
+    <!-- End Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('assets/css/AdminLTE.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('assets/css/ionicons.css') }}">
+     <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    
+    <!-- Main Style -->
+    <link href="{{asset('assets/css/agency.min.css')}}" rel="stylesheet">
+   
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   
+    <!-- Scripts -->
+    <script>
+        window.Laravel = {!! json_encode([
+            'csrfToken' => csrf_token(),
+        ]) !!};
+    </script>
+</head>
+<body style="margin-top: 120px"> 
+
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -87,7 +129,7 @@
                                 <div class="row">
                                     <div class="form-group{{ $errors->has('mobile_no') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                         <label class="control-label">Mobile Number</label>
-                                        <input maxlength="10" minlength="10" type="text" required="required" class="form-control" placeholder="e.g 0700000000" name="mobile_no" value="{{ old('mobile_no') }}" />
+                                        <input maxlength="10" minlength="10" type="text" required="required" class="form-control" placeholder="e.g 0727750007" name="mobile_no" value="{{ old('mobile_no') }}" />
                                         @if ($errors->has('mobile_number'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('mobile_no') }}</strong>
@@ -98,7 +140,7 @@
                                         <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                                         <div class="col-md-6 col-md-6 col-sm-6">
-                                            <input id="email" type="email" class="form-control" name="email" placeholder="Enter e.g mancini@gmail.com" value="{{ old('email') }}" required>
+                                            <input id="email" type="email" class="form-control" name="email" placeholder="e.g mancini@gmail.com" value="{{ old('email') }}" required>
 
                                             @if ($errors->has('email'))
                                                 <span class="help-block">
@@ -504,28 +546,53 @@
                                     <button class="btn btn-success btn-block" type="submit">Submit</button>
                                 </div>
                             </div>
-                       
+                            <br>
                              <div class="wrapper" align="center">
                                     <div class="row-fluid">
                                         <div class="span12">
                                            <label><a href="/login">Have an Account ? Login</a>
                                         </div>
                                     </div>
-                            </div>           
-                              <hr>
-                      
-                            <div class="wrapper" align="center">
-                                <div class="row-fluid">
-                                     <div class="span12">
-                                        <div id="copyright">© <?=date('Y');?> - Machini Technologies . All Rights Reserved</div>
-                                    </div><!--span12-->
-                                </div><!--row-fluid-->
-                            </div><!--wrapper-->   
+                            </div>                 
                     </form>
                 </div>
             </div>
+             <hr>
+             <div class="wrapper" align="center">
+                <div class="row-fluid">
+                    <div class="span12">
+                    <div id="copyright">© <?=date('Y');?> Machini Technologies . All Rights Reserved</div>
+                    </div><!--span12-->
+                </div><!--row-fluid-->
+            </div><!--wrapper-->  
         </div>
     </div>
 </div>
-<script src="assets/js/multistep_form.js"></script> 
-@endsection
+   <!-- Scripts -->
+    <script src="{{ asset('assets/bootstrap/js/jquery.js') }}"></script>
+
+    <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+
+    <script src="{{ asset('assets/bootstrap/js/smoothscroll.js') }}"></script>
+
+    <script src="{{ asset('assets/bootstrap/js/custom.js') }}"></script>
+
+    <script src="{{URL::asset('assets/js/multistep_form.js')}}"></script>
+
+    <script src="{{ URL::asset('/assets/js/app.js') }}"></script>
+    
+    <script src="{{ URL::asset('assets/dist/js/demo.js') }}"></script>
+
+     <!--script>
+      $(function () {
+        $('input').iCheck({
+          checkboxClass: 'icheckbox_square-blue',
+          radioClass: 'iradio_square-blue',
+          increaseArea: '20%' // optional
+        });
+      });
+    </script-->
+</body>
+</html>
+         
+ 
