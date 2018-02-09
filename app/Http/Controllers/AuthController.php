@@ -65,7 +65,7 @@ $employment = new EmploymentDetails();
         $employment->county_name = $request->input('county_name');
         $employment->city_name = $request->input('city_name');
         $employment->sector = $request->input('sector');
-        $employment->kra_no = $request->input('kra_no');
+        $employment->kra_pin = $request->input('kra_pin');
         $employment->institution_name = $request->input('institution_name');
         $employment->save();
 		$residential->save();

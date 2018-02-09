@@ -474,7 +474,7 @@
                                                     </span>
                                                 @endif  
                                             </div>
-                                          <div class="form-group{{ $errors->has('kra_no') ? 'has-error' : '' }} col-md-6 col-sm-6">
+                                          <div class="form-group{{ $errors->has('kra_pin') ? 'has-error' : '' }} col-md-6 col-sm-6">
                                                 <label class="control-label">KRA Pin</label>
                                                 <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter KRA PIN Number" name="kra_no" value="{{ old('kra_no') }}" />
                                                 @if ($errors->has('last_name'))

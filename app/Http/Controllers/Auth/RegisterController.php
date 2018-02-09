@@ -85,7 +85,7 @@ class RegisterController extends Controller
             'county_name' => 'required|max:255',
             'city_name' => 'required|max:255',
             'sector' => 'sometimes|max:255',
-            'kra_no' => 'required|max:11|unique:users',
+            'kra_pin' => 'required|max:11|unique:users',
             'institution_name' => 'sometimes|max:200',
             //profile
            
@@ -135,7 +135,7 @@ $residential = new ResidentialDetails();
         $employment->county_name = $request->input('county_name');
         $employment->city_name = $request->input('city_name');
         $employment->sector = $request->input('sector');
-        $employment->kra_no = $request->input('kra_no');
+        $employment->kra_pin = $request->input('kra_pin');
         $employment->institution_name = $request->input('institution_name');
         
 
@@ -172,7 +172,7 @@ return redirect('login');
         $employment->county_name = $input['county_name'];
         $employment->city_name = $input['city_name'];
         $employment->sector = $input['sector'];
-        $employment->kra_no = $input['kra_no'];
+        $employment->kra_pin = $input['kra_pin'];
         $employment->institution_name = $input['institution_name'];
        
         $employment->save();
