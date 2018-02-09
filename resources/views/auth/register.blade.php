@@ -91,12 +91,12 @@
                                             </span>
                                         @endif
                                     </div>
-                                    <div class="form-group{{ $errors->has('kra_no') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                        <label class="control-label">KRA Pin</label>
-                                        <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter KRA PIN Number" name="kra_no" value="{{ old('kra_no') }}" />
-                                        @if ($errors->has('last_name'))
+                                    <div class="form-group{{ $errors->has('nationality') ? 'has-error' : '' }} col-md-6 col-sm-6">
+                                        <label class="control-label">Nationality</label>
+                                        <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Nationality" name="nationality" value="{{ old('nationality') }}" />
+                                        @if ($errors->has('nationality'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('kra_no') }}</strong>
+                                                <strong>{{ $errors->first('nationality') }}</strong>
                                             </span>
                                         @endif
                                     </div> 
@@ -346,7 +346,7 @@
                                             </div> 
                                             <div class="form-group{{ $errors->has('floor_number') ? 'has-error' : '' }} col-md-3 col-sm-6">
                                                 <label class="control-label">Floor Number</label>
-                                                <input maxlength="200" type="text" name="floor_number" class="form-control" placeholder="Enter Floor No." value="{{ old('floor_number') }}" />
+                                                <input maxlength="200" type="text" name="floor_number" class="form-control" placeholder="Floor No." value="{{ old('floor_number') }}" />
                                                 @if ($errors->has('floor_number'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('floor_number') }}</strong>
@@ -355,7 +355,7 @@
                                             </div>
                                             <div class="form-group{{ $errors->has('door_number') ? 'has-error' : '' }} col-md-3 col-sm-6">
                                                 <label class="control-label">Door Number </label>
-                                                <input maxlength="100" type="text" name="door_number" class="form-control" placeholder="Enter Door No. " value="{{ old('door_number') }}" />
+                                                <input maxlength="100" type="text" name="door_number" class="form-control" placeholder=" Door No. " value="{{ old('door_number') }}" />
                                                 @if ($errors->has('door_number'))
                                                     <span class="help-block">
                                                         <strong>{{ $errors->first('door_number') }}</strong>
@@ -378,7 +378,7 @@
                                             <label class="radio-inline"><input type="radio" value="unemployed" name="employment" checked="checked" onclick="show5();">Unemployed</label>
                                             <label class="radio-inline"><input type="radio" value="employed" name="employment" onclick="show3();">Employed</label>
                                             <label class="radio-inline"><input type="radio" value="self_employed" name="employment" onclick="show4();">Self-Employed</label>
-                                             <label class="radio-inline"><input type="radio" value="volunteer" name="employment" onclick="show6();">Volunteer</label>
+                                             <label class="radio-inline"><input type="radio" value="intern" name="employment" onclick="show6();">Intern</label>
                                         </label>
                                         @if ($errors->has('employment'))
                                             <span class="help-block">
@@ -474,49 +474,16 @@
                                                     </span>
                                                 @endif  
                                             </div>
-
-                                            <div class="form-group{{ $errors->has('business_category') ? 'has-error' : '' }} col-md-6 col-sm-6">
-                                                <label  >Business Category</label>
-                                                <select class="form-control" name="business_category">
-                                                    <option value="" selected>--select--</option>
-                                                    <option value="Advertising" >Advertising / Marketing / PR / Media / Publishing</option>
-                                                    <option value="Accounting" >Accounting / Auditing</option>
-                                                    <option value="Agriculture">Agriculture / Chemicals</option>
-                                                    <option value="aviation">Airline &amp; Travel</option>
-                                                     <option value="Security">Armed Forces / Security Forces</option>
-                                                    <option value="Banking & Finance">Banking / Money  &amp; Finance</option>
-                                                     <option value="Beauty & Product">Beauty & Beauty Products </option>
-                                                    <option value="Business Support">Business Support</option>
-                                                    <option value="Building & Construction">Building / Architecture / Real Estate &amp; Construction</option>
-                                                    <option value="Computer & Internet">Computer Hardware / Software / Networking &amp; Internet</option>
-                                                    <option value="Cars & Vehicles">Cars &amp; Vehicles</option>
-                                                    <option value="Electrical & Electronic">Electrical / Electronic &amp; Engineering </option>
-                                                    <option value="Education">Education / Learning Institutions</option>
-                                                     <option value="Energy">Energy</option>
-                                                    <option value="Entertainment">Entertainment / Film &amp;  Music </option>
-                                                    <option value="Fashion & Lifestyle">Fashion &amp; Lifestyle</option>
-                                                    <option value="Insurance">Insurance &amp; Legal</option>
-                                                     <option value="Government & Parastatals">Government &amp; Institutions Parastatals </option>
-                                                    <option value="Health">Health Services / Medical / Pharmaciticals</option>
-                                                    <option value="Hotel & Restaurant">Hospitality /  Hotel &amp; Restaurant</option>
-                                                   
-                                                    <option value="Manufacturing & Industries">Manufacturing &amp; Industries</option>
-                                                    <option value="Shipping / clearing &amp; Forwarding">Shipping / Clearing &amp; Forwarding</option>
-                                                    <option value="Others">Others</option>
-                                                    <option value="Petroleum">Petroleum</option>
-                                                    <option value="Professional Services">Professional Services</option>
-                                                    
-                                                    <option value="Society">NGOs / Religious / Society &amp; Charity Organizations</option>
-                                                     <option value="Shopping">Shopping</option>
-                                                    <option value="Sports & Betting">Sports &amp; Betting</option>
-                                                     <option value="UN & Diplomatic Missions">UN & Diplomatic Missions</option>
-                                                </select>
-                                                @if ($errors->has('business_category'))
+                                          <div class="form-group{{ $errors->has('kra_no') ? 'has-error' : '' }} col-md-6 col-sm-6">
+                                                <label class="control-label">KRA Pin</label>
+                                                <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter KRA PIN Number" name="kra_no" value="{{ old('kra_no') }}" />
+                                                @if ($errors->has('last_name'))
                                                     <span class="help-block">
-                                                        <strong>{{ $errors->first('business_category') }}</strong>
+                                                        <strong>{{ $errors->first('kra_no') }}</strong>
                                                     </span>
                                                 @endif
-                                            </div>
+                                         </div>
+                                        
                                         </div>
                                     </div>
                                         <div class="form-group{{ $errors->has('institution_name') ? 'has-error' : '' }}">

@@ -61,29 +61,13 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'id_no' => 'required|unique:users',
+            'nationality' => 'required|max:255',
             'first_name' => 'required|max:255',
             'last_name' => 'required|max:255',
             'mobile_no' => 'required|min:10|max:10',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required',
             'terms' => 'accepted',
-            //employment details
-            'employment' => 'required',
-            'county_name' => 'required|max:255',
-            'city_name' => 'required|max:255',
-            'sector' => 'sometimes|max:255',
-            'business_category'  => 'sometimes|max:255',
-            'institution_name' => 'sometimes|max:200',
-            'building_name' => 'sometimes|max:200',
-            'floor_num' => 'sometimes|max:100',
-            'room_num' => 'sometimes|max:100',
-            'branch_name' => 'sometimes|max:100',
-            'street_name' => 'sometimes|max:200',
-            'postal_address' => 'sometimes|max:255',
-            'email_address' => 'sometimes|max:100',
-            'telephone' => 'sometimes|max:100',
-            'fax_num' => 'sometimes|max:100',
-            'website' => 'sometimes|max:100',
             //residential details
             'county_residence' => 'required|max:255',
             'sub_county' => 'required|max:255',
@@ -92,7 +76,17 @@ class RegisterController extends Controller
             'city_name' => 'required|max:200',
             'street' => 'required|max:100',
             'household_type' => 'required|max:255',
-            'household_name' => 'required|max:100', 
+            'household_name' => 'required|max:100',
+            'property_number' => 'required|max:100',
+            'floor_number' => 'required|max:255',
+            'door_number' => 'required|max:255',  
+            //employment details
+            'employment' => 'required',
+            'county_name' => 'required|max:255',
+            'city_name' => 'required|max:255',
+            'sector' => 'sometimes|max:255',
+            'kra_no' => 'required|max:11|unique:users',
+            'institution_name' => 'sometimes|max:200',
             //profile
            
 
@@ -113,10 +107,26 @@ $nextid = DB::table('users')->max('id') + 1;
         $fname = $request->input('first_name');
         $lname = $request->input('last_name');
         $user->id_no = $request->input('id_no');
+        $user->nationality = $request->input('nationality');
         $user->name = $request->input('first_name').' '.$request->input('last_name');
         $user->email = $request->input('email');
         $user->mobile_no = $request->input('mobile_no');
         $user->password = bcrypt($request->input('password'));
+
+        //residential
+$residential = new ResidentialDetails();
+        $residential->user_id = $nextid;
+        $residential->county_residence = $request->input('county_residence');
+        $residential->sub_county = $request->input('sub_county');
+        $residential->constituency = $request->input('constituency');
+        $residential->ward = $request->input('ward');
+        $residential->city_name = $request->input('city_name');
+        $residential->street = $request->input('street');
+        $residential->household_type = $request->input('household_type');
+        $residential->household_name = $request->input('household_name');
+        $residential->property_number = $input['property_number'];
+        $residential->floor_number = $input['floor_number'];
+        $residential->door_number = $input['door_number'];
 
         //employment
  $employment = new EmploymentDetails();
@@ -125,35 +135,13 @@ $nextid = DB::table('users')->max('id') + 1;
         $employment->county_name = $request->input('county_name');
         $employment->city_name = $request->input('city_name');
         $employment->sector = $request->input('sector');
-        $employment->business_category = $request->input('business_category');
+        $employment->kra_no = $request->input('kra_no');
         $employment->institution_name = $request->input('institution_name');
-        $employment->building_name = $request->input('building_name');
-        $employment->floor_num = $request->input('floor_num');
-        $employment->room_num = $request->input('room_num');
-        $employment->branch_name = $request->input('branch_name');
-        $employment->street_name = $request->input('street_name');
-        $employment->postal_address = $request->input('postal_address');
-        $employment->email_address = $request->input('email_address');
-        $employment->telephone = $request->input('telephone');
-        $employment->fax_num = $request->input('fax_num');
-        $employment->website = $request->input('website');
-
-        //employment
- $residential = new ResidentialDetails();
-        $residential->user_id = $nextid;
-        $residential->county_residence = $request->input('county_residence');
-        $residential->sub_county = $request->input('sub_county');
-        $residential->constituency = $request->input('constituency');
-        $residential->ward = $request->input('ward');
-        $residential->city_name = $request->input('city_name');
-        $residential->street = $request->input('street');
-        $residential->household_name = $request->input('household_name');
-        $residential->household_type = $request->input('household_type');
-
+        
 
         $employment->save();
         $residential->save();
-        //$profile->save();
+        $profile->save();
         $user->save();
 
       
@@ -169,6 +157,7 @@ return redirect('login');
         $input = $data;
         $user = User::create([
             'id_no' => $input['id_no'],  
+            'nationality' => $input['nationality'],  
             'name' => $input['first_name'].' '.$input['last_name'], 
             'email' => $input['email'], 
             'password'=> bcrypt($input['password']), 
@@ -183,18 +172,9 @@ return redirect('login');
         $employment->county_name = $input['county_name'];
         $employment->city_name = $input['city_name'];
         $employment->sector = $input['sector'];
-        $employment->business_category = $input['business_category'];
+        $employment->kra_no = $input['kra_no'];
         $employment->institution_name = $input['institution_name'];
-        $employment->building_name = $input['building_name'];
-        $employment->floor_num = $input['floor_num'];
-        $employment->room_num = $input['room_num'];
-        $employment->branch_name = $input['branch_name'];
-        $employment->street_name = $input['street_name'];
-        $employment->postal_address = $input['postal_address'];
-        $employment->email_address = $input['email_address'];
-        $employment->telephone = $input['telephone'];
-        $employment->fax_num = $input['fax_num'];
-        $employment->website = $input['website'];
+       
         $employment->save();
 
         $residential = new ResidentialDetails();
@@ -207,18 +187,17 @@ return redirect('login');
         $residential->street = $request->input('street');
         $residential->household_name = $request->input('household_name');
         $residential->household_type = $request->input('household_type');
+        $residential->property_number = $request['property_number'];
+        $residential->floor_number = $request['floor_number'];
+        $residential->door_number = $request['door_number'];
         $residential->save();
 
         
-        //mail::send('mails.confirmation', $data ,function ($message) use ($data) {
-        //    $message->to($data['email']);
-        //    $message->subject('Registration Confirmation');
-         //   )
+        
         $user->attachRole(Role::where('name','user')->first());
         return $user;
-       // return redirect(route('login'))->with('status', 'Confirmation email has been send.kindly check your mail')
+       
     }
-       // return redirect(route('login'))->with('status', '$validator->errors')
 
     public function register(Request $request)
     {
