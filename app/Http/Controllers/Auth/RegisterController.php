@@ -185,7 +185,7 @@ return redirect('login');
         $employment->sector = $input['sector'];
         $employment->business_category = $input['business_category'];
         $employment->institution_name = $input['institution_name'];
-        $employment->building_name = $input['building_name'];
+        //$employment->building_name = $input['building_name'];
         $employment->floor_num = $input['floor_num'];
         $employment->room_num = $input['room_num'];
         $employment->branch_name = $input['branch_name'];
