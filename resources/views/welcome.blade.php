@@ -341,7 +341,7 @@
                         <div class="widget-body">
                             <address>
                             <i class="fa fa-phone fa-3x sr-contact"></i> : 
-                             <a href="call"> +254 727 750 007 </a><br><br>
+                             <a href="call"> +254 741 271 936 </a><br><br>
                             <i class="fa fa-envelope fa-3x sr-contact"></i> : <a href="mailto:#">  contact@ecp.co.ke</a><br>
                                
                                 
