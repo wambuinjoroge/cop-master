@@ -78,6 +78,7 @@
                     <a href="{{ route('user.show', $user->id) }}" class="">View</a> &nbsp;&nbsp;
                     <a href="" class="">Edit</a> &nbsp;&nbsp;
                     <a href="" class="">Delete</a> &nbsp;&nbsp;
+                    <a href="{{ route('user.role', $user->id) }}" class="">Attach/Change Role</a> &nbsp;&nbsp;
                   </td>
               @empty
                   <td colspan="6" class="alert alert-warning">No users available</td>
