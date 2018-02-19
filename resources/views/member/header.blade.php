@@ -142,7 +142,7 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              {{ Auth::user()->name  }}
+             {{-- {{ Auth::user()->name  }} --}} 
               <span class="hidden-xs"></span>
             </a>
             <ul class="dropdown-menu">
@@ -151,8 +151,8 @@
                 <img src="{{ asset('assets/bootstrap/img/member.jpeg') }}" class="img-circle" alt="User Image">
 
                 <p>
-                  Welcome {{ Auth::user()->name  }}
-                      <small>Member Since {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', Auth::user()->created_at)->format('l j F Y') }}</small>
+                  Welcome {{-- {{ Auth::user()->name  }} --}} 
+                      <small>Member Since {{-- {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', Auth::user()->created_at)->format('l j F Y') }} --}}</small>
                      
                     </p>
 
