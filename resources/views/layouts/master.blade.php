@@ -26,9 +26,7 @@
 
     <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
 
-    <script src="{{ asset('assets/bootstrap/js/smoothscroll.js') }}"></script>
 
-    <script src="{{ asset('assets/bootstrap/js/custom.js') }}"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="60" id="page-top">
 
