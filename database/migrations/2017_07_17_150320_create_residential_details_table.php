@@ -26,6 +26,9 @@ class CreateResidentialDetailsTable extends Migration
             $table->string('street');
             $table->string('household_type');
             $table->string('household_name');
+            $table->string('property_number');
+            $table->string('floor_number');
+            $table->string('door_number');
             $table->timestamps();
         });
     }
@@ -38,8 +41,6 @@ class CreateResidentialDetailsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('residential_details');
-           $table->string('property_number');
-           $table->string('floor_number');
-           $table->string('door_number');
+           
     }
 }

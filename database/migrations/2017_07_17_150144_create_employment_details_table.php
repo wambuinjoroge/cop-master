@@ -21,19 +21,10 @@ class CreateEmploymentDetailsTable extends Migration
             $table->string('employment');
             $table->string('county_name');
             $table->string('city_name');
+            $table->string('kra_pin');
             $table->string('sector')->nullable();
-            $table->string('business_category')->nullable();
             $table->string('institution_name')->nullable();
-            $table->string('building_name')->nullable();
-            $table->string('floor_num')->nullable();
-            $table->string('room_num')->nullable();
-            $table->string('branch_name')->nullable();
-            $table->string('street_name')->nullable();
-            $table->string('postal_address')->nullable();
-            $table->string('telephone')->nullable();
-            $table->string('email_address')->nullable();
-            $table->string('fax_num')->nullable();
-            $table->string('website')->nullable();
+            
             $table->timestamps();
         });
     }
@@ -46,5 +37,16 @@ class CreateEmploymentDetailsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('employment_details');
+        $table->string('business_category')->nullable();
+        $table->string('building_name')->nullable();
+        $table->string('floor_num')->nullable();
+        $table->string('room_num')->nullable();
+        $table->string('branch_name')->nullable();
+        $table->string('street_name')->nullable();
+        $table->string('postal_address')->nullable();
+        $table->string('telephone')->nullable();
+        $table->string('email_address')->nullable();
+        $table->string('fax_num')->nullable();
+        $table->string('website')->nullable();
     }
 }

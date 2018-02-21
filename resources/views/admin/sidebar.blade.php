@@ -24,6 +24,7 @@
               
                 <li><a href="{{ route('roles.index') }}"><i class="fa fa-cog"></i>Roles</a></li>
                 <li><a href="/admin/user"><i class="fa fa-user-plus"></i>Users</a></li>
+                <li><a href="{{ route('permissions.index') }}"><i class="fa fa-lock"></i>Permissions</a></li>
 
              
           </ul>

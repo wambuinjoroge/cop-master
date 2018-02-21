@@ -36,6 +36,7 @@ $id = DB::table('users')->max('id') + 1;
 
 $user = new User();
         $user->id_no = $request->input('id_no');
+        $user->nationality = $request->input('nationality');
         $user->name = $request->input('first_name');
         $user->email = $request->input('email');
         $user->mobile_no = $request->input('mobile_no');
@@ -53,24 +54,10 @@ $residential = new ResidentialDetails();
 		$residential->street = $request->input('street');
 		$residential->household_type = $request->input('household_type');
 		$residential->household_name = $request->input('household_name');
+		$residential->property_number = $input('property_number');
+        $residential->floor_number = $input('floor_number');
+        $residential->door_number = $input('door_number');
 		
-	
-//$employment = new EmploymentDetails();
-	//	$employment->user_id = $id;
-	//	$employment->employment = $request->input('employment');
-	//	$employment->sector = $request->input('sector');
-	//	$employment->institution_name = $request->input('institution_name');
-	//	$employment->building_name = $request->input('building_name');
-	//	$employment->floor_num = $request->input('floor_num');
-	//	$employment->room_num = $request->input('room_num');
-	//	$employment->street_name = $request->input('street_name');
-	//	$employment->emp_address = $request->input('emp_address');
-	//	$employment->emp_phone_num = $request->input('emp_phone_num');
-	//	$employment->emp_fax_num = $request->input('emp_fax_num');
-	//	$employment->emp_website = $request->input('emp_website');
-	//	$employment->save();
-	//	$residential->save();
-	//	$user->save();
 
 $employment = new EmploymentDetails();
 		$employment->user_id = $id;
@@ -78,20 +65,11 @@ $employment = new EmploymentDetails();
         $employment->county_name = $request->input('county_name');
         $employment->city_name = $request->input('city_name');
         $employment->sector = $request->input('sector');
-        $employment->business_category = $request->input('business_category');
+        $employment->kra_pin = $request->input('kra_pin');
         $employment->institution_name = $request->input('institution_name');
-        $employment->building_name = $request->input('building_name');
-        $employment->floor_num = $request->input('floor_num');
-        $employment->room_num = $request->input('room_num');
-        $employment->branch_name = $request->input('branch_name');
-        $employment->street_name = $request->input('street_name');
-        $employment->postal_address = $request->input('postal_address');
-        $employment->email_address = $request->input('email_address');
-        $employment->telephone = $request->input('telephone');
-        $employment->fax_num = $request->input('fax_num');
-        $employment->website = $request->input('website');
         $employment->save();
 		$residential->save();
+		//$profile->save();
 		$user->save();
 
  // $user->save();
@@ -115,6 +93,7 @@ session::flash ('msg','Registration successful') ;
 		
 
 		return $redirect('member');
+		//return $redirect('login');
 		
 	}
 }

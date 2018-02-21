@@ -59,7 +59,7 @@ class UserController extends Controller
         $this->validate($request, [
             'email' => 'required|unique:users|max:255',
             'name' => 'required',
-            'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:8|confirmed',
         ]);
         //$user = new User;
         $this->user->name = $request->name;

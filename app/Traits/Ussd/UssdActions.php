@@ -10,14 +10,14 @@ namespace App\Traits\Ussd;
 
 use App\User;
 use App\EmploymentDetails;
-//use App\Institution;
+use App\Institution;
 use App\Utils\SMS\AfricasTalkingGateway;
 
 trait UssdActions
 {
     private function verifyIdentity($input)
     {
-        preg_match_all("!([0-9]{8})!",$input,$matches);
+        preg_match_all("!([0-9]{7})!",$input,$matches);
         $id_number = $matches[0][0];
         $user = User::where('id_no',$id_number)->get()->first();
         if(!is_null($user)){
@@ -30,14 +30,14 @@ trait UssdActions
             //$details .= "Branch Name : ".$user->employment->branch_name."\n";
             $details .= "Resident County : ".$user->residence->county_residence."\n";
             $details .= "Constituency : ".$user->residence->constituency."\n";
-            $details .= "Area Name : ".$user->residence->household_name."\n";
+            $details .= "Resident Name : ".$user->residence->household_name."\n";
             
            
         }
         else
             $details = " Community Member not found\n";
 
-        $this->sendSMS("+254741271936","Your Profile has been viewed by me");
+        $this->sendSMS("+254727750007","Your Profile has been viewed by me");
 
         return $details;
     }
@@ -67,7 +67,7 @@ trait UssdActions
         else
             $details = "Institution Record Unavailable\n";
 
-        $this->sendSMS("+254741271936","Contact has been searched by user");
+        $this->sendSMS("+254727750007","Contact has been searched by user");
 
         return $details;
     }
