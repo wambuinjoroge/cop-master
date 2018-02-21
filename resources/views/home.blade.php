@@ -8,7 +8,7 @@
             @if(Auth::guest())
                 <div class="panel-body">
                     <p>Welcome to ecp</p>
-                    <a href="/login" class="btn btn-success  ">Login</a>
+                    <a href="{{url('/login')}}" class="btn btn-success  ">Login</a>
                 </div>
 
             @else
