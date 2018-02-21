@@ -206,7 +206,7 @@
                 <div class="col-md-3">
                      <img src="{{asset('assets/img/services/roundicons.png')}}" class="img-responsive" alt="">
                     <h4 class="service-heading">Law & Justice Service</h4>
-                    <p class="text-muted">Correction & Rehabilitation Dept.</p>
+                    <p class="text-muted">State Department of Correction.</p>
                     <!--p class="text-muted">Kenya Prison Department</p>
                     <p class="text-muted">Kenya Wildlife Department</p>
                     <p class="text-muted">Kenya Forest Department</p>
