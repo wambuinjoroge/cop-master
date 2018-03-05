@@ -31,12 +31,26 @@ class LoginController extends Controller
     {
         return $request->only($this->username(), 'password') + ['verified' => true];
     }
+
     /**
-     * Where to redirect users after login.
+     * The user has been authenticated.
      *
-     * @var string
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
      */
-    protected $redirectTo = 'member';
+    protected function authenticated(Request $request, $user)
+    {
+        if ($user->hasRole('citizen')) {
+            return redirect('member');
+        } elseif ($user->hasRole('admin')) {
+            return redirect('admin');
+        } elseif ($user->hasRole('probation')) {
+            return redirect('agent');
+        } else {
+            return redirect('finance');
+        }  
+    }
 
     /**
      * Create a new controller instance.

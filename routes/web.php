@@ -20,7 +20,7 @@
 
 Route::get('/', 'PagesController@welcome');
 Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+//Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Auth::routes();
 //registration detail 
 Route::get('/register', 'AuthController@register');
@@ -34,7 +34,7 @@ Route::get('register/verify/{token}', 'Auth\RegisterController@verifyEmail');
 |--------------------------------------------------------------------------
 |
 */
-Route::get('member', 'PagesController@member');
+Route::get('member', 'PagesController@member')->name('member');
 Route::get('faq', 'PagesController@faq');
 Route::get('help', 'PagesController@help');
 Route::get('finance', 'PagesController@finance');
@@ -44,7 +44,7 @@ Route::get('/contacts', 'ContactsController@index');
 Route::get('/contacts/{id}/details', 'ContactsController@viewContactDetails');
 Route::post('/contacts', 'ContactsController@searchContact');
 // Administrator routes
-Route::get('admin', 'Admin\PagesController@dashboard');
+Route::get('admin', 'Admin\PagesController@dashboard')->name('admin');
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 {
     Route::resource('user', 'UserController');
