@@ -2,7 +2,7 @@
 
 
 @section('title')
-{{ config('app.name', 'ECP') }}
+{{ config('app.name', 'ecp') }}
 @endsection
 
 @section('navigation')
