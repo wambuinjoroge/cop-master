@@ -227,7 +227,7 @@
           <li class="dropdown user user-menu">
            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
              Welcome
-              <span class="hidden-xs">Mancini </span>
+              <span class="hidden-xs">{{ Auth::user()->name }}</span>
             </a>
             <ul class="dropdown-menu">
                <!-- User image -->
