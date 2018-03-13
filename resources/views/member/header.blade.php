@@ -143,7 +143,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
              {{-- {{ Auth::user()->name  }} --}} 
-              <span class="hidden-xs"></span>
+              <span class="hidden-xs">Account</span>
             </a>
             <ul class="dropdown-menu">
                <!-- User image -->
